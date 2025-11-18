@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/minecraft_font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slot {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  background-image: url("/slots/slot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  user-select: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* when mouse is hovering */
+.slot.hover {
+  background-image: url("/slots/slot_hover.png");
+}
+
+/* when slot is part of a drag preview */
+.slot.dragged {
+  background-image: url("/slots/slot_drag.png");
+}
+
+/* when hovering AND dragged */
+.slot.dragged.hover {
+  background-image: url("/slots/slot_drag_hover.png");
+}
+
+/* Item rendering stays the same */
+.item-icon {
+  width: 88.88%;
+  height: 88.88%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.item-count {
+  position: absolute;
+  bottom: 1.7px;
+  right: 1.7px;
+  color: rgb(252, 252, 252);
+  font-family: "Minecraft", monospace;
+  font-weight: normal;
+  font-size: 35.65px;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 3;
+}
+
+.item-count-shadow {
+  position: absolute;
+  bottom: -1.9px;
+  right: -1.9px;
+  color: rgb(62, 62, 62);
+  font-family: "Minecraft", monospace;
+  font-weight: normal;
+  font-size: 35.65px;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 2;
+}
+
+.item-count.overflow {
+  color: rgb(252, 252, 84)
+}
+
+.item-count-shadow.overflow {
+  color: rgb(62, 62, 21)
+}
+
+.held-item {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.held-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.held-item .item-icon {
+  pointer-events: none;
+}
+
+.offhand-slot {
+  position: relative;
+}
+
+.offhand-slot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/slots/slot_offhand.png"); /* your custom image */
+  background-size: cover; /* or contain */
+  pointer-events: none;
+  z-index: 0;
+}
