@@ -1,7 +1,6 @@
-// src/hooks/useInventoryInput.ts
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Item } from "../types/Item";
-import type { Slot } from "../types/Slot";
+import { SlotType, type Slot } from "../types/Slot";
 import { getCraftingResult } from "../utils/CraftingUtils";
 import {
   playPickupSound,
@@ -11,10 +10,10 @@ import {
 } from "../utils/SoundUtils";
 import {
   getShiftClickOrder,
-  distributeIntoSlots,
   distributeEvenlyToSlots,
   distributeOneByOne,
   getSlotIndex,
+  tryPlaceAllTwoPass,
 } from "../utils/InventoryUtils";
 
 export type InventoryInputState = {
@@ -24,7 +23,7 @@ export type InventoryInputState = {
   draggingLeft: boolean;
   draggingRight: boolean;
   dragStartIndex: number | null;
-  dragCurrentIndex: number | null;
+  hoverIndex: number | null;
   selectedSlots: number[];
   doubleClick: boolean;
   previewSlots?: Array<Slot>;
@@ -39,21 +38,29 @@ export function useInventoryInput(options: {
   hotbarSlots: number;
   craftingSlots: number;
 }) {
-  const { preventContextMenu = true, slots, setSlots, inventorySlots, hotbarSlots, craftingSlots } = options;
+  const {
+    preventContextMenu = true,
+    slots,
+    setSlots,
+    inventorySlots,
+    hotbarSlots,
+    craftingSlots,
+  } = options;
 
-  // mouse states
+  // safe clone: always returns a valid Slot (preserves type)
+  const cloneSlot = (s: Slot): Slot => ({
+    type: s.type,
+    item: s.item ? { ...s.item } : null,
+  });
+
   const [leftDown, setLeftDown] = useState(false);
   const [rightDown, setRightDown] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  // held item
   const [heldItem, setHeldItem] = useState<Item | null>(null);
 
-  // drag indices
   const [dragStartIndex, setDragStartIndex] = useState<number | null>(null);
-  const [dragCurrentIndex, setDragCurrentIndex] = useState<number | null>(
-    null
-  );
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const [dragLeft, setDragLeft] = useState(false);
   const [dragRight, setDragRight] = useState(false);
@@ -61,7 +68,7 @@ export function useInventoryInput(options: {
   const [selectedSlots, setSelectedSlots] = useState<number[]>([]);
   const hoveredSlotsRef = useRef<Set<number>>(new Set());
 
-  // double-click helpers
+  // double click
   const lastLeftDownRef = useRef<number | null>(null);
   const [doubleClick, setDoubleClick] = useState(false);
   const [doubleClickSlot, setDoubleClickSlot] = useState<number | null>(null);
@@ -80,7 +87,7 @@ export function useInventoryInput(options: {
     slots.map(() => null)
   );
 
-  // hotkeys map
+  // hotkeys
   const hotkeyBindings: Record<string, number> = {
     Digit1: inventorySlots,
     Digit2: inventorySlots + 1,
@@ -94,7 +101,6 @@ export function useInventoryInput(options: {
     KeyF: inventorySlots + hotbarSlots + craftingSlots + 1,
   };
 
-  // runDoubleClick
   const runDoubleClick = useCallback(() => {
     if (!heldItem) return;
     const targetId = heldItem.id;
@@ -104,13 +110,13 @@ export function useInventoryInput(options: {
     let needed = maxStack - heldItem.count;
     if (needed <= 0) return;
 
-    const next = [...slots];
+    const next = slots.map(cloneSlot);
     let takenTotal = 0;
 
     for (let i = 0; i < next.length; i++) {
       const s = next[i];
-      if (s.output) continue
-      if (!s?.item) continue;
+      if (s.type === SlotType.OUTPUT) continue;
+      if (!s.item) continue;
       if (s.item.id !== targetId) continue;
       if (needed <= 0) break;
 
@@ -118,8 +124,7 @@ export function useInventoryInput(options: {
       if (take <= 0) continue;
 
       const remainInSlot = s.item.count - take;
-      if (remainInSlot > 0)
-        next[i] = { ...next[i], item: { ...s.item, count: remainInSlot } };
+      if (remainInSlot > 0) next[i] = { ...next[i], item: { ...s.item, count: remainInSlot } };
       else next[i] = { ...next[i], item: null };
 
       takenTotal += take;
@@ -128,12 +133,12 @@ export function useInventoryInput(options: {
 
     if (takenTotal > 0) {
       setSlots(next);
+      playSwapSound();
       const newHeldCount = heldItem.count + takenTotal;
       setHeldItem({ ...heldItem, count: Math.min(newHeldCount, maxStack) });
     }
   }, [heldItem, slots, setSlots]);
 
-  // hotkey listener uses stored mouse pos and helper getSlotIndex
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       const code = e.code;
@@ -146,75 +151,53 @@ export function useInventoryInput(options: {
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [mousePos, slots, heldItem, dragCurrentIndex]); // keep deps minimal but include mousePos
-
+  }, [mousePos, slots, heldItem, hoverIndex]); // keep deps minimal but include mousePos
 
   useEffect(() => {
+    // compute output based on input slice
     const inputSlots = slots.slice(inputStart, inputEnd);
     const outputItem = getCraftingResult(inputSlots);
 
-    setSlots(prev => {
-      const next = [...prev];
+    setSlots((prev) => {
+      const next = prev.slice();
       const outputIdx = inputEnd;
       next[outputIdx] = { ...next[outputIdx], item: outputItem };
       return next;
     });
-  }, [slots.slice(inputStart, inputEnd).map(s => s.item?.id + ":" + s.item?.count).join(",")]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slots
+    .slice(inputStart, inputEnd)
+    .map((s) => `${s.item?.id ?? "null"}:${s.item?.count ?? 0}`)
+    .join(",")]);
 
-  // compute a visual preview (pure, no state mutation) while dragging
   const { previewSlots, previewHeldItem } = useMemo(() => {
-    // Not dragging or no held item => no preview
     if (!heldItem || (!dragLeft && !dragRight) || selectedSlots.length === 0) {
       return { previewSlots: undefined, previewHeldItem: undefined };
     }
 
-    // Make deep-ish copy of slots array (slot objects and item objects)
-    const copy = slots.map((s) =>
-      s
-        ? {
-          ...s,
-          item: s.item ? { ...s.item } : null,
-        }
-        : { item: null }
-    );
+    // deep-ish clone of slots (valid Slot[])
+    const copy = slots.map(cloneSlot);
 
-    // order is selectedSlots in the order user traversed them (hoveredSlotsRef)
     const valid = selectedSlots.filter((i) => i >= 0 && i < copy.length);
 
-    // helper to compute only-on-preview results
+    if (valid.length === 0) {
+      return { previewSlots: undefined, previewHeldItem: undefined };
+    }
+
     if (dragLeft) {
-      // left-drag = split evenly if possible, otherwise one-per-slot when perSlot===0
       const perSlot = Math.floor(heldItem.count / valid.length);
       if (perSlot > 0) {
-        // use distributeEvenlyToSlots but on our copy (must be pure)
-        const { next: after, placed } = distributeEvenlyToSlots(
-          copy.map((c) => ({ ...c, item: c.item ? { ...c.item } : null })),
-          valid,
-          heldItem
-        );
-        const previewHeld =
-          placed >= heldItem.count
-            ? null
-            : { ...heldItem, count: Math.max(0, heldItem.count - placed) };
+        const { next: after, placed } = distributeEvenlyToSlots(copy, valid, heldItem);
+        const previewHeld = placed >= heldItem.count ? null : { ...heldItem, count: Math.max(0, heldItem.count - placed) };
         return { previewSlots: after, previewHeldItem: previewHeld };
       } else {
-        // one-per-slot
-        const { next: after, remaining } = distributeOneByOne(
-          copy.map((c) => ({ ...c, item: c.item ? { ...c.item } : null })),
-          valid,
-          heldItem
-        );
-        const previewHeld =
-          remaining > 0 ? { ...heldItem, count: remaining } : null;
+        const { next: after, remaining } = distributeOneByOne(copy, valid, heldItem);
+        const previewHeld = remaining > 0 ? { ...heldItem, count: remaining } : null;
         return { previewSlots: after, previewHeldItem: previewHeld };
       }
     } else {
-      // dragRight: give one per slot (only to valid slots)
-      const { next: after, remaining } = distributeOneByOne(
-        copy.map((c) => ({ ...c, item: c.item ? { ...c.item } : null })),
-        valid,
-        heldItem
-      );
+      // right-drag
+      const { next: after, remaining } = distributeOneByOne(copy, valid, heldItem);
       const previewHeld = remaining > 0 ? { ...heldItem, count: remaining } : null;
       return { previewSlots: after, previewHeldItem: previewHeld };
     }
@@ -222,32 +205,31 @@ export function useInventoryInput(options: {
 
   function handleOutputClick(outputIdx: number) {
     const outputSlot = slots[outputIdx];
-    if (!outputSlot.item) return; // nothing to pick up
+    if (!outputSlot.item) return;
 
     const inputSlots = slots.slice(inputStart, inputEnd);
     const resultItem = getCraftingResult(inputSlots);
     if (!resultItem) return;
 
-    // Determine if held item allows pickup
+    // held interactions
     if (!heldItem) {
       setHeldItem({ ...resultItem });
     } else if (heldItem.id !== resultItem.id || heldItem.count + resultItem.count > heldItem.stack_size) {
-      return; // cannot take
+      return;
     } else {
       setHeldItem({ ...heldItem, count: heldItem.count + resultItem.count });
     }
     playSwapSound();
 
-    // Remove 1 from each input slot
-    setSlots(prev => {
-      const next = [...prev];
+    // remove 1 from each input slot
+    setSlots((prev) => {
+      const next = prev.slice();
       for (let i = inputStart; i < inputEnd; i++) {
         const s = next[i];
         if (!s.item) continue;
         const count = s.item.count - 1;
         next[i] = { ...s, item: count > 0 ? { ...s.item, count } : null };
       }
-      // Recompute output
       const newOutput = getCraftingResult(next.slice(inputStart, inputEnd));
       next[outputIdx] = { ...next[outputIdx], item: newOutput };
       return next;
@@ -256,73 +238,66 @@ export function useInventoryInput(options: {
 
   function handleShiftClickOutput(outputIdx: number) {
     const outputSlot = slots[outputIdx];
-    if (!outputSlot.item) return;
+    if (!outputSlot?.item) return;
+
     let didMove = false;
-    setSlots(prevSlots => {
-      let next = [...prevSlots];
-      let done = false;
 
-      while (!done) {
-        const outputSlot = next[outputIdx];
-        if (!outputSlot.item) break;
+    setSlots((prevSlots) => {
+      let next = prevSlots.slice();
 
-        const item = outputSlot.item;
+      while (true) {
+        const curOutput = next[outputIdx];
+        if (!curOutput?.item) break;
 
-        // check if enough space in inventory
-      const order = getShiftClickOrder(next, outputIdx, true);
-      const { next: after, remaining, placed } = distributeIntoSlots(next, order, item, item.count);
-      // If not all items fit, stop and do not modify inventory
-      if (remaining && remaining > 0) break;
+        const item = curOutput.item;
+        const order = getShiftClickOrder(next, outputIdx);
 
-      // Only commit if all items fit
-      next = after;
-      if (placed > 0) didMove = true;
-        // remove 1 from each input slot
+        const { success, after, remaining, placed } = tryPlaceAllTwoPass(next, order, item, item.count);
+
+        if (!success) break;
+
+        // clone all slots in after safely
+        let afterCopy = after.map(cloneSlot);
+
         for (let i = inputStart; i < inputEnd; i++) {
-          const s = after[i];
-          if (!s.item) continue;
-          const count = s.item.count - 1;
-          after[i] = { ...s, item: count > 0 ? { ...s.item, count } : null };
+          const s = afterCopy[i];
+          if (!s?.item) continue;
+          const newCount = s.item.count - 1;
+          afterCopy[i] = { ...s, item: newCount > 0 ? { ...s.item, count: newCount } : null };
         }
 
-        // recompute output
-        const newOutput = getCraftingResult(after.slice(inputStart, inputEnd));
-        after[outputIdx] = { ...after[outputIdx], item: newOutput };
+        const newOutput = getCraftingResult(afterCopy.slice(inputStart, inputEnd));
+        afterCopy[outputIdx] = { ...afterCopy[outputIdx], item: newOutput };
+
+        next = afterCopy;
+        if (placed > 0) didMove = true;
 
         if (!newOutput || newOutput.id !== item.id) break;
-
-        next = after;
       }
 
       return next;
     });
+
     if (didMove) playSwapSound();
   }
 
-
-  // SHIFT-click functions (unchanged but using helper utilities)
   function shiftClickSlots(clickedIdx: number, item: Item | null) {
     if (!item) return;
     const itemId = item.id;
 
-    const next = [...slots];
+    const next = slots.map(cloneSlot);
     let totalToDistribute = 0;
     for (let i = 0; i < next.length; i++) {
       const s = next[i];
-      if (s?.item?.id === itemId) {
+      if (s.item?.id === itemId) {
         totalToDistribute += s.item.count;
         next[i] = { ...s, item: null };
       }
     }
 
     const order = getShiftClickOrder(slots, clickedIdx);
-    const { next: after } = distributeIntoSlots(
-      next,
-      order,
-      item,
-      totalToDistribute
-    );
-    setSlots(after);
+    const { after: after } = tryPlaceAllTwoPass(next, order, item, totalToDistribute);
+    setSlots(after.map(cloneSlot));
   }
 
   function shiftClickSlot(idx: number) {
@@ -331,18 +306,13 @@ export function useInventoryInput(options: {
 
     playSwapSound();
     const item = slot.item;
-    const next = [...slots];
+    const next = slots.map(cloneSlot);
     let totalToDistribute = item.count;
     next[idx] = { ...slot, item: null };
 
     const order = getShiftClickOrder(slots, idx);
-    const { next: after } = distributeIntoSlots(
-      next,
-      order,
-      item,
-      totalToDistribute
-    );
-    setSlots(after);
+    const { after: after } = tryPlaceAllTwoPass(next, order, item, totalToDistribute);
+    setSlots(after.map(cloneSlot));
   }
 
   function runHotkey(targetIndex: number, idx: number | null) {
@@ -357,7 +327,7 @@ export function useInventoryInput(options: {
 
     if (sHot.item && !sSel.item) {
       setSlots((prev) => {
-        const next = [...prev];
+        const next = prev.slice();
         next[sel] = { ...next[sel], item: sHot.item };
         next[hot] = { ...next[hot], item: null };
         return next;
@@ -368,7 +338,7 @@ export function useInventoryInput(options: {
 
     if (!sHot.item && sSel.item) {
       setSlots((prev) => {
-        const next = [...prev];
+        const next = prev.slice();
         next[hot] = { ...next[hot], item: sSel.item };
         next[sel] = { ...next[sel], item: null };
         return next;
@@ -379,7 +349,7 @@ export function useInventoryInput(options: {
 
     if (sHot.item && sSel.item) {
       setSlots((prev) => {
-        const next = [...prev];
+        const next = prev.slice();
         next[hot] = sSel;
         next[sel] = sHot;
         return next;
@@ -389,7 +359,6 @@ export function useInventoryInput(options: {
     }
   }
 
-  // compute selection while dragging: keep hovered order
   useEffect(() => {
     if (dragLeft || dragRight) {
       setSelectedSlots(Array.from(hoveredSlotsRef.current));
@@ -397,22 +366,21 @@ export function useInventoryInput(options: {
       setSelectedSlots([]);
       hoveredSlotsRef.current.clear();
     }
-  }, [dragLeft, dragRight, dragStartIndex, dragCurrentIndex]);
+  }, [dragLeft, dragRight, dragStartIndex, hoverIndex]);
 
-  // handlers (I left them as you already had; they update hoveredSlotsRef and selectedSlots)
   function onMouseDown(e: React.MouseEvent) {
     const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
     setDoubleClick(false);
 
-    if (idx !== null && slots[idx]?.hidden) return;
+    if (idx !== null && slots[idx]?.type == SlotType.OFFHAND) return;
 
-    if (idx !== null && slots[idx]?.output) {
+    if (idx !== null && slots[idx]?.type == SlotType.OUTPUT) {
       if (e.shiftKey) {
         handleShiftClickOutput(idx);
       } else {
         handleOutputClick(idx);
       }
-      return
+      return;
     }
 
     if (e.button === 0) {
@@ -451,7 +419,6 @@ export function useInventoryInput(options: {
         if (idx !== null) hoveredSlotsRef.current.add(idx);
         setSelectedSlots([...hoveredSlotsRef.current]);
         setDragStartIndex(idx);
-        setDragCurrentIndex(idx);
       } else {
         if (idx !== null) {
           const s = slots[idx];
@@ -459,19 +426,16 @@ export function useInventoryInput(options: {
             setHeldItem(s.item);
             playPickupSound();
             setSlots((prev) => {
-              const next = [...prev];
+              const next = prev.slice();
               next[idx] = { ...next[idx], item: null };
               return next;
             });
             setDragStartIndex(null);
-            setDragCurrentIndex(null);
           } else {
             setDragStartIndex(idx);
-            setDragCurrentIndex(idx);
           }
         } else {
           setDragStartIndex(null);
-          setDragCurrentIndex(null);
         }
       }
     } else if (e.button === 2 && !dragLeft) {
@@ -482,7 +446,6 @@ export function useInventoryInput(options: {
         if (idx !== null) hoveredSlotsRef.current.add(idx);
         setSelectedSlots([...hoveredSlotsRef.current]);
         setDragStartIndex(idx);
-        setDragCurrentIndex(idx);
       } else {
         if (idx !== null) {
           const s = slots[idx];
@@ -492,7 +455,7 @@ export function useInventoryInput(options: {
             setHeldItem({ ...s.item, count: take });
             playPickupSound();
             setSlots((prev) => {
-              const next = [...prev];
+              const next = prev.slice();
               next[idx] =
                 remain > 0
                   ? { ...next[idx], item: { ...(s.item as Item), count: remain } }
@@ -500,19 +463,15 @@ export function useInventoryInput(options: {
               return next;
             });
             setDragStartIndex(null);
-            setDragCurrentIndex(null);
           } else {
             setDragStartIndex(idx);
-            setDragCurrentIndex(idx);
           }
         } else {
           setDragStartIndex(null);
-          setDragCurrentIndex(null);
         }
       }
     } else if (!dragLeft && !dragRight) {
       setDragStartIndex(idx);
-      setDragCurrentIndex(idx);
     }
   }
 
@@ -556,7 +515,7 @@ export function useInventoryInput(options: {
 
       if (different) {
         setSlots((prev) => {
-          const next = [...prev];
+          const next = prev.slice();
           next[idx] = { ...next[idx], item: heldItem ? { ...heldItem } : null };
           return next;
         });
@@ -589,12 +548,8 @@ export function useInventoryInput(options: {
         if (perSlot > 0) {
           let totalPlaced = 0;
           setSlots((prev) => {
-            const next = [...prev];
-            const { next: after, placed } = distributeEvenlyToSlots(
-              next,
-              valid,
-              heldItem
-            );
+            const next = prev.slice();
+            const { next: after, placed } = distributeEvenlyToSlots(next, valid, heldItem);
             totalPlaced = placed;
             return after;
           });
@@ -602,10 +557,9 @@ export function useInventoryInput(options: {
           if (remaining > 0) setHeldItem({ ...heldItem, count: remaining });
           else setHeldItem(null);
         } else {
-          // one-per-slot distribution
           let remaining = heldItem.count;
           setSlots((prev) => {
-            const next = [...prev];
+            const next = prev.slice();
             const r = distributeOneByOne(next, valid, heldItem);
             remaining = r.remaining;
             return r.next;
@@ -634,7 +588,7 @@ export function useInventoryInput(options: {
         playPutDownSound();
         let remaining = heldItem.count;
         setSlots((prev) => {
-          const next = [...prev];
+          const next = prev.slice();
           const r = distributeOneByOne(next, valid, heldItem);
           remaining = r.remaining;
           return r.next;
@@ -655,17 +609,34 @@ export function useInventoryInput(options: {
     setMousePos({ x: e.clientX, y: e.clientY });
     const idx = getSlotIndex(slotRefs.current, e.clientX, e.clientY);
     if (idx === null) return;
-    if (slots[idx]?.hidden) return;
+    if (slots[idx]?.type === SlotType.OFFHAND) return;
+
+    setHoverIndex(idx);
+
+    if (slots[idx].item && heldItem) {
+      if (slots[idx].item.id != heldItem.id) return;
+    }
 
     if ((dragLeft || dragRight) && heldItem) {
       if (!hoveredSlotsRef.current.has(idx)) {
-        playDragSound();
-        hoveredSlotsRef.current.add(idx);
-        setSelectedSlots([...hoveredSlotsRef.current]);
+
+        let used = selectedSlots.length;
+        hoveredSlotsRef.current.forEach((sIdx) => {
+          const s = slots[sIdx];
+          if (!s.item) return;
+          if (s.item.id !== heldItem.id || s.item.count === s.item.stack_size) {
+            used -= 1;
+          }
+        });
+
+        // Make sure we still have items to place
+        if (used < heldItem.count) {
+          playDragSound();
+          hoveredSlotsRef.current.add(idx);
+          setSelectedSlots([...hoveredSlotsRef.current]);
+        }
       }
     }
-
-    setDragCurrentIndex(idx);
   }
 
   function onContextMenu(e: React.MouseEvent) {
@@ -676,7 +647,6 @@ export function useInventoryInput(options: {
 
   const resetDrag = useCallback(() => {
     setDragStartIndex(null);
-    setDragCurrentIndex(null);
     hoveredSlotsRef.current.clear();
     setSelectedSlots([]);
   }, []);
@@ -688,7 +658,7 @@ export function useInventoryInput(options: {
     draggingLeft: dragLeft,
     draggingRight: dragRight,
     dragStartIndex,
-    dragCurrentIndex,
+    hoverIndex,
     selectedSlots,
     doubleClick,
     previewSlots,
@@ -702,6 +672,7 @@ export function useInventoryInput(options: {
     onMouseUp,
     onMouseMove,
     onContextMenu,
+    onMouseLeave: () => setHoverIndex(null),
     setHeld,
     resetDrag,
   };

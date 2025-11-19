@@ -1,6 +1,7 @@
 // src/utils/inventoryUtils.ts
 import type { Item } from "../types/Item";
 import type { Slot } from "../types/Slot";
+import { SlotType } from "../types/Slot";
 
 /**
  * Collect indices and total count of all slots containing itemId.
@@ -18,55 +19,37 @@ export function collectSameItems(slots: Slot[], itemId: string) {
   return { indices, total };
 }
 
-/**
- * Build shift-click distribution order.
- * Keeps clicked index in the result (at the end like your current code).
- * Skips slots where `preventShiftClickToIt` is truthy.
- *
- * Behavior preserved from your recent code:
- * if clicked slot is prioritized -> [...normal, ...prioritized, clickedIdx]
- * else -> [...prioritized, ...normal, clickedIdx]
- */
-export function getShiftClickOrder(slots: Slot[], clickedIdx: number, fromOutput: boolean = false) {
-  const prioritized: number[] = [];
-  const normal: number[] = [];
+const SHIFT_ROUTES: Record<SlotType, SlotType[]> = {
+  [SlotType.INPUT]:  [SlotType.INVENTORY, SlotType.HOTBAR],
+  [SlotType.OUTPUT]: [SlotType.HOTBAR, SlotType.INVENTORY],
+  [SlotType.HOTBAR]: [SlotType.INPUT, SlotType.INVENTORY],
+  [SlotType.INVENTORY]: [SlotType.INPUT, SlotType.HOTBAR],
+  [SlotType.OFFHAND]: []
+};
 
-  const offhandIndex = slots.length - 1;
+export function getShiftClickOrder(slots: Slot[], clickedIdx: number): number[] {
+  const clicked = slots[clickedIdx];
+  if (!clicked) return [];
 
-  for (let i = 0; i < slots.length; i++) {
-    if (i === clickedIdx) continue;
-    if (i === offhandIndex) continue;
-    if (fromOutput && slots[i].input) continue;
-    if (slots[i].preventShiftClickToIt) continue;
-    if (slots[i].output) continue;
+  const routes = SHIFT_ROUTES[clicked.type];
+  if (!routes || routes.length === 0) return [];
 
-    if (slots[i].isPrioritized) prioritized.push(i);
-    else normal.push(i);
+  const order: number[] = [];
+
+  for (const targetType of routes) {
+    for (let i = 0; i < slots.length; i++) {
+      if (i === clickedIdx) continue;
+
+      const s = slots[i];
+      if (s.type === targetType) {
+        order.push(i);
+      }
+    }
   }
 
-  const clickedIsPrioritized = !!slots[clickedIdx]?.isPrioritized;
-  if (!fromOutput) {
-    const baseOrder = clickedIsPrioritized
-        ? [...normal, ...prioritized, clickedIdx]
-        : [...prioritized, ...normal, clickedIdx];
-    return [...baseOrder, offhandIndex];
-  }
-  else {
-    const baseOrder = clickedIsPrioritized
-        ? [...normal, ...prioritized]
-        : [...prioritized, ...normal];
-    return [...baseOrder];
-  }
+  return order;
 }
 
-/**
- * Distribute 'total' amount of item across the 'order' indices of `next`.
- * - respects slot capacities (maxStack)
- * - only places into slots that are empty or have the same item id
- * - mutates and returns `next` (shallow copy expected by caller)
- *
- * returns { next, remaining, placed }
- */
 export function distributeIntoSlots(
   next: Slot[],
   order: number[],
@@ -113,7 +96,7 @@ export function distributeEvenlyToSlots(next: Slot[], valid: number[], heldItem:
   let placed = 0;
   for (const idx of valid) {
     const s = next[idx];
-    if (s.output) continue;
+    if (s.type == SlotType.OUTPUT) continue;
     const existing = s.item?.count ?? 0;
     const capacity = Math.max(0, maxStack - existing);
     const toPlace = Math.min(perSlot, capacity);
@@ -141,7 +124,7 @@ export function distributeOneByOne(next: Slot[], valid: number[], heldItem: Item
   for (const idx of valid) {
     if (remaining <= 0) break;
     const s = next[idx];
-    if (s.output) continue;
+    if (s.type == SlotType.OUTPUT) continue;
     const existing = s.item?.count ?? 0;
     const capacity = Math.max(0, maxStack - existing);
     if (capacity <= 0) continue;
@@ -176,3 +159,49 @@ export function getSlotIndex(slotRefs: Array<HTMLDivElement | null>, x: number, 
   }
   return null;
 }
+
+export function tryPlaceAllTwoPass(
+  slotsArr: Slot[],
+  order: number[],
+  item: Item,
+  count: number
+): { success: boolean; after: Slot[]; remaining: number; placed: number } {
+
+  const cp: Slot[] = slotsArr.map((s) => ({
+    type: s.type,
+    item: s.item ? { ...s.item } : null
+  }));
+
+  let remaining = count;
+  let placed = 0;
+  const maxStack = item.stack_size;
+
+  for (const i of order) {
+    if (remaining <= 0) break;
+    const s = cp[i];
+    if (!s.item) continue;
+    if (s.item.id !== item.id) continue;
+
+    const capacity = Math.max(0, maxStack - s.item.count);
+    if (capacity <= 0) continue;
+
+    const toPlace = Math.min(capacity, remaining);
+    s.item.count += toPlace;
+    remaining -= toPlace;
+    placed += toPlace;
+  }
+
+  for (const i of order) {
+    if (remaining <= 0) break;
+    const s = cp[i];
+    if (s.item) continue;
+
+    const toPlace = Math.min(maxStack, remaining);
+    cp[i] = { type: s.type, item: { ...item, count: toPlace } };
+    remaining -= toPlace;
+    placed += toPlace;
+  }
+
+  return { success: remaining === 0, after: cp, remaining, placed };
+}
+

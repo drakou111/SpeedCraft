@@ -1,8 +1,13 @@
 import { useState } from "react"
 import Inventory from "./components/Inventory"
+import { SlotType } from "./types/Slot"
 import type { Slot } from "./types/Slot"
 import "./App.css"
 import type { Item } from "./types/Item"
+
+function slot(type: Slot["type"]): Slot {
+  return { item: null, type };
+}
 
 export default function App() {
   const startingItems: Array<Item> = [
@@ -17,15 +22,14 @@ export default function App() {
   const rows = 3;
   const inventorySlots = rows * columns;
   const hotbarSlots = columns;
-  const craftingSlots = 4;
+  const craftingSlots = 9;
 
   const initialSlots: Slot[] = [
-    ...Array.from({ length: inventorySlots }, () => ({ item: null })), // inventory
-    ...Array.from({ length: hotbarSlots }, () => ({ item: null, isPrioritized: true })), // hotbar
-    ...Array.from({ length: craftingSlots }, () => ({ item: null, input: true, preventShiftClickToIt: true, isPrioritized: true })), // input
-    { item: null, output: true, isPrioritized: true }, // output
-    { item: null, hidden: true, preventShiftClickToIt: true }, // offhand
-
+    ...Array.from({ length: inventorySlots }, () => ({ item: null, type: SlotType.INVENTORY })), // inventory
+    ...Array.from({ length: hotbarSlots }, () => ({ item: null, type: SlotType.HOTBAR })), // hotbar
+    ...Array.from({ length: craftingSlots }, () => ({ item: null, type: SlotType.INPUT })), // input
+    { item: null, type: SlotType.OUTPUT }, // output
+    { item: null, type: SlotType.OFFHAND }, // offhand
   ]
 
   startingItems.slice(0, initialSlots.length).forEach((item, idx) => {
@@ -36,7 +40,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Minecraft Inventory</h1>
+      <h1>SpeedCraft</h1>
 
       <Inventory slots={slots} setSlots={setSlots} inventorySlots={inventorySlots} hotbarSlots={hotbarSlots} craftingSlots={craftingSlots} />
     </div>
