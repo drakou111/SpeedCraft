@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import GamePage from "./pages/GamePage";
 import EditorPage from "./pages/EditorPage";
@@ -7,7 +7,7 @@ import { Header, Footer } from "./components/Layout";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div
         style={{
           display: "flex",
@@ -29,6 +29,6 @@ export default function App() {
         
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
