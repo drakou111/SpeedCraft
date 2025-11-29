@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --dotfiles --depth 1"
+    "deploy": "npm run build && git add dist -f && git commit -m \"Deploy\" && git subtree push --prefix dist origin gh-pages"
   },
   "proxy": "http://localhost:4000",
   "dependencies": {
