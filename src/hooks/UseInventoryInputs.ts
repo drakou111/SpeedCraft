@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Item } from "../types/Item";
 import { SlotType, type Slot } from "../types/Slot";
-import { getCraftingResult } from "../utils/CraftingUtils";
 import {
   playPickupSound,
   playPutDownSound,
@@ -14,7 +13,9 @@ import {
   distributeOneByOne,
   getSlotIndex,
   tryPlaceAllTwoPass,
+  SHIFT_ROUTES,
 } from "../utils/InventoryUtils";
+import { getCraftingResult } from "../utils/CraftingUtils";
 
 export type InventoryInputState = {
   leftDown: boolean;
@@ -25,7 +26,6 @@ export type InventoryInputState = {
   dragStartIndex: number | null;
   hoverIndex: number | null;
   selectedSlots: number[];
-  doubleClick: boolean;
   previewSlots?: Array<Slot>;
   previewHeldItem?: Item | null;
 };
@@ -47,7 +47,6 @@ export function useInventoryInput(options: {
     craftingSlots,
   } = options;
 
-  // safe clone: always returns a valid Slot (preserves type)
   const cloneSlot = (s: Slot): Slot => ({
     type: s.type,
     item: s.item ? { ...s.item } : null,
@@ -68,26 +67,20 @@ export function useInventoryInput(options: {
   const [selectedSlots, setSelectedSlots] = useState<number[]>([]);
   const hoveredSlotsRef = useRef<Set<number>>(new Set());
 
-  // double click
   const lastLeftDownRef = useRef<number | null>(null);
-  const [doubleClick, setDoubleClick] = useState(false);
+  const [doubleClick, setDoubleClick] = useState<boolean>(false);
   const [doubleClickSlot, setDoubleClickSlot] = useState<number | null>(null);
+  const [doubleClickItem, setDoubleClickItem] = useState<Item | null>(null);
   const DOUBLE_CLICK_MS = 175;
 
-  const inputStart = inventorySlots + hotbarSlots;
+  const inputStart = inventorySlots + hotbarSlots + 1;
   const inputEnd = inputStart + craftingSlots;
 
-  // shift-click helpers
-  const [shiftClicked, setShiftClicked] = useState(false);
-  const [shiftClickItem, setShiftClickItem] = useState<Item | null>(null);
-
-  // DOM refs
   const containerRef = useRef<HTMLElement | null>(null);
   const slotRefs = useRef<Array<HTMLDivElement | null>>(
     slots.map(() => null)
   );
 
-  // hotkeys
   const hotkeyBindings: Record<string, number> = {
     Digit1: inventorySlots,
     Digit2: inventorySlots + 1,
@@ -98,8 +91,10 @@ export function useInventoryInput(options: {
     Digit7: inventorySlots + 6,
     Digit8: inventorySlots + 7,
     Digit9: inventorySlots + 8,
-    KeyF: inventorySlots + hotbarSlots + craftingSlots + 1,
+    KeyF: inventorySlots + hotbarSlots,
   };
+  const dropKey = "KeyQ";
+
 
   const runDoubleClick = useCallback(() => {
     if (!heldItem) return;
@@ -141,22 +136,47 @@ export function useInventoryInput(options: {
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      const code = e.code;
-      if (hotkeyBindings[code] != null) {
-        e.preventDefault();
-        const hotbarIdx = hotkeyBindings[code];
+      const { code, ctrlKey } = e;
+
+      const hotbarIdx = hotkeyBindings[code];
+      if (hotbarIdx != null) {
         const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
+        if (idx)
+          e.preventDefault();
         runHotkey(hotbarIdx, idx);
+        return;
+      }
+
+      if (code === dropKey && !heldItem) {
+        const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
+        if (idx == null) return;
+        e.preventDefault();
+
+        const slot = slots[idx];
+        if (!slot?.item) return;
+
+        const newSlots = [...slots];
+        const item = slot.item;
+
+        if (item) {
+          newSlots[idx] = {...slot,item: ctrlKey? null: item.count === 1? null: { ...item, count: item.count - 1 }};
+          playPutDownSound();
+        }
+
+        setSlots(newSlots);
       }
     }
+
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [mousePos, slots, heldItem, hoverIndex]); // keep deps minimal but include mousePos
+  }, [mousePos, slots, heldItem, hotkeyBindings]);
 
   useEffect(() => {
-    // compute output based on input slice
+    if (craftingSlots == 0)
+      return;
+
     const inputSlots = slots.slice(inputStart, inputEnd);
-    const outputItem = getCraftingResult(inputSlots);
+    const { output: outputItem } = getCraftingResult(inputSlots);
 
     setSlots((prev) => {
       const next = prev.slice();
@@ -164,7 +184,6 @@ export function useInventoryInput(options: {
       next[outputIdx] = { ...next[outputIdx], item: outputItem };
       return next;
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slots
     .slice(inputStart, inputEnd)
     .map((s) => `${s.item?.id ?? "null"}:${s.item?.count ?? 0}`)
@@ -175,7 +194,6 @@ export function useInventoryInput(options: {
       return { previewSlots: undefined, previewHeldItem: undefined };
     }
 
-    // deep-ish clone of slots (valid Slot[])
     const copy = slots.map(cloneSlot);
 
     const valid = selectedSlots.filter((i) => i >= 0 && i < copy.length);
@@ -196,123 +214,194 @@ export function useInventoryInput(options: {
         return { previewSlots: after, previewHeldItem: previewHeld };
       }
     } else {
-      // right-drag
       const { next: after, remaining } = distributeOneByOne(copy, valid, heldItem);
       const previewHeld = remaining > 0 ? { ...heldItem, count: remaining } : null;
       return { previewSlots: after, previewHeldItem: previewHeld };
     }
   }, [heldItem, dragLeft, dragRight, selectedSlots, slots]);
 
-  function handleOutputClick(outputIdx: number) {
-    const outputSlot = slots[outputIdx];
-    if (!outputSlot.item) return;
 
-    const inputSlots = slots.slice(inputStart, inputEnd);
-    const resultItem = getCraftingResult(inputSlots);
-    if (!resultItem) return;
-
-    // held interactions
-    if (!heldItem) {
-      setHeldItem({ ...resultItem });
-    } else if (heldItem.id !== resultItem.id || heldItem.count + resultItem.count > heldItem.stack_size) {
-      return;
-    } else {
-      setHeldItem({ ...heldItem, count: heldItem.count + resultItem.count });
+  function applyAfterInPlace(target: Slot[], after: Slot[]) {
+    const len = Math.min(target.length, after.length);
+    for (let k = 0; k < len; k++) {
+      if (target[k] !== after[k]) target[k] = after[k];
     }
-    playSwapSound();
-
-    // remove 1 from each input slot
-    setSlots((prev) => {
-      const next = prev.slice();
-      for (let i = inputStart; i < inputEnd; i++) {
-        const s = next[i];
-        if (!s.item) continue;
-        const count = s.item.count - 1;
-        next[i] = { ...s, item: count > 0 ? { ...s.item, count } : null };
-      }
-      const newOutput = getCraftingResult(next.slice(inputStart, inputEnd));
-      next[outputIdx] = { ...next[outputIdx], item: newOutput };
-      return next;
-    });
+    for (let k = len; k < after.length; k++) {
+      target[k] = after[k];
+    }
   }
 
-  function handleShiftClickOutput(outputIdx: number) {
+  function handleOutputClick(outputIdx: number) {
+    const outputSlot = slots[outputIdx];
+    if (!outputSlot?.item) return;
+
+    const inputSlots = slots.slice(inputStart, inputEnd);
+    const result = getCraftingResult(inputSlots);
+    const { output, secondary } = result;
+    if (!output) return;
+
+    if (!heldItem) {
+      setHeldItem({ ...output });
+    } else if (heldItem.id !== output.id || heldItem.count + output.count > heldItem.stack_size) {
+      return;
+    } else {
+      setHeldItem({ ...heldItem, count: heldItem.count + output.count });
+    }
+
+    playSwapSound();
+
+    const next = slots.slice();
+
+    for (let i = inputStart; i < inputEnd; i++) {
+      const s = next[i];
+      if (!s?.item) continue;
+      const newCount = s.item.count - 1;
+      next[i] = { ...s, item: newCount > 0 ? { ...s.item, count: newCount } : null };
+    }
+
+    if (secondary && Array.isArray(secondary)) {
+      for (let rel = 0; rel < secondary.length; rel++) {
+        const sec = secondary[rel];
+        if (!sec) continue;
+
+        const targetIndex = inputStart + rel;
+        const targetSlot = next[targetIndex];
+
+        if (!targetSlot?.item) {
+          next[targetIndex] = { ...targetSlot, item: { ...sec } };
+        } else {
+          const order = getShiftClickOrder(next, outputIdx, false);
+          const { after: after } = tryPlaceAllTwoPass(next, order, order, false, sec, sec.count);
+
+          if (after) {
+            applyAfterInPlace(next, after);
+          }
+        }
+      }
+    }
+
+    const newResult = getCraftingResult(next.slice(inputStart, inputEnd));
+    const newOutput = newResult.output ?? null;
+
+    next[outputIdx] = { ...next[outputIdx], item: newOutput };
+
+    setSlots(next);
+  }
+
+  async function handleShiftClickOutput(outputIdx: number) {
     const outputSlot = slots[outputIdx];
     if (!outputSlot?.item) return;
 
     let didMove = false;
+    let next = slots.slice();
 
-    setSlots((prevSlots) => {
-      let next = prevSlots.slice();
+    while (true) {
+      const curOutput = next[outputIdx];
+      if (!curOutput?.item) break;
+      const item = curOutput.item;
 
-      while (true) {
-        const curOutput = next[outputIdx];
-        if (!curOutput?.item) break;
+      const firstOrder = getShiftClickOrder(next, outputIdx, false);
+      const secondOrder = getShiftClickOrder(next, outputIdx, true);
+      const { success, after, placed } = tryPlaceAllTwoPass(next, firstOrder, secondOrder, false, item, item.count);
 
-        const item = curOutput.item;
-        const order = getShiftClickOrder(next, outputIdx);
+      if (!success) break;
 
-        const { success, after, remaining, placed } = tryPlaceAllTwoPass(next, order, item, item.count);
+      next = after.map((s) => ({ ...s, item: s.item ? { ...s.item } : null }));
 
-        if (!success) break;
+      const curRecipeResult = getCraftingResult(next.slice(inputStart, inputEnd));
+      const secondary = curRecipeResult?.secondary;
 
-        // clone all slots in after safely
-        let afterCopy = after.map(cloneSlot);
+      for (let i = inputStart; i < inputEnd; i++) {
+        const s = next[i];
+        if (!s?.item) continue;
+        const newCount = s.item.count - 1;
+        next[i] = { ...s, item: newCount > 0 ? { ...s.item, count: newCount } : null };
+      }
 
-        for (let i = inputStart; i < inputEnd; i++) {
-          const s = afterCopy[i];
-          if (!s?.item) continue;
-          const newCount = s.item.count - 1;
-          afterCopy[i] = { ...s, item: newCount > 0 ? { ...s.item, count: newCount } : null };
+      if (secondary) {
+        for (let rel = 0; rel < secondary.length; rel++) {
+          const sec = secondary[rel];
+          if (!sec) continue;
+          const targetIndex = inputStart + rel;
+          const targetSlot = next[targetIndex];
+          if (!targetSlot?.item) {
+            next[targetIndex] = { ...targetSlot, item: { ...sec } };
+          } else {
+            const order = getShiftClickOrder(next, outputIdx, false);
+            const { success: s2, after: afterSec } = tryPlaceAllTwoPass(next, order, order, false, sec, sec.count);
+            if (s2 && afterSec) {
+              next = afterSec.map(cloneSlot)
+            } else {
+              break;
+            }
+          }
         }
-
-        const newOutput = getCraftingResult(afterCopy.slice(inputStart, inputEnd));
-        afterCopy[outputIdx] = { ...afterCopy[outputIdx], item: newOutput };
-
-        next = afterCopy;
-        if (placed > 0) didMove = true;
-
-        if (!newOutput || newOutput.id !== item.id) break;
       }
 
-      return next;
-    });
+      const newResult = getCraftingResult(next.slice(inputStart, inputEnd));
+      const newOutput = newResult?.output ?? null;
 
-    if (didMove) playSwapSound();
-  }
+      next[outputIdx] = { ...next[outputIdx], item: newOutput };
 
-  function shiftClickSlots(clickedIdx: number, item: Item | null) {
-    if (!item) return;
-    const itemId = item.id;
+      if (placed > 0) didMove = true;
 
-    const next = slots.map(cloneSlot);
-    let totalToDistribute = 0;
-    for (let i = 0; i < next.length; i++) {
-      const s = next[i];
-      if (s.item?.id === itemId) {
-        totalToDistribute += s.item.count;
-        next[i] = { ...s, item: null };
-      }
+      if (!newOutput || newOutput.id !== item.id) break;
     }
 
-    const order = getShiftClickOrder(slots, clickedIdx);
-    const { after: after } = tryPlaceAllTwoPass(next, order, item, totalToDistribute);
-    setSlots(after.map(cloneSlot));
+    if (didMove) playSwapSound();
+    setSlots(next);
   }
 
-  function shiftClickSlot(idx: number) {
-    const slot = slots[idx];
-    if (!slot?.item) return;
 
-    playSwapSound();
+  function shiftClickSlots(clickedIdx: number, item: Item | null): Slot[] | null {
+    if (!item) return null;
+    const itemId = item.id;
+    let next = slots.map(cloneSlot);
+
+    const indices = slots
+      .map((s, i) => (s?.item?.id === itemId ? i : -1))
+      .filter((i) => i >= 0);
+
+    for (const idx of indices) {
+      const cur = next[idx];
+      if (!cur?.item || cur.item.id !== itemId) {
+        continue;
+      }
+
+      const after = shiftClickSlot(next, idx, slots[clickedIdx]?.type ?? null);
+      if (!after) continue;
+      next = after.map(cloneSlot);
+    }
+
+    return next;
+  }
+
+  function shiftClickSlot(slotsArr: Slot[], idx: number, overrideType: SlotType | null = null): Slot[] | null {
+    const slot = slotsArr[idx];
+    if (!slot?.item) return null;
+
     const item = slot.item;
-    const next = slots.map(cloneSlot);
-    let totalToDistribute = item.count;
+
+    if (overrideType) {
+      const type = slot.type;
+      const avoidType = SHIFT_ROUTES[overrideType][0];
+      if (type == avoidType)
+        return null;
+    }
+
+    const next = slotsArr.map(cloneSlot);
+
+    const totalToDistribute = item.count;
     next[idx] = { ...slot, item: null };
 
-    const order = getShiftClickOrder(slots, idx);
-    const { after: after } = tryPlaceAllTwoPass(next, order, item, totalToDistribute);
-    setSlots(after.map(cloneSlot));
+    const order = getShiftClickOrder(next, idx, false, overrideType);
+    const { after, remaining } = tryPlaceAllTwoPass(next, order, order, true, item, totalToDistribute);
+
+    if (remaining > 0) {
+      after[idx] = { ...slot, item: { ...(slot.item as Item), count: remaining } };
+    }
+
+    return after;
   }
 
   function runHotkey(targetIndex: number, idx: number | null) {
@@ -324,6 +413,61 @@ export function useInventoryInput(options: {
     const hot = targetIndex;
     const sSel = slots[sel];
     const sHot = slots[hot];
+
+    if (sSel.type == SlotType.OFFHAND)
+      return;
+
+    // special output handling
+    if (sSel.type == SlotType.OUTPUT) {
+      if (sSel.item && !sHot.item) {
+        setSlots((prev) => {
+          const next = prev.slice();
+          next[hot] = { ...next[hot], item: sSel.item };
+          next[sel] = { ...next[sel], item: null };
+          return next;
+        });
+
+        const curRecipeResult = getCraftingResult(slots.slice(inputStart, inputEnd));
+        const secondary = curRecipeResult?.secondary;
+
+        setSlots((prev) => {
+          let next = prev.slice();
+          for (let i = inputStart; i < inputEnd; i++) {
+            const s = next[i];
+            if (!s.item) continue;
+            const count = s.item.count - 1;
+            next[i] = { ...s, item: count > 0 ? { ...s.item, count } : null };
+          }
+
+          if (secondary) {
+            for (let rel = 0; rel < secondary.length; rel++) {
+              const sec = secondary[rel];
+              if (!sec) continue;
+              const targetIndex = inputStart + rel;
+              const targetSlot = next[targetIndex];
+              if (!targetSlot?.item) {
+                next[targetIndex] = { ...targetSlot, item: { ...sec } };
+              } else {
+                const order = getShiftClickOrder(next, idx, false);
+                const { success: s2, after: afterSec } = tryPlaceAllTwoPass(next, order, order, false, sec, sec.count);
+                if (s2 && afterSec) {
+                  next = afterSec.map(cloneSlot)
+                } else {
+                  break;
+                }
+              }
+            }
+          }
+
+
+          const { output: newOutput } = getCraftingResult(next.slice(inputStart, inputEnd));
+          next[sel] = { ...next[sel], item: newOutput };
+          return next;
+        });
+        playSwapSound();
+      }
+      return;
+    }
 
     if (sHot.item && !sSel.item) {
       setSlots((prev) => {
@@ -350,8 +494,8 @@ export function useInventoryInput(options: {
     if (sHot.item && sSel.item) {
       setSlots((prev) => {
         const next = prev.slice();
-        next[hot] = sSel;
-        next[sel] = sHot;
+        next[hot] = { ...next[hot], item: sSel.item };
+        next[sel] = { ...next[sel], item: sHot.item };
         return next;
       });
       playSwapSound();
@@ -370,7 +514,6 @@ export function useInventoryInput(options: {
 
   function onMouseDown(e: React.MouseEvent) {
     const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
-    setDoubleClick(false);
 
     if (idx !== null && slots[idx]?.type == SlotType.OFFHAND) return;
 
@@ -383,33 +526,43 @@ export function useInventoryInput(options: {
       return;
     }
 
-    if (e.button === 0) {
-      const now = performance.now();
-      if (
-        heldItem &&
-        lastLeftDownRef.current !== null &&
-        now - lastLeftDownRef.current <= DOUBLE_CLICK_MS &&
-        doubleClickSlot === idx
-      ) {
-        setDoubleClick(true);
-        setDoubleClickSlot(null);
-        return;
-      } else {
-        setShiftClicked(false);
-        setShiftClickItem(null);
+    let isDoubleClicking = false;
+    const now = performance.now();
+
+    if (lastLeftDownRef.current && now - lastLeftDownRef.current <= DOUBLE_CLICK_MS)
+      isDoubleClicking = true;
+
+    setDoubleClick(false);
+    if (e.button === 0 && idx !== null) {
+      if (isDoubleClicking) {
+        if (idx != doubleClickSlot) {
+          setDoubleClickSlot(idx);
+        }
+        else {
+          if (slots[idx].item || doubleClickItem != null) {
+            setDoubleClick(true);
+          }
+        }
+      }
+      else {
+        setDoubleClickItem(slots[idx].item);
         setDoubleClickSlot(idx);
         lastLeftDownRef.current = now;
       }
     }
 
-    if (idx !== null && e.shiftKey && !doubleClick) {
-      setShiftClicked(true);
-      setShiftClickItem(slots[idx].item);
-      shiftClickSlot(idx);
-      setDragLeft(false);
-      setDragRight(false);
+    if (idx && slots[idx].item && e.shiftKey) {
+      const after = shiftClickSlot(slots, idx);
+      if (after) {
+        playSwapSound();
+        setSlots(after.map(cloneSlot));
+      }
       return;
     }
+
+    if (e.shiftKey)
+      return;
+
 
     if (e.button === 0 && !dragRight) {
       setLeftDown(true);
@@ -475,27 +628,32 @@ export function useInventoryInput(options: {
     }
   }
 
+  // TODO: when double clcking to stack, not taking it from the right order
+  // TODO: drop item when click outside area (clicking in-between slots doesnt drop)
+
+
+  function getAllItems(slots: Slot[], heldItem: Item | null): Item[] {
+    const collected: Item[] = [];
+
+    for (const slot of slots) {
+      if (slot.item) {
+        collected.push({ ...slot.item });
+      }
+    }
+
+    if (heldItem) {
+      collected.push({ ...heldItem });
+    }
+
+    return collected;
+  }
+
   function onMouseUp(e: React.MouseEvent) {
     if (e.button === 0) setLeftDown(false);
     else if (e.button === 2) setRightDown(false);
 
     const sel = selectedSlots.slice();
-
-    // double click behavior
-    if (e.button === 0 && doubleClick) {
-      if (sel.length === 1 && (shiftClicked || e.shiftKey)) {
-        shiftClickSlots(sel[0], shiftClickItem);
-        setShiftClicked(false);
-        setShiftClickItem(null);
-      } else {
-        runDoubleClick();
-      }
-      resetDrag();
-      setDoubleClick(false);
-      return;
-    }
-
-    setDoubleClick(false);
+    const idx = getSlotIndex(slotRefs.current, e.clientX, e.clientY);
 
     // cancel confusing cross-button drags
     if (e.button === 2 && dragLeft && heldItem) {
@@ -506,6 +664,23 @@ export function useInventoryInput(options: {
       setDragRight(false);
       return;
     }
+
+    if (doubleClick && idx) {
+      if (e.shiftKey && heldItem) {
+        const after = shiftClickSlots(idx, doubleClickItem)
+        if (after)
+          setSlots(after.map(cloneSlot));
+      }
+      else {
+        runDoubleClick()
+      }
+
+      lastLeftDownRef.current = -999;
+      setDragLeft(false);
+      setDragRight(false);
+      return;
+    }
+    setDoubleClick(false);
 
     // single-slot swap when dragging and the slot contains a different item
     if ((dragLeft || dragRight) && sel.length === 1 && heldItem) {
@@ -660,7 +835,6 @@ export function useInventoryInput(options: {
     dragStartIndex,
     hoverIndex,
     selectedSlots,
-    doubleClick,
     previewSlots,
     previewHeldItem,
   };

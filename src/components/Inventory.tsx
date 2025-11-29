@@ -2,21 +2,25 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useInventoryInput } from "../hooks/UseInventoryInputs";
 import type { Item } from "../types/Item";
 import { SlotType, type Slot } from "../types/Slot";
+import "../App.css"
 import {
     distributeEvenlyToSlots,
     distributeOneByOne,
 } from "../utils/InventoryUtils";
 import { slotPositions } from "../data/SlotPositions";
+import ItemGrid from "./ItemGrid";
 
 export default function Inventory({
     slots,
     setSlots,
+    infiniteItems,
     inventorySlots,
     hotbarSlots,
     craftingSlots,
 }: {
     slots: Array<Slot>;
     setSlots: React.Dispatch<React.SetStateAction<Array<Slot>>>;
+    infiniteItems: Item[],
     inventorySlots: number;
     hotbarSlots: number;
     craftingSlots: number;
@@ -55,13 +59,27 @@ export default function Inventory({
 
     function handleMouseUp(e: React.MouseEvent<HTMLDivElement>) {
         onMouseUp(e);
-        if (!state.heldItem) setMousePos({ x: -9999, y: -9999 });
+        setMousePos({ x: e.clientX, y: e.clientY });
+    }
+
+    function handleMouseDown(e: React.MouseEvent<HTMLDivElement>) {
+        onMouseDown(e);
+        setMousePos({ x: e.clientX, y: e.clientY });
     }
 
     function renderItem(item: Item | null, preview = false) {
-        if (!item) return null;
+        if (!item) {
+            return (
+                <>
+                    <div className="slot-bg" aria-hidden="true" />
+                </>
+            );
+        }
+
         return (
             <>
+                <div className="slot-bg" aria-hidden="true" />
+
                 {item.count > 0 && (
                     <img src={item.icon} alt={item.name} className="item-icon" draggable={false} />
                 )}
@@ -106,13 +124,13 @@ export default function Inventory({
             const perSlot = Math.floor(held.count / validIndices.length);
             if (perSlot > 0) {
                 const cp = copy.map((r) => ({ ...r, item: r.item ? { ...r.item } : null }));
-                const res = distributeEvenlyToSlots(cp, validIndices, held); // expects { next, placed }
+                const res = distributeEvenlyToSlots(cp, validIndices, held);
                 const after = res.next;
                 for (const i of validIndices) previewMap.set(i, after[i].item ? { ...after[i].item } : null);
                 previewHeld = held.count - (res.placed ?? 0);
             } else {
                 const cp = copy.map((r) => ({ ...r, item: r.item ? { ...r.item } : null }));
-                const res = distributeOneByOne(cp, validIndices, held); // expects { next, remaining }
+                const res = distributeOneByOne(cp, validIndices, held);
                 const after = res.next;
                 for (const i of validIndices) previewMap.set(i, after[i].item ? { ...after[i].item } : null);
                 previewHeld = res.remaining ?? held.count;
@@ -139,27 +157,50 @@ export default function Inventory({
         const s = slots[i];
         const held = state.heldItem;
 
-        const selected = state.selectedSlots.includes(i); // <-- only when inside
-        const hover =  mouseInInventory && state.hoverIndex === i;
+        const selected = state.selectedSlots.includes(i);
+        const hover = mouseInInventory && state.hoverIndex === i;
 
+        let overflow = false;
         let dragged = false;
-        if (selected && held) {
+        if (selected && held && state.selectedSlots.length > 1) {
             const empty = !s.item;
             const sameType = s.item && s.item.id === held.id;
             const isOutput = s.type == SlotType.OUTPUT;
             if ((empty || sameType) && !isOutput) dragged = true;
+
+
+            if (dragged) {
+                if (state.draggingLeft) {
+                    const spreadPer = Math.floor((held.count ?? 0) / state.selectedSlots.length)
+                    if (s.item && s.item.count + spreadPer > s.item.stack_size) {
+                        overflow = true;
+                    }
+                }
+                else if (state.draggingRight) {
+                    const index = state.selectedSlots.indexOf(i);
+                    if (s.item && s.item.count >= s.item.stack_size && index <= held.count) {
+                        overflow = true;
+                    }
+                }
+            }
         }
 
         const offhand = s.type == SlotType.OFFHAND;
-
-        return `slot ${dragged ? "dragged" : ""} ${hover ? "hover" : ""} ${offhand ? "offhand" : "" }`.trim();
+        return `slot ${dragged ? "dragged" : ""} ${hover ? "hover" : ""} ${overflow ? "overflow" : ""} ${offhand ? "offhand" : ""}`.trim();
     }
 
     return (
         <>
             <div className="inventory-wrapper">
-                <div className="inventory-root"
-                onContextMenu={(e) => e.preventDefault()}>
+                <div
+                    className="inventory-root"
+                    onMouseDown={(e) => handleMouseDown(e)}
+                    onMouseMove={(e) => handleMouseMove(e)}
+                    onMouseUp={(e) => handleMouseUp(e)}
+                    onContextMenu={(e) => onContextMenu(e)}
+                    onMouseLeave={() => { setMouseInInventory(false); }}
+                    onMouseEnter={() => { setMouseInInventory(true); }}
+                >
                     <img src="/layouts/crafting_table.png" className="inventory-img" />
                     {slots.map((slot, i) => {
                         const pos = slotPositions[i];
@@ -171,18 +212,9 @@ export default function Inventory({
                                 ref={(el) => { slotRefs.current[i] = el; }}
                                 data-index={i}
                                 className={slotClassName(i)}
-                                onMouseDown={onMouseDown}
-                                onMouseMove={handleMouseMove}
-                                onMouseUp={handleMouseUp}
-                                onContextMenu={onContextMenu}
-                                onMouseEnter={() => setMouseInInventory(true)}
-                                onMouseLeave={() => setMouseInInventory(false)}
                                 style={{
-                                    position: "absolute",
                                     left: pos.x,
                                     top: pos.y,
-                                    width: 64,
-                                    height: 64,
                                 }}
                             >
                                 {previewActive && previewSlotsMap.has(i)
@@ -191,7 +223,6 @@ export default function Inventory({
                             </div>
                         );
                     })}
-
 
                     {state.heldItem && (
                         <div
@@ -209,6 +240,18 @@ export default function Inventory({
                     )}
                 </div>
             </div>
+
+            {infiniteItems.length > 0 &&
+                <div className="item-grid-container" style={{
+                    marginTop: 10
+                }}>
+                    <ItemGrid
+                        itemIds={infiniteItems.map(a => a.id)}
+                        heldItem={state.heldItem}
+                        setHeld={handlers.setHeld}
+                    />
+                </div>
+            }
         </>
     );
 }

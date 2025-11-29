@@ -18,9 +18,8 @@
 
 .inventory-wrapper {
   user-select: none;
-  width: 80vw;
-  max-width: 625.8px;
-  aspect-ratio: 625.8 / 590.4; /* maintain aspect ratio */
+  width: 625.8px;
+  aspect-ratio: 1.06 / 1.0;
   border-radius: 50px;
   background-color: rgb(139, 139, 139);
   position: relative;
@@ -39,74 +38,83 @@
   height: 100%;
   object-fit: contain;
   image-rendering: pixelated;
-  z-index: 10;
   pointer-events: none;
 }
 
 .slot {
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   position: absolute;
   display: flex;
   user-select: none;
   align-items: center;
   justify-content: center;
-  z-index: 5;
   box-sizing: border-box;
 }
 
-.slot.hover {
+.slot-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 88.8888%;
+  height: 88.8888%;
+  pointer-events: none;
+}
+
+.slot.hover .slot-bg {
   background-color: rgb(192, 192, 192);
 }
 
-.slot.dragged {
+.slot.dragged .slot-bg {
   background-color: rgb(197, 197, 197);
 }
 
-.slot.dragged.hover {
+.slot.dragged.hover .slot-bg {
   background-color: rgb(224, 224, 224);
 }
 
 .item-icon {
-  width: 88.88%;
-  height: 88.88%;
+  width: 88.8888%;
+  height: 88.8888%;
   object-fit: contain;
   image-rendering: pixelated;
   display: block;
   pointer-events: none;
+  z-index: 1;
 }
 
 .item-count {
   position: absolute;
-  bottom: 1.7px;
-  right: 1.7px;
+  bottom: 1.5px;
+  right: 1.5px;
   color: rgb(252, 252, 252);
   font-weight: normal;
   font-size: 35.65px;
   pointer-events: none;
-  line-height: 1;
   z-index: 3;
+  line-height: 1;
 }
 
 .item-count-shadow {
   position: absolute;
-  bottom: -1.9px;
-  right: -1.9px;
+  bottom: -2.1px;
+  right: -2.1px;
   color: rgb(62, 62, 62);
   font-family: "Minecraft", monospace;
   font-weight: normal;
   font-size: 35.65px;
   pointer-events: none;
-  line-height: 1;
   z-index: 2;
+  line-height: 1;
 }
 
-.item-count.overflow {
-  color: rgb(252, 252, 84)
+.slot.overflow .item-count {
+  color: rgb(252, 252, 84);
 }
 
-.item-count-shadow.overflow {
-  color: rgb(62, 62, 21)
+.slot.overflow .item-count-shadow {
+  color: rgb(62, 62, 21);
 }
 
 .held-item {
@@ -130,13 +138,23 @@
 .held-item .item-icon {
   pointer-events: none;
 }
-.offhand {
+
+.offhand .slot-bg {
   position: absolute;
-  background-color: rgb(120, 120, 120);
   background-image: url("/slots/slot_offhand.png");
+  background-color: rgb(120, 120, 120);
+  position: absolute;
   background-repeat: no-repeat;
-  background-size: 88.88% 88.88%;
+  background-size:100% 100%;
   background-position: center;
   image-rendering: pixelated;
   pointer-events: none;
+}
+
+.item-grid-container {
+  height: 100%;
+  display: flex;
+}
+.item-grid-container > div {
+  height: 100%;
 }

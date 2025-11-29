@@ -19,32 +19,56 @@ export function collectSameItems(slots: Slot[], itemId: string) {
   return { indices, total };
 }
 
-const SHIFT_ROUTES: Record<SlotType, SlotType[]> = {
-  [SlotType.INPUT]:  [SlotType.INVENTORY, SlotType.HOTBAR],
+export const SHIFT_ROUTES: Record<SlotType, SlotType[]> = {
+  [SlotType.INPUT]: [SlotType.INVENTORY, SlotType.HOTBAR],
   [SlotType.OUTPUT]: [SlotType.HOTBAR, SlotType.INVENTORY],
   [SlotType.HOTBAR]: [SlotType.INPUT, SlotType.INVENTORY],
   [SlotType.INVENTORY]: [SlotType.INPUT, SlotType.HOTBAR],
   [SlotType.OFFHAND]: []
 };
 
-export function getShiftClickOrder(slots: Slot[], clickedIdx: number): number[] {
+export function getAllItemsAsArray(slots: Slot[]): Item[] {
+  const items: Item[] = [];
+
+  for (const slot of slots) {
+    if (slot.type !== "OUTPUT" && slot.item) {
+      items.push(slot.item);
+    }
+  }
+
+  return items;
+}
+
+export function getShiftClickOrder(slots: Slot[], clickedIdx: number, reverseOrder: boolean = false, overrideType: SlotType | null = null): number[] {
   const clicked = slots[clickedIdx];
   if (!clicked) return [];
 
-  const routes = SHIFT_ROUTES[clicked.type];
+  let routes = SHIFT_ROUTES[overrideType ? overrideType : clicked.type];
+
+  // Special behaviour
+  if (overrideType && overrideType == SlotType.INVENTORY) {
+    routes = [SlotType.INPUT, SlotType.INVENTORY];
+  }
+
   if (!routes || routes.length === 0) return [];
 
   const order: number[] = [];
 
   for (const targetType of routes) {
+    const subOrder: number[] = [];
     for (let i = 0; i < slots.length; i++) {
       if (i === clickedIdx) continue;
 
       const s = slots[i];
       if (s.type === targetType) {
-        order.push(i);
+        subOrder.push(i);
       }
     }
+
+    if (reverseOrder)
+      subOrder.reverse();
+
+    order.push(...subOrder);
   }
 
   return order;
@@ -83,11 +107,42 @@ export function distributeIntoSlots(
   return { next, remaining, placed };
 }
 
-/**
- * Even-split distribution (used for left-drag when perSlot >= 1).
- * Will try to give each valid slot `perSlot` then clamp to capacity.
- * Returns { next, placed } where next is mutated copy and placed total amount.
- */
+export function distributeIntoSlotsOnlyIfSame(
+  next: Slot[],
+  order: number[],
+  item: Item,
+  total: number
+) {
+  let remaining = total;
+  let placed = 0;
+  const id = item.id;
+  const maxStack = item.stack_size;
+
+  for (const idx of order) {
+    if (remaining <= 0) break;
+    const s = next[idx];
+    // skip if slot contains a different item
+    if (s.item && s.item.id !== id) continue;
+    if (!s.item) continue;
+
+    const existing = s.item?.count ?? 0;
+    const capacity = Math.max(0, maxStack - existing);
+    if (capacity <= 0) continue;
+
+    const toPlace = Math.min(capacity, remaining);
+
+    if (s.item) next[idx] = { ...s, item: { ...s.item, count: existing + toPlace } };
+    else next[idx] = { ...s, item: { ...item, count: toPlace } };
+
+    remaining -= toPlace;
+    placed += toPlace;
+  }
+
+  return { next, remaining, placed };
+}
+
+
+
 export function distributeEvenlyToSlots(next: Slot[], valid: number[], heldItem: Item) {
   const maxStack = heldItem.stack_size;
   const perSlot = Math.floor(heldItem.count / valid.length);
@@ -111,11 +166,6 @@ export function distributeEvenlyToSlots(next: Slot[], valid: number[], heldItem:
   return { next, placed };
 }
 
-/**
- * One-per-slot distribution (used when perSlot < 1)
- * Fills valid slots one by one up to remaining count.
- * Returns { next, placed, remaining }.
- */
 export function distributeOneByOne(next: Slot[], valid: number[], heldItem: Item) {
   const maxStack = heldItem.stack_size;
   let remaining = heldItem.count;
@@ -145,9 +195,6 @@ export function distributeOneByOne(next: Slot[], valid: number[], heldItem: Item
   return { next, placed, remaining };
 }
 
-/**
- * Returns slot index under mouse using slot refs.
- */
 export function getSlotIndex(slotRefs: Array<HTMLDivElement | null>, x: number, y: number) {
   for (let i = 0; i < slotRefs.length; i++) {
     const el = slotRefs[i];
@@ -162,9 +209,11 @@ export function getSlotIndex(slotRefs: Array<HTMLDivElement | null>, x: number, 
 
 export function tryPlaceAllTwoPass(
   slotsArr: Slot[],
-  order: number[],
+  firstOrder: number[],
+  secondOrder: number[],
+  reverse: boolean = false,
   item: Item,
-  count: number
+  count: number,
 ): { success: boolean; after: Slot[]; remaining: number; placed: number } {
 
   const cp: Slot[] = slotsArr.map((s) => ({
@@ -174,32 +223,17 @@ export function tryPlaceAllTwoPass(
 
   let remaining = count;
   let placed = 0;
-  const maxStack = item.stack_size;
 
-  for (const i of order) {
-    if (remaining <= 0) break;
-    const s = cp[i];
-    if (!s.item) continue;
-    if (s.item.id !== item.id) continue;
-
-    const capacity = Math.max(0, maxStack - s.item.count);
-    if (capacity <= 0) continue;
-
-    const toPlace = Math.min(capacity, remaining);
-    s.item.count += toPlace;
-    remaining -= toPlace;
-    placed += toPlace;
-  }
-
-  for (const i of order) {
-    if (remaining <= 0) break;
-    const s = cp[i];
-    if (s.item) continue;
-
-    const toPlace = Math.min(maxStack, remaining);
-    cp[i] = { type: s.type, item: { ...item, count: toPlace } };
-    remaining -= toPlace;
-    placed += toPlace;
+  if (reverse) {
+    const { remaining: remain1, placed: placed1 } = distributeIntoSlots(cp, firstOrder, item, remaining);
+    const { remaining: remain2, placed: placed2 } = distributeIntoSlotsOnlyIfSame(cp, secondOrder, item, remain1);
+    remaining = remain2;
+    placed = placed1 + placed2;
+  } else {
+    const { remaining: remain1, placed: placed1 } = distributeIntoSlotsOnlyIfSame(cp, firstOrder, item, remaining);
+    const { remaining: remain2, placed: placed2 } = distributeIntoSlots(cp, secondOrder, item, remain1);
+    remaining = remain2;
+    placed = placed1 + placed2;
   }
 
   return { success: remaining === 0, after: cp, remaining, placed };
