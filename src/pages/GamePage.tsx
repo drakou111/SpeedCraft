@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { decodeGameFromUrlPayload } from "../utils/UrlUtils";
 import Inventory from "../components/Inventory";
 import { SlotType, type Slot } from "../types/Slot";
@@ -56,6 +56,8 @@ function areSlotsEqual(a: Slot[], b: Slot[]) {
 }
 
 export default function GamePage() {
+  const navigate = useNavigate();
+
   const columns = 9;
   const rows = 3;
   const inventorySlots = rows * columns;
@@ -157,15 +159,15 @@ export default function GamePage() {
   return (
     <div className="app" style={{ display: "flex", gap: 0, margin: 24 }}>
       <div style={{
-          textAlign: "center",
-          marginBottom: 24,
-          color: "#f0f0f0",
-          lineHeight: 1.4
-        }}>
-          {game.title && <h1 style={{ fontSize: 32, marginBottom: 8 }}>{game.title}</h1>}
-          {game.description && <p style={{ fontSize: 16, marginBottom: 12, color: "#ccc" }}>{game.description}</p>}
-          {game.author && <h2 style={{ fontSize: 20, fontWeight: 400, color: "#aaa" }}>By {game.author}</h2>}
-        </div>
+        textAlign: "center",
+        marginBottom: 24,
+        color: "#f0f0f0",
+        lineHeight: 1.4
+      }}>
+        {game.title && <h1 style={{ fontSize: 32, marginBottom: 8 }}>{game.title}</h1>}
+        {game.description && <p style={{ fontSize: 16, marginBottom: 12, color: "#ccc" }}>{game.description}</p>}
+        {game.author && <h2 style={{ fontSize: 20, fontWeight: 400, color: "#aaa" }}>By {game.author}</h2>}
+      </div>
 
       <Inventory
         slots={slots}
@@ -295,9 +297,9 @@ export default function GamePage() {
         borderRadius: 16,
         boxShadow: "0 4px 12px rgba(0,0,0,0.3)"
       }}>
-        <button onClick={handleRestart} style={{ padding: "8px 16px", fontSize: 16 }}>Restart</button>
-        <button onClick={() => window.location.href = "/"} style={{ padding: "8px 16px", fontSize: 16 }}>Go Home</button>
-        <button onClick={() => window.location.href = `/edit?data=${data}`} style={{ padding: "8px 16px", fontSize: 16 }}>Edit</button>
+        <button onClick={handleRestart}>Restart</button>
+        <button onClick={() => navigate("/")}>Go Home</button>
+        <button onClick={() => navigate(`/edit?data=${data}`)}>Edit</button>
       </div>
     </div>
   );
