@@ -632,22 +632,6 @@ export function useInventoryInput(options: {
   // TODO: drop item when click outside area (clicking in-between slots doesnt drop)
 
 
-  function getAllItems(slots: Slot[], heldItem: Item | null): Item[] {
-    const collected: Item[] = [];
-
-    for (const slot of slots) {
-      if (slot.item) {
-        collected.push({ ...slot.item });
-      }
-    }
-
-    if (heldItem) {
-      collected.push({ ...heldItem });
-    }
-
-    return collected;
-  }
-
   function onMouseUp(e: React.MouseEvent) {
     if (e.button === 0) setLeftDown(false);
     else if (e.button === 2) setRightDown(false);
