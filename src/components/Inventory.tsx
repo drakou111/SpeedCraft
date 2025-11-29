@@ -201,7 +201,7 @@ export default function Inventory({
                     onMouseLeave={() => { setMouseInInventory(false); }}
                     onMouseEnter={() => { setMouseInInventory(true); }}
                 >
-                    <img src="/layouts/crafting_table.png" className="inventory-img" />
+                    <img src="./layouts/crafting_table.png" className="inventory-img" />
                     {slots.map((slot, i) => {
                         const pos = slotPositions[i];
                         if (!pos) return null;
