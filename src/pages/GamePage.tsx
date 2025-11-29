@@ -149,7 +149,7 @@ export default function GamePage() {
 
   const handleShare = () => {
     const elapsed = finishedMs ?? (startTimeRef.current ? Date.now() - startTimeRef.current : 0);
-    const text = `I just completed "${game!.title ?? "Untitled"}" by ${game!.author ?? "Unknown"} in ${formatTime(elapsed)}, check it out here: ${window.location.href}`;
+    const text = `I just completed "${game!.title ?? "Untitled"}" by ${game!.author ?? "Unknown"} in ${formatTime(elapsed)}, check it out [here](${window.location.href}).`;
     navigator.clipboard.writeText(text);
     alert("Copied to clipboard!");
   };
