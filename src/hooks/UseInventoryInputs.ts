@@ -404,6 +404,8 @@ export function useInventoryInput(options: {
     return after;
   }
 
+
+
   function runHotkey(targetIndex: number, idx: number | null) {
     if (heldItem) return;
     if (targetIndex >= slots.length) return;
@@ -630,6 +632,7 @@ export function useInventoryInput(options: {
 
   // TODO: when double clcking to stack, not taking it from the right order
   // TODO: drop item when click outside area (clicking in-between slots doesnt drop)
+  // TODO: handle drop of output
 
 
   function onMouseUp(e: React.MouseEvent) {
