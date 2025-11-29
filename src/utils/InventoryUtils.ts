@@ -35,7 +35,7 @@ export function getAllItemsAsArray(slots: Slot[]): Item[] {
   return items;
 }
 
-export function getShiftClickOrder(slots: Slot[], clickedIdx: number, reverseOrder: boolean = false, overrideType: SlotType | null = null): number[] {
+export function getShiftClickOrder(slots: Slot[], clickedIdx: number, reverseOrder: boolean = false, overrideType: SlotType | null = null, includeSelf: boolean = false): number[] {
   const clicked = slots[clickedIdx];
   if (!clicked) return [];
 
@@ -56,6 +56,23 @@ export function getShiftClickOrder(slots: Slot[], clickedIdx: number, reverseOrd
 
       const s = slots[i];
       if (s.type === targetType) {
+        subOrder.push(i);
+      }
+    }
+
+    if (reverseOrder)
+      subOrder.reverse();
+
+    order.push(...subOrder);
+  }
+
+  if (includeSelf) {
+    const subOrder: number[] = [];
+    for (let i = 0; i < slots.length; i++) {
+      if (i === clickedIdx) continue;
+
+      const s = slots[i];
+      if (s.type === clicked.type) {
         subOrder.push(i);
       }
     }

@@ -103,13 +103,17 @@ export function useInventoryInput(options: {
     if (heldItem.count >= maxStack) return;
 
     let needed = maxStack - heldItem.count;
+    const slotIndex = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
     if (needed <= 0) return;
+    if (!slotIndex) return;
+    
+    const order = getShiftClickOrder(slots, slotIndex, false, null, true);
 
     const next = slots.map(cloneSlot);
     let takenTotal = 0;
 
-    for (let i = 0; i < next.length; i++) {
-      const s = next[i];
+    for (let index of order) {
+      const s = next[index];
       if (s.type === SlotType.OUTPUT) continue;
       if (!s.item) continue;
       if (s.item.id !== targetId) continue;
@@ -119,8 +123,8 @@ export function useInventoryInput(options: {
       if (take <= 0) continue;
 
       const remainInSlot = s.item.count - take;
-      if (remainInSlot > 0) next[i] = { ...next[i], item: { ...s.item, count: remainInSlot } };
-      else next[i] = { ...next[i], item: null };
+      if (remainInSlot > 0) next[index] = { ...next[index], item: { ...s.item, count: remainInSlot } };
+      else next[index] = { ...next[index], item: null };
 
       takenTotal += take;
       needed -= take;
@@ -136,7 +140,7 @@ export function useInventoryInput(options: {
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      const { code, ctrlKey } = e;
+      const { code } = e;
 
       const hotbarIdx = hotkeyBindings[code];
       if (hotbarIdx != null) {
@@ -148,22 +152,7 @@ export function useInventoryInput(options: {
       }
 
       if (code === dropKey && !heldItem) {
-        const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
-        if (idx == null) return;
-        e.preventDefault();
-
-        const slot = slots[idx];
-        if (!slot?.item) return;
-
-        const newSlots = [...slots];
-        const item = slot.item;
-
-        if (item) {
-          newSlots[idx] = {...slot,item: ctrlKey? null: item.count === 1? null: { ...item, count: item.count - 1 }};
-          playPutDownSound();
-        }
-
-        setSlots(newSlots);
+        runDrop(e);
       }
     }
 
@@ -288,7 +277,7 @@ export function useInventoryInput(options: {
     setSlots(next);
   }
 
-  async function handleShiftClickOutput(outputIdx: number) {
+  async function handleShiftClickOutput(outputIdx: number, deleteResult: boolean = false) {
     const outputSlot = slots[outputIdx];
     if (!outputSlot?.item) return;
 
@@ -296,17 +285,20 @@ export function useInventoryInput(options: {
     let next = slots.slice();
 
     while (true) {
+      console.log("A")
       const curOutput = next[outputIdx];
       if (!curOutput?.item) break;
       const item = curOutput.item;
 
-      const firstOrder = getShiftClickOrder(next, outputIdx, false);
-      const secondOrder = getShiftClickOrder(next, outputIdx, true);
-      const { success, after, placed } = tryPlaceAllTwoPass(next, firstOrder, secondOrder, false, item, item.count);
+      if (!deleteResult) {
+        const firstOrder = getShiftClickOrder(next, outputIdx, false);
+        const secondOrder = getShiftClickOrder(next, outputIdx, true);
+        const { success, after, placed } = tryPlaceAllTwoPass(next, firstOrder, secondOrder, false, item, item.count);
 
-      if (!success) break;
-
-      next = after.map((s) => ({ ...s, item: s.item ? { ...s.item } : null }));
+        if (!success) break;
+        if (placed > 0) didMove = true;
+        next = after.map((s) => ({ ...s, item: s.item ? { ...s.item } : null }));
+      }
 
       const curRecipeResult = getCraftingResult(next.slice(inputStart, inputEnd));
       const secondary = curRecipeResult?.secondary;
@@ -342,8 +334,6 @@ export function useInventoryInput(options: {
       const newOutput = newResult?.output ?? null;
 
       next[outputIdx] = { ...next[outputIdx], item: newOutput };
-
-      if (placed > 0) didMove = true;
 
       if (!newOutput || newOutput.id !== item.id) break;
     }
@@ -404,7 +394,32 @@ export function useInventoryInput(options: {
     return after;
   }
 
+  function runDrop(e: KeyboardEvent) {
+    const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
+    if (idx == null) return;
+    e.preventDefault();
 
+    const slot = slots[idx];
+    if (!slot?.item) return;
+    if ((slot.type) == SlotType.OFFHAND) return;
+
+    const next = [...slots];
+    const item = slot.item;
+
+    if (item) {
+      console.log("yup")
+      if (slot.type == SlotType.OUTPUT) {
+        if (e.ctrlKey) {
+          handleShiftClickOutput(idx, true);
+        }
+      } else {
+        next[idx] = {...slot,item: e.ctrlKey? null: item.count === 1? null: { ...item, count: item.count - 1 }};
+        playPutDownSound();
+      }
+    }
+
+    setSlots(next);
+  }
 
   function runHotkey(targetIndex: number, idx: number | null) {
     if (heldItem) return;
@@ -460,7 +475,6 @@ export function useInventoryInput(options: {
               }
             }
           }
-
 
           const { output: newOutput } = getCraftingResult(next.slice(inputStart, inputEnd));
           next[sel] = { ...next[sel], item: newOutput };
@@ -630,10 +644,10 @@ export function useInventoryInput(options: {
     }
   }
 
-  // TODO: when double clcking to stack, not taking it from the right order
   // TODO: drop item when click outside area (clicking in-between slots doesnt drop)
   // TODO: handle drop of output
-
+  // TODO: fix display issue when edit mode
+  // TODO: when drag over slot should not work
 
   function onMouseUp(e: React.MouseEvent) {
     if (e.button === 0) setLeftDown(false);
