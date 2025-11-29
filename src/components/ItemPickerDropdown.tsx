@@ -19,7 +19,6 @@ export default function ItemPickerDropdown({
         ? all.filter((it) => it.id.toLowerCase().includes(query.toLowerCase()))
         : all;
 
-    // close when clicking outside
     useEffect(() => {
         function handle(e: MouseEvent) {
             if (!ref.current) return;

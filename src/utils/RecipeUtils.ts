@@ -1,4 +1,3 @@
-// src/utils/RecipeUtils.ts
 import type { Item } from "../types/Item";
 import { type Recipe } from "../types/Recipe";
 import { getItemById } from "./ItemUtils";
@@ -10,12 +9,10 @@ function ensureMinecraftPrefix(id: string) {
 }
 
 function normalizePattern(pattern: any): any {
-    // Shapeless array: ["id", ["id1","id2"], ...]
     if (Array.isArray(pattern) && !Array.isArray(pattern[0])) {
         return pattern as (string | string[] | null)[];
     }
 
-    // Shaped 2D pattern (array of rows)
     if (Array.isArray(pattern)) {
         return pattern.map((row: any) =>
             Array.isArray(row) ? row : [row]
@@ -31,18 +28,15 @@ function normalizeRawToRecipe(raw: any): Recipe | null {
     const typeRaw = (raw.type ?? "").toString().toUpperCase();
     const type: Recipe["type"] = typeRaw === "SHAPED" ? "SHAPED" : "SHAPELESS";
 
-    // inputs
     const inputRaw =
         raw.input ?? raw.pattern ?? raw.ingredients ?? raw;
     const input = normalizePattern(inputRaw);
 
-    // secondary outputs
     const secondaryRaw = raw.secondaryOutput ?? null;
     const secondaryOutput = secondaryRaw
         ? normalizePattern(secondaryRaw)
         : undefined;
 
-    // output item (primary)
     const outIdRaw = raw.output?.id ?? raw.result?.id ?? "";
     if (!outIdRaw) return null;
 
@@ -159,7 +153,6 @@ export function recipeSatisfied(recipe: Recipe, items: Item[]) {
     return true;
   }
 
-  // Check shaped recipe
   const grid = recipe.input as (string | string[] | null)[][];
   for (const row of grid) {
     for (const slot of row) {

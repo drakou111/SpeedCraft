@@ -1,4 +1,3 @@
-// src/utils/CraftingRecipes.ts
 import type { Item } from "../types/Item";
 
 export type RecipeType = "SHAPED" | "SHAPELESS";

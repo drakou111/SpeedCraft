@@ -1,4 +1,3 @@
-// src/utils/CraftingUtils.ts
 import type { Slot } from "../types/Slot";
 import { getAllRecipes } from "../utils/RecipeUtils";
 import { getItemById } from "../utils/ItemUtils";

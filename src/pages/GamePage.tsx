@@ -96,7 +96,7 @@ export default function GamePage() {
   const [timerStarted, setTimerStarted] = useState(false);
 
   const handleSlotsChange: React.Dispatch<React.SetStateAction<Slot[]>> = (value) => {
-    const newSlots = typeof value === "function" ? (value as (prev: Slot[]) => Slot[])(_setSlots instanceof Function ? // note: we don't have direct prev, use current state
+    const newSlots = typeof value === "function" ? (value as (prev: Slot[]) => Slot[])(_setSlots instanceof Function ?
       slots : slots) : value;
 
     if (!timerStarted && !completed && !areSlotsEqual(slots, newSlots)) {

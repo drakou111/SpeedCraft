@@ -10,7 +10,6 @@ export default function SandboxPage() {
   const hotbarSlots = columns;
   const craftingSlots = 9;
 
-  // Initialize slots
   const initialSlots: Slot[] = [
     ...Array.from({ length: inventorySlots }, () => ({ item: null, type: SlotType.INVENTORY })),
     ...Array.from({ length: hotbarSlots }, () => ({ item: null, type: SlotType.HOTBAR })),

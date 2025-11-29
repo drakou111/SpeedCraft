@@ -1,11 +1,7 @@
-// src/utils/inventoryUtils.ts
 import type { Item } from "../types/Item";
 import type { Slot } from "../types/Slot";
 import { SlotType } from "../types/Slot";
 
-/**
- * Collect indices and total count of all slots containing itemId.
- */
 export function collectSameItems(slots: Slot[], itemId: string) {
   const indices: number[] = [];
   let total = 0;
@@ -45,7 +41,6 @@ export function getShiftClickOrder(slots: Slot[], clickedIdx: number, reverseOrd
 
   let routes = SHIFT_ROUTES[overrideType ? overrideType : clicked.type];
 
-  // Special behaviour
   if (overrideType && overrideType == SlotType.INVENTORY) {
     routes = [SlotType.INPUT, SlotType.INVENTORY];
   }
@@ -88,7 +83,6 @@ export function distributeIntoSlots(
   for (const idx of order) {
     if (remaining <= 0) break;
     const s = next[idx];
-    // skip if slot contains a different item
     if (s.item && s.item.id !== id) continue;
 
     const existing = s.item?.count ?? 0;
@@ -121,7 +115,6 @@ export function distributeIntoSlotsOnlyIfSame(
   for (const idx of order) {
     if (remaining <= 0) break;
     const s = next[idx];
-    // skip if slot contains a different item
     if (s.item && s.item.id !== id) continue;
     if (!s.item) continue;
 
