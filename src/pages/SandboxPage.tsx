@@ -2,6 +2,7 @@ import Inventory from "../components/Inventory";
 import { SlotType, type Slot } from "../types/Slot";
 import { useState } from "react";
 import { getAllItems } from "../utils/ItemUtils";
+import { useNavigate } from "react-router-dom";
 
 export default function SandboxPage() {
   const columns = 9;
@@ -21,6 +22,10 @@ export default function SandboxPage() {
   const [slots, setSlots] = useState<Slot[]>(initialSlots);
   const infiniteItems = getAllItems();
 
+  const handleRestart = () => window.location.reload();
+
+  const navigate = useNavigate();
+
   return (
     <div className="app" style={{ display: "flex", gap: 12, margin: 24 }}>
       <Inventory
@@ -31,6 +36,29 @@ export default function SandboxPage() {
         hotbarSlots={hotbarSlots}
         craftingSlots={craftingSlots}
       />
+      <div style={{
+        marginTop: 24,
+        gap: 16,
+        display: "flex",
+        background: "rgba(30, 30, 30, 0.85)",
+        padding: 8,
+        borderRadius: 16,
+        fontSize: 32
+      }}>
+        <button onClick={handleRestart} style={{
+          padding: "12px 24px",
+          fontWeight: 600,
+          cursor: "pointer",
+          fontSize: 32
+        }}>Clear</button>
+        <button onClick={() => navigate("/")} style={{
+          padding: "12px 24px",
+          fontWeight: 600,
+          cursor: "pointer",
+          fontSize: 32
+        }}>Go Home</button>
+      </div>
     </div>
+    
   );
 }

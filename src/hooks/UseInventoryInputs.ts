@@ -16,6 +16,7 @@ import {
   SHIFT_ROUTES,
 } from "../utils/InventoryUtils";
 import { getCraftingResult } from "../utils/CraftingUtils";
+import { useKeybinds } from "../state/KeybindsContext";
 
 export type InventoryInputState = {
   leftDown: boolean;
@@ -88,19 +89,20 @@ export function useInventoryInput(options: {
     slots.map(() => null)
   );
 
-  const hotkeyBindings: Record<string, number> = {
-    Digit1: inventorySlots,
-    Digit2: inventorySlots + 1,
-    Digit3: inventorySlots + 2,
-    Digit4: inventorySlots + 3,
-    Digit5: inventorySlots + 4,
-    Digit6: inventorySlots + 5,
-    Digit7: inventorySlots + 6,
-    Digit8: inventorySlots + 7,
-    Digit9: inventorySlots + 8,
-    KeyF: inventorySlots + hotbarSlots,
-  };
-  const dropKey = "KeyQ";
+  const { keybinds } = useKeybinds();
+  const hotkeyBindings = useMemo(() => ({
+    [keybinds.hotbar1 || "Digit1"]: inventorySlots,
+    [keybinds.hotbar2 || "Digit2"]: inventorySlots + 1,
+    [keybinds.hotbar3 || "Digit3"]: inventorySlots + 2,
+    [keybinds.hotbar4 || "Digit4"]: inventorySlots + 3,
+    [keybinds.hotbar5 || "Digit5"]: inventorySlots + 4,
+    [keybinds.hotbar6 || "Digit6"]: inventorySlots + 5,
+    [keybinds.hotbar7 || "Digit7"]: inventorySlots + 6,
+    [keybinds.hotbar8 || "Digit8"]: inventorySlots + 7,
+    [keybinds.hotbar9 || "Digit9"]: inventorySlots + 8,
+    [keybinds.offhand || "KeyF"]: inventorySlots + hotbarSlots,
+  }), [keybinds, inventorySlots, hotbarSlots]);
+  const dropKey = keybinds.drop || "KeyQ";
 
 
   const runDoubleClick = useCallback(() => {
@@ -147,18 +149,17 @@ export function useInventoryInput(options: {
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      const { code } = e;
+      const key = e.key.toLowerCase();
 
-      const hotbarIdx = hotkeyBindings[code];
+      const hotbarIdx = hotkeyBindings[key];
       if (hotbarIdx != null) {
         const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
-        if (idx)
-          e.preventDefault();
+        if (idx) e.preventDefault();
         runHotkey(hotbarIdx, idx);
         return;
       }
 
-      if (code === dropKey && !heldItem) {
+      if (key === dropKey && !heldItem) {
         runDrop(e);
       }
     }

@@ -3,6 +3,7 @@ import GoalItemEditor from "./GoalItemEditor";
 import type { GoalItem } from "../types/Game";
 import { allPossibleItemsFromInput } from "../utils/RecipeUtils";
 import type { Item } from "../types/Item";
+import InfoIcon from "./InfoIcon";
 
 export function GoalsEditor({
     goals,
@@ -22,13 +23,13 @@ export function GoalsEditor({
 
     const containerStyle: React.CSSProperties = {
         padding: 12,
-        border: "1px solid #999",
         borderRadius: 6,
         width: 700,
         textAlign: "center",
-        background: "rgba(30, 30, 30, 0.85)",
+        background: "rgba(40,40,40,0.85)",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
     };
-
+    
     const gridStyle: React.CSSProperties = {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
@@ -85,7 +86,7 @@ export function GoalsEditor({
 
     return (
         <div style={containerStyle}>
-            <h2>Goals</h2>
+            <h2>Goals <InfoIcon content="What the player must craft." size={20} color="white" /></h2>
 
             <div style={gridStyle}>
                 {goals.map((g, i) => (
@@ -104,7 +105,6 @@ export function GoalsEditor({
                 <button onClick={handleAllCombinations}>All Combinations</button>
             </div>
 
-            {/* Modal */}
             {modal?.visible && (
                 <div style={{
                     position: "fixed",

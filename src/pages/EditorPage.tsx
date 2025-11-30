@@ -7,6 +7,8 @@ import { getAllItems, getItemById } from "../utils/ItemUtils";
 import type { Game, ItemInfo, GoalItem } from "../types/Game";
 import { GoalsEditor } from "../components/GoalsEditor";
 import { getAllItemsAsArray } from "../utils/InventoryUtils";
+import { Gamepad2, House } from "lucide-react";
+import InfoIcon from "../components/InfoIcon";
 
 export default function EditorPage() {
     const navigate = useNavigate();
@@ -59,7 +61,7 @@ export default function EditorPage() {
             checkAtEndOnly
         };
     }
-    
+
     useEffect(() => {
         const game = exportToGame();
         const encoded = encodeGameToUrlPayload(game);
@@ -80,6 +82,7 @@ export default function EditorPage() {
                 inventorySlots={inventorySlots}
                 hotbarSlots={hotbarSlots}
                 craftingSlots={0}
+
             />
 
             <div style={{
@@ -129,26 +132,63 @@ export default function EditorPage() {
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                    <label>
-                        <input type="checkbox" checked={showOnUI} onChange={e => setShowOnUI(e.target.checked)} /> Show goals on UI
-                    </label>
-                    <label>
-                        <input type="checkbox" checked={checkAtEndOnly} onChange={e => setCheckAtEndOnly(e.target.checked)} /> Check goals only at the end
-                    </label>
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={showOnUI}
+                                onChange={(e) => setShowOnUI(e.target.checked)}
+                            />
+                            Show goals on UI
+                        </label>
+                        <InfoIcon content="Whether to show the goal items or not. Can be fun for puzzles where you have to remember the recipes." size={20} textSize={15} color="white" />
+                    </div>
+
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={checkAtEndOnly}
+                                onChange={(e) => setCheckAtEndOnly(e.target.checked)}
+                            />
+                            Check goals only at the end
+                        </label>
+                        <InfoIcon content="When enabled, the player must end with all required items. If disabled, simply crafting it counts and can be thrown away." size={20} textSize={15} color="white" />
+                    </div>
                 </div>
             </div>
 
             <GoalsEditor goals={goals} setGoals={setGoals} inventoryItems={getAllItemsAsArray(slots)} />
 
-            <div style={{
-                display: "flex",
-                gap: "16px",
-                justifyContent: "center",
-                width: "100%",
-                maxWidth: "600px"
-            }}>
-                <button onClick={handlePlay} style={{ padding: "10px 20px", borderRadius: 8, fontWeight: 600, border: "none" }}>Play</button>
+                <div style={{
+                    gap: 16,
+                    display: "flex",
+                    background: "rgba(30, 30, 30, 0.85)",
+                    borderRadius: 16,
+                    fontSize: 32,
+                    padding: "12px 24px",
+                }}>
+
+                <button onClick={handlePlay} style={{
+                    padding: "12px 24px",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    fontSize: 32
+                }}>
+                    Play
+                    <Gamepad2 size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+                </button>
+                <button onClick={() => navigate("/")} style={{
+                    padding: "12px 24px",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    fontSize: 32
+                }}>
+                    Go Home
+                    <House size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+                </button>
             </div>
+
         </div>
     );
 }

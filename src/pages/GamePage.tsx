@@ -8,6 +8,7 @@ import type { Game } from "../types/Game";
 import { getAllItemsAsArray } from "../utils/InventoryUtils";
 import type { Item } from "../types/Item";
 import Confetti from "react-confetti";
+import { Repeat, House, Pencil, CircleX, ExternalLink } from "lucide-react";
 
 function Timer({ startTimeRef, completed, finishedMs }: {
   startTimeRef: React.MutableRefObject<number | null>;
@@ -98,24 +99,37 @@ export default function GamePage() {
   const startTimeRef = useRef<number | null>(null);
   const [timerStarted, setTimerStarted] = useState(false);
 
-  // ---------- Craft handler (no separate craftedCounts) ----------
-  // When Inventory performs a craft, call this with the crafted item (and count).
   function handleCrafted(crafted: Item) {
-    // Only count crafted items if we're NOT in checkAtEndOnly mode
     if (!game) return;
     if (game.checkAtEndOnly) return;
 
     setGoalProgress(prev => {
-      // increment progress for any goal that includes this crafted item
       return prev.map((val, i) => {
         const goal = game.goals[i];
         if (!goal.items.includes(crafted.id)) return val;
-        // increment by the crafted count
         return val + crafted.count;
       });
     });
   }
-  // ----------------------------------------------------------------
+
+  function formatGoalProgress(current: number, min?: number, max?: number, checkAtEndOnly?: boolean) {
+    const m = min ?? -1;
+    const M = max ?? -1;
+
+    // Case N/A
+    if ((m === -1 || m === 0) && (M === -1)) return "N/A";
+
+    // Case: only max
+    if ((m === -1 || m === 0) && M > -1) return `(${current}) ≤ ${M}`;
+
+    // Case: only min
+    if (m > 0 && (M === -1 || M === 0)) return `(${current}) / ${m}`;
+
+    // Case: both min and max
+    if (m > 0 && M > 0) return `${m} ≤ (${current}) ≤ ${M}`;
+
+    return `(${current})`; // fallback
+  }
 
   const handleSlotsChange: React.Dispatch<React.SetStateAction<Slot[]>> = (value) => {
     _setSlots(prev => {
@@ -136,15 +150,9 @@ export default function GamePage() {
     setGoalProgress(prev => {
       const newProgress = game!.goals.map((goal, i) => {
         let current = 0;
-        for (const item of allItems) if (goal.items.includes(item.id)) current += item.count;
-
-        // If not checkAtEndOnly, we keep the best seen value:
-        // * prev already contains crafted increments (because handleCrafted added them)
-        // * compare with current inventory count and keep the max
-        if (!game!.checkAtEndOnly) return Math.max(prev[i], current);
-
-        // If checkAtEndOnly is true, progress is purely derived from inventory at the moment (or clamped to max)
-        return goal.max !== undefined && goal.max !== -1 ? Math.min(current, goal.max) : current;
+        for (const item of allItems) 
+          if (goal.items.includes(item.id)) current += item.count;
+        return current;
       });
 
       const changed = newProgress.some((v, i) => v !== prev[i]);
@@ -155,7 +163,15 @@ export default function GamePage() {
   useEffect(() => {
     if (completed) return;
 
-    const allDone = goalProgress.every((v, i) => v >= (game!.goals[i].min ?? 1));
+    const allDone = goalProgress.every((v, i) => {
+      const goal = game!.goals[i];
+      const min = goal.min ?? -1;
+      const max = goal.max ?? -1;
+      const minCheck = min === -1 ? true : v >= min;
+      const maxCheck = max === -1 ? true : v <= max;
+
+      return minCheck && maxCheck;
+    });
     if (allDone) {
       setCompleted(true);
       setModalOpen(true);
@@ -233,10 +249,12 @@ export default function GamePage() {
           }}>
             {game.goals.map((goal, i) => {
               const current = goalProgress[i];
-              const fulfilled = current >= (goal.min ?? 1);
-              const progressText = (goal.max === -1 || goal.max === undefined || !game.checkAtEndOnly)
-                ? `${current} / ${goal.min ?? 0}`
-                : `${goal.min ?? 0} ≤ ${current} ≤ ${goal.max}`;
+              const min = goal.min ?? -1;
+              const max = goal.max ?? -1;
+              const minCheck = min === -1 ? true : current >= min;
+              const maxCheck = max === -1 ? true : current <= max;
+              const fulfilled = minCheck && maxCheck;
+              const progressText = formatGoalProgress(current, min, max, game.checkAtEndOnly);
 
               return (
                 <div key={i} style={{
@@ -304,9 +322,14 @@ export default function GamePage() {
                 </p>
 
                 <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12 }}>
-                  <button onClick={handleShare} style={{ padding: "8px 16px" }}>Share</button>
-                  <button onClick={() => { setModalOpen(false); setConfettiActive(false); }} style={{ padding: "8px 16px" }}>Close</button>
-                  <button onClick={handleRestart} style={{ padding: "8px 16px" }}>Restart</button>
+                  <button onClick={handleShare} style={{ padding: "8px 16px" }}>
+                    Share
+                    <ExternalLink size={16} style={{ transform: "translateX(4px) translateY(4px)" }} />
+                  </button>
+                  <button onClick={handleRestart} style={{ padding: "8px 16px" }}>
+                    Restart
+                    <Repeat size={16} style={{ transform: "translateX(4px) translateY(4px)" }} />
+                  </button>
                 </div>
               </div>
             </div>
@@ -318,15 +341,41 @@ export default function GamePage() {
         marginTop: 24,
         gap: 16,
         display: "flex",
-        justifyContent: "center",
         background: "rgba(30, 30, 30, 0.85)",
         padding: 8,
         borderRadius: 16,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.3)"
+        fontSize: 32
       }}>
-        <button onClick={handleRestart}>Restart</button>
-        <button onClick={() => navigate("/")}>Go Home</button>
-        <button onClick={() => navigate(`/edit?data=${data}`)}>Edit</button>
+        <button onClick={handleRestart} style={{
+          padding: "12px 24px",
+          fontWeight: 600,
+          cursor: "pointer",
+          fontSize: 32
+        }}>
+          Restart
+
+          <Repeat size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+        </button>
+        <button onClick={() => navigate("/")} style={{
+          padding: "12px 24px",
+          fontWeight: 600,
+          cursor: "pointer",
+          fontSize: 32
+        }}>
+          Go Home
+
+          <House size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+        </button>
+        <button onClick={() => navigate(`/edit?data=${data}`)} style={{
+          padding: "12px 24px",
+          fontWeight: 600,
+          cursor: "pointer",
+          fontSize: 32
+        }}>
+          Edit
+
+          <Pencil size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+        </button>
       </div>
     </div>
   );

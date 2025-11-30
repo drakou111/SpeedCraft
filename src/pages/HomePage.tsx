@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import predefinedGames from "../data/games/games.json" with { type: "json" };
+import { Brush, Package } from "lucide-react";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -31,12 +32,14 @@ export default function HomePage() {
                     style={buttonStyle}
                 >
                     Create
+                    <Brush size={32} style={{ transform: "translateX(4px) translateY(4px)"}}/>
                 </button>
                 <button
                     onClick={() => navigate("/sandbox")}
                     style={buttonStyle}
                 >
                     Sandbox
+                    <Package size={32} style={{ transform: "translateX(4px) translateY(4px)"}}/>
                 </button>
             </div>
 
@@ -52,7 +55,6 @@ export default function HomePage() {
                                 borderRadius: 12,
                                 boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
                                 cursor: "pointer",
-                                transition: "transform 0.2s",
                             }}
                             onClick={() => navigate(`/game?data=${encodeURIComponent(game.data)}`)}
                             onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.03)")}
@@ -72,5 +74,5 @@ const buttonStyle: React.CSSProperties = {
     padding: "12px 24px",
     fontWeight: 600,
     cursor: "pointer",
-    transition: "background 0.2s",
+    fontSize: 32
 };

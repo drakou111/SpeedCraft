@@ -14,7 +14,9 @@
   },
   "proxy": "http://localhost:4000",
   "dependencies": {
+    "framer-motion": "^12.23.24",
     "gh-pages": "^6.3.0",
+    "lucide-react": "^0.555.0",
     "lz-string": "^1.5.0",
     "react": "^19.2.0",
     "react-confetti": "^6.4.0",

@@ -36,6 +36,13 @@ export const playDragSound = () => {
     playRandomAudio(sounds, 0.1);
 };
 
+export const playClickSound = () => {
+    const sounds = [
+        "./sounds/click.mp3"
+    ];
+    playRandomAudio(sounds, 0.1);
+};
+
 function playRandomAudio(sounds: string[], volume: number) {
     const sound = sounds[Math.floor(Math.random() * sounds.length)];
     const audio = new Audio(sound);

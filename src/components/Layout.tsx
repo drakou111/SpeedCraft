@@ -8,6 +8,7 @@ export function Header() {
         { label: "Home", path: "/" },
         { label: "Editor", path: "/edit" },
         { label: "Sandbox", path: "/sandbox" },
+        { label: "Settings", path: "/settings" },
     ];
 
     return (

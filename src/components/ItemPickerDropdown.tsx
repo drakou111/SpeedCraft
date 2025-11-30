@@ -60,16 +60,14 @@ export default function ItemPickerDropdown({
                         border: "1px solid rgba(255,255,255,0.12)",
                         borderRadius: 6,
                         padding: 6,
-                        width: 300,
+                        width: 350,
                     }}
                 >
-                    {/* search */}
                     <input
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder="Search item..."
                         style={{
-                            width: "100%",
                             padding: "6px",
                             marginBottom: 6,
                             borderRadius: 4,
@@ -79,14 +77,14 @@ export default function ItemPickerDropdown({
                         }}
                     />
 
-                    {/* scroll grid */}
                     <div
                         style={{
                             maxHeight: 260,
                             overflowY: "auto",
                             display: "grid",
                             gridTemplateColumns: "repeat(6, 40px)",
-                            gap: 6,
+                            rowGap: 6,
+                            columnGap: 16,
                             paddingRight: 3,
                         }}
                     >
@@ -98,8 +96,8 @@ export default function ItemPickerDropdown({
                                     setOpen(false);
                                 }}
                                 style={{
-                                    width: 40,
-                                    height: 40,
+                                    width: 48,
+                                    height: 48,
                                     background: selectedIds.includes(proto.id)
                                         ? "rgba(0,200,0,0.35)"
                                         : "rgba(255,255,255,0.05)",
@@ -114,8 +112,8 @@ export default function ItemPickerDropdown({
                                     src={proto.icon}
                                     alt=""
                                     style={{
-                                        width: 28,
-                                        height: 28,
+                                        width: 40,
+                                        height: 40,
                                         imageRendering: "pixelated",
                                         pointerEvents: "none",
                                     }}

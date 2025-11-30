@@ -1,6 +1,7 @@
 import { getItemById } from "../utils/ItemUtils";
 import ItemPickerDropdown from "./ItemPickerDropdown";
 import type { GoalItem } from "../types/Game";
+import InfoIcon from "./InfoIcon";
 
 export default function GoalItemEditor({
     goal,
@@ -31,8 +32,8 @@ export default function GoalItemEditor({
     };
 
     const itemStyle: React.CSSProperties = {
-        width: 32,
-        height: 32,
+        width: 48,
+        height: 48,
         background: "rgba(255,255,255,0.06)",
         border: "1px solid rgba(255,255,255,0.15)",
         borderRadius: 4,
@@ -58,7 +59,6 @@ export default function GoalItemEditor({
     return (
         <div style={containerStyle}>
             <div style={rowStyle}>
-                {/* Allowed item icons */}
                 <div style={itemsGridStyle}>
                     {goal.items.map((id) => {
                         const it = getItemById(id);
@@ -75,8 +75,8 @@ export default function GoalItemEditor({
                                     src={it.icon}
                                     alt=""
                                     style={{
-                                        width: 26,
-                                        height: 26,
+                                        width: 40,
+                                        height: 40,
                                         imageRendering: "pixelated",
                                         pointerEvents: "none"
                                     }}
@@ -127,6 +127,8 @@ export default function GoalItemEditor({
                         style={numberInputStyle}
                     />
                 </div>
+
+                <InfoIcon content="The player must have at least 'Min' and at most 'Max' of the items defined above. Putting min or max to -1 basically removes that cap." size={20} textSize={15} width={500} color="white" />
 
             </div>
         </div>
