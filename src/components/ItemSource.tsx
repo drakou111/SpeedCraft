@@ -1,6 +1,6 @@
 import React from "react";
 import type { Item } from "../types/Item";
-import { playPickupSound, playPutDownSound } from "../utils/SoundUtils";
+import { playPickupSound } from "../utils/SoundUtils";
 import { getItemById } from "../utils/ItemUtils";
 
 export type ItemSourceProps = {
