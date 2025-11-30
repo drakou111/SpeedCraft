@@ -4,175 +4,200 @@
     "name": "Acacia Boat",
     "icon": "acacia_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_button",
     "name": "Acacia Button",
     "icon": "acacia_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_chest_boat",
     "name": "Acacia Chest Boat",
     "icon": "acacia_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_door",
     "name": "Acacia Door",
     "icon": "acacia_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_fence",
     "name": "Acacia Fence",
     "icon": "acacia_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_fence_gate",
     "name": "Acacia Fence Gate",
     "icon": "acacia_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_hanging_sign",
     "name": "Acacia Hanging Sign",
     "icon": "acacia_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_log",
     "name": "Acacia Log",
     "icon": "acacia_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_planks",
     "name": "Acacia Planks",
     "icon": "acacia_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_pressure_plate",
     "name": "Acacia Pressure Plate",
     "icon": "acacia_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_shelf",
     "name": "Acacia Shelf",
     "icon": "acacia_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_sign",
     "name": "Acacia Sign",
     "icon": "acacia_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_slab",
     "name": "Acacia Slab",
     "icon": "acacia_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_stairs",
     "name": "Acacia Stairs",
     "icon": "acacia_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_trapdoor",
     "name": "Acacia Trapdoor",
     "icon": "acacia_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:acacia_wood",
     "name": "Acacia Wood",
     "icon": "acacia_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:activator_rail",
     "name": "Activator Rail",
     "icon": "activator_rail.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:allium",
     "name": "Allium",
     "icon": "allium.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:amethyst_block",
     "name": "Amethyst Block",
     "icon": "amethyst_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:amethyst_shard",
     "name": "Amethyst Shard",
     "icon": "amethyst_shard.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:andesite",
     "name": "Andesite",
     "icon": "andesite.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:andesite_slab",
     "name": "Andesite Slab",
     "icon": "andesite_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:andesite_stairs",
     "name": "Andesite Stairs",
     "icon": "andesite_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:andesite_wall",
     "name": "Andesite Wall",
     "icon": "andesite_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:anvil",
     "name": "Anvil",
     "icon": "anvil.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:apple",
@@ -186,28 +211,32 @@
     "name": "Armadillo Scute",
     "icon": "armadillo_scute.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:armor_stand",
     "name": "Armor Stand",
     "icon": "armor_stand.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:arrow",
     "name": "Arrow",
     "icon": "arrow.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:azure_bluet",
     "name": "Azure Bluet",
     "icon": "azure_bluet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:baked_potato",
@@ -221,161 +250,184 @@
     "name": "Bamboo",
     "icon": "bamboo.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_block",
     "name": "Bamboo Block",
     "icon": "bamboo_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_button",
     "name": "Bamboo Button",
     "icon": "bamboo_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_chest_raft",
     "name": "Bamboo Chest Raft",
     "icon": "bamboo_chest_raft.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_door",
     "name": "Bamboo Door",
     "icon": "bamboo_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_fence",
     "name": "Bamboo Fence",
     "icon": "bamboo_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_fence_gate",
     "name": "Bamboo Fence Gate",
     "icon": "bamboo_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_hanging_sign",
     "name": "Bamboo Hanging Sign",
     "icon": "bamboo_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_mosaic",
     "name": "Bamboo Mosaic",
     "icon": "bamboo_mosaic.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_mosaic_slab",
     "name": "Bamboo Mosaic Slab",
     "icon": "bamboo_mosaic_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_mosaic_stairs",
     "name": "Bamboo Mosaic Stairs",
     "icon": "bamboo_mosaic_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_planks",
     "name": "Bamboo Planks",
     "icon": "bamboo_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_pressure_plate",
     "name": "Bamboo Pressure Plate",
     "icon": "bamboo_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_raft",
     "name": "Bamboo Raft",
     "icon": "bamboo_raft.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_shelf",
     "name": "Bamboo Shelf",
     "icon": "bamboo_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_sign",
     "name": "Bamboo Sign",
     "icon": "bamboo_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_slab",
     "name": "Bamboo Slab",
     "icon": "bamboo_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_stairs",
     "name": "Bamboo Stairs",
     "icon": "bamboo_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bamboo_trapdoor",
     "name": "Bamboo Trapdoor",
     "icon": "bamboo_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:barrel",
     "name": "Barrel",
     "icon": "barrel.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:basalt",
     "name": "Basalt",
     "icon": "basalt.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:beacon",
     "name": "Beacon",
     "icon": "beacon.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:beehive",
     "name": "Beehive",
     "icon": "beehive.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:beetroot",
@@ -389,133 +441,152 @@
     "name": "Beetroot Soup",
     "icon": "beetroot_soup.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_boat",
     "name": "Birch Boat",
     "icon": "birch_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_button",
     "name": "Birch Button",
     "icon": "birch_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_chest_boat",
     "name": "Birch Chest Boat",
     "icon": "birch_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_door",
     "name": "Birch Door",
     "icon": "birch_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_fence",
     "name": "Birch Fence",
     "icon": "birch_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_fence_gate",
     "name": "Birch Fence Gate",
     "icon": "birch_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_hanging_sign",
     "name": "Birch Hanging Sign",
     "icon": "birch_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_log",
     "name": "Birch Log",
     "icon": "birch_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_planks",
     "name": "Birch Planks",
     "icon": "birch_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_pressure_plate",
     "name": "Birch Pressure Plate",
     "icon": "birch_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_shelf",
     "name": "Birch Shelf",
     "icon": "birch_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_sign",
     "name": "Birch Sign",
     "icon": "birch_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_slab",
     "name": "Birch Slab",
     "icon": "birch_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_stairs",
     "name": "Birch Stairs",
     "icon": "birch_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_trapdoor",
     "name": "Birch Trapdoor",
     "icon": "birch_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:birch_wood",
     "name": "Birch Wood",
     "icon": "birch_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:black_banner",
     "name": "Black Banner",
     "icon": "black_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:black_bed",
     "name": "Black Bed",
     "icon": "black_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:black_bundle",
@@ -536,14 +607,16 @@
     "name": "Black Carpet",
     "icon": "black_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:black_concrete_powder",
     "name": "Black Concrete Powder",
     "icon": "black_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:black_dye",
@@ -557,77 +630,88 @@
     "name": "Black Harness",
     "icon": "black_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:black_shulker_box",
     "name": "Black Shulker Box",
     "icon": "black_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:black_stained_glass",
     "name": "Black Stained Glass",
     "icon": "black_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:black_stained_glass_pane",
     "name": "Black Stained Glass Pane",
     "icon": "black_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:black_terracotta",
     "name": "Black Terracotta",
     "icon": "black_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:black_wool",
     "name": "Black Wool",
     "icon": "black_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:blackstone",
     "name": "Blackstone",
     "icon": "blackstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blackstone_slab",
     "name": "Blackstone Slab",
     "icon": "blackstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blackstone_stairs",
     "name": "Blackstone Stairs",
     "icon": "blackstone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blackstone_wall",
     "name": "Blackstone Wall",
     "icon": "blackstone_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blast_furnace",
     "name": "Blast Furnace",
     "icon": "blast_furnace.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blaze_powder",
@@ -648,14 +732,16 @@
     "name": "Blue Banner",
     "icon": "blue_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:blue_bed",
     "name": "Blue Bed",
     "icon": "blue_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:blue_bundle",
@@ -676,14 +762,16 @@
     "name": "Blue Carpet",
     "icon": "blue_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:blue_concrete_powder",
     "name": "Blue Concrete Powder",
     "icon": "blue_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:blue_dye",
@@ -704,56 +792,64 @@
     "name": "Blue Harness",
     "icon": "blue_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:blue_ice",
     "name": "Blue Ice",
     "icon": "blue_ice.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blue_orchid",
     "name": "Blue Orchid",
     "icon": "blue_orchid.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:blue_shulker_box",
     "name": "Blue Shulker Box",
     "icon": "blue_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blue_stained_glass",
     "name": "Blue Stained Glass",
     "icon": "blue_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blue_stained_glass_pane",
     "name": "Blue Stained Glass Pane",
     "icon": "blue_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blue_terracotta",
     "name": "Blue Terracotta",
     "icon": "blue_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:blue_wool",
     "name": "Blue Wool",
     "icon": "blue_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:bolt_armor_trim_smithing_template",
@@ -767,14 +863,16 @@
     "name": "Bone",
     "icon": "bone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:bone_block",
     "name": "Bone Block",
     "icon": "bone_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:bone_meal",
@@ -795,7 +893,8 @@
     "name": "Bookshelf",
     "icon": "bookshelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bordure_indented_banner_pattern",
@@ -809,14 +908,16 @@
     "name": "Bow",
     "icon": "bow.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bowl",
     "name": "Bowl",
     "icon": "bowl.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:bread",
@@ -837,56 +938,64 @@
     "name": "Brewing Stand",
     "icon": "brewing_stand.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brick",
     "name": "Brick",
     "icon": "brick.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brick_slab",
     "name": "Brick Slab",
     "icon": "brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brick_stairs",
     "name": "Brick Stairs",
     "icon": "brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brick_wall",
     "name": "Brick Wall",
     "icon": "brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:bricks",
     "name": "Bricks",
     "icon": "bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brown_banner",
     "name": "Brown Banner",
     "icon": "brown_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:brown_bed",
     "name": "Brown Bed",
     "icon": "brown_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:brown_bundle",
@@ -907,14 +1016,16 @@
     "name": "Brown Carpet",
     "icon": "brown_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:brown_concrete_powder",
     "name": "Brown Concrete Powder",
     "icon": "brown_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:brown_dye",
@@ -935,7 +1046,8 @@
     "name": "Brown Harness",
     "icon": "brown_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:brown_mushroom",
@@ -949,35 +1061,40 @@
     "name": "Brown Shulker Box",
     "icon": "brown_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brown_stained_glass",
     "name": "Brown Stained Glass",
     "icon": "brown_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brown_stained_glass_pane",
     "name": "Brown Stained Glass Pane",
     "icon": "brown_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brown_terracotta",
     "name": "Brown Terracotta",
     "icon": "brown_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:brown_wool",
     "name": "Brown Wool",
     "icon": "brown_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:brush",
@@ -991,7 +1108,8 @@
     "name": "Bucket",
     "icon": "bucket.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:bundle",
@@ -1005,28 +1123,32 @@
     "name": "Cactus Flower",
     "icon": "cactus_flower.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:cake",
     "name": "Cake",
     "icon": "cake.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:calibrated_sculk_sensor",
     "name": "Calibrated Sculk Sensor",
     "icon": "calibrated_sculk_sensor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:campfire",
     "name": "Campfire",
     "icon": "campfire.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:candle",
@@ -1047,294 +1169,336 @@
     "name": "Carrot On A Stick",
     "icon": "carrot_on_a_stick.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cartography_table",
     "name": "Cartography Table",
     "icon": "cartography_table.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:carved_pumpkin",
     "name": "Carved Pumpkin",
     "icon": "carved_pumpkin.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cauldron",
     "name": "Cauldron",
     "icon": "cauldron.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:charcoal",
     "name": "Charcoal",
     "icon": "charcoal.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cherry_boat",
     "name": "Cherry Boat",
     "icon": "cherry_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_button",
     "name": "Cherry Button",
     "icon": "cherry_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_chest_boat",
     "name": "Cherry Chest Boat",
     "icon": "cherry_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_door",
     "name": "Cherry Door",
     "icon": "cherry_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_fence",
     "name": "Cherry Fence",
     "icon": "cherry_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_fence_gate",
     "name": "Cherry Fence Gate",
     "icon": "cherry_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_hanging_sign",
     "name": "Cherry Hanging Sign",
     "icon": "cherry_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_log",
     "name": "Cherry Log",
     "icon": "cherry_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_planks",
     "name": "Cherry Planks",
     "icon": "cherry_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_pressure_plate",
     "name": "Cherry Pressure Plate",
     "icon": "cherry_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_shelf",
     "name": "Cherry Shelf",
     "icon": "cherry_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_sign",
     "name": "Cherry Sign",
     "icon": "cherry_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_slab",
     "name": "Cherry Slab",
     "icon": "cherry_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_stairs",
     "name": "Cherry Stairs",
     "icon": "cherry_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_trapdoor",
     "name": "Cherry Trapdoor",
     "icon": "cherry_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:cherry_wood",
     "name": "Cherry Wood",
     "icon": "cherry_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:chest",
     "name": "Chest",
     "icon": "chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:chest_minecart",
     "name": "Chest Minecart",
     "icon": "chest_minecart.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:chiseled_bookshelf",
     "name": "Chiseled Bookshelf",
     "icon": "chiseled_bookshelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:chiseled_copper",
     "name": "Chiseled Copper",
     "icon": "chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:chiseled_deepslate",
     "name": "Chiseled Deepslate",
     "icon": "chiseled_deepslate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_nether_bricks",
     "name": "Chiseled Nether Bricks",
     "icon": "chiseled_nether_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_polished_blackstone",
     "name": "Chiseled Polished Blackstone",
     "icon": "chiseled_polished_blackstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_quartz_block",
     "name": "Chiseled Quartz Block",
     "icon": "chiseled_quartz_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_red_sandstone",
     "name": "Chiseled Red Sandstone",
     "icon": "chiseled_red_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_resin_bricks",
     "name": "Chiseled Resin Bricks",
     "icon": "chiseled_resin_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_sandstone",
     "name": "Chiseled Sandstone",
     "icon": "chiseled_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_stone_bricks",
     "name": "Chiseled Stone Bricks",
     "icon": "chiseled_stone_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_tuff",
     "name": "Chiseled Tuff",
     "icon": "chiseled_tuff.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:chiseled_tuff_bricks",
     "name": "Chiseled Tuff Bricks",
     "icon": "chiseled_tuff_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:clay",
     "name": "Clay",
     "icon": "clay.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:clay_ball",
     "name": "Clay Ball",
     "icon": "clay_ball.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:clock",
     "name": "Clock",
     "icon": "clock.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:closed_eyeblossom",
     "name": "Closed Eyeblossom",
     "icon": "closed_eyeblossom.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:coal",
     "name": "Coal",
     "icon": "coal.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:coal_block",
     "name": "Coal Block",
     "icon": "coal_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:coarse_dirt",
     "name": "Coarse Dirt",
     "icon": "coarse_dirt.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:coast_armor_trim_smithing_template",
@@ -1348,56 +1512,64 @@
     "name": "Cobbled Deepslate",
     "icon": "cobbled_deepslate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobbled_deepslate_slab",
     "name": "Cobbled Deepslate Slab",
     "icon": "cobbled_deepslate_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobbled_deepslate_stairs",
     "name": "Cobbled Deepslate Stairs",
     "icon": "cobbled_deepslate_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobbled_deepslate_wall",
     "name": "Cobbled Deepslate Wall",
     "icon": "cobbled_deepslate_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobblestone",
     "name": "Cobblestone",
     "icon": "cobblestone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobblestone_slab",
     "name": "Cobblestone Slab",
     "icon": "cobblestone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobblestone_stairs",
     "name": "Cobblestone Stairs",
     "icon": "cobblestone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cobblestone_wall",
     "name": "Cobblestone Wall",
     "icon": "cobblestone_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cocoa_beans",
@@ -1411,28 +1583,32 @@
     "name": "Comparator",
     "icon": "comparator.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:compass",
     "name": "Compass",
     "icon": "compass.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:composter",
     "name": "Composter",
     "icon": "composter.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:conduit",
     "name": "Conduit",
     "icon": "conduit.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cooked_rabbit",
@@ -1453,182 +1629,208 @@
     "name": "Copper Axe",
     "icon": "copper_axe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_bars",
     "name": "Copper Bars",
     "icon": "copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_block",
     "name": "Copper Block",
     "icon": "copper_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_boots",
     "name": "Copper Boots",
     "icon": "copper_boots.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_bulb",
     "name": "Copper Bulb",
     "icon": "copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_chain",
     "name": "Copper Chain",
     "icon": "copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_chest",
     "name": "Copper Chest",
     "icon": "copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_chestplate",
     "name": "Copper Chestplate",
     "icon": "copper_chestplate.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_door",
     "name": "Copper Door",
     "icon": "copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_golem_statue",
     "name": "Copper Golem Statue",
     "icon": "copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_grate",
     "name": "Copper Grate",
     "icon": "copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_helmet",
     "name": "Copper Helmet",
     "icon": "copper_helmet.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_hoe",
     "name": "Copper Hoe",
     "icon": "copper_hoe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_ingot",
     "name": "Copper Ingot",
     "icon": "copper_ingot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_lantern",
     "name": "Copper Lantern",
     "icon": "copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_leggings",
     "name": "Copper Leggings",
     "icon": "copper_leggings.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_nugget",
     "name": "Copper Nugget",
     "icon": "copper_nugget.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_pickaxe",
     "name": "Copper Pickaxe",
     "icon": "copper_pickaxe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_shovel",
     "name": "Copper Shovel",
     "icon": "copper_shovel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_sword",
     "name": "Copper Sword",
     "icon": "copper_sword.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:copper_torch",
     "name": "Copper Torch",
     "icon": "copper_torch.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:copper_trapdoor",
     "name": "Copper Trapdoor",
     "icon": "copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:cornflower",
     "name": "Cornflower",
     "icon": "cornflower.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:crafter",
     "name": "Crafter",
     "icon": "crafter.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:crafting_table",
     "name": "Crafting Table",
     "icon": "crafting_table.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:creaking_heart",
     "name": "Creaking Heart",
     "icon": "creaking_heart.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:creeper_banner_pattern",
@@ -1649,175 +1851,200 @@
     "name": "Crimson Button",
     "icon": "crimson_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_door",
     "name": "Crimson Door",
     "icon": "crimson_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_fence",
     "name": "Crimson Fence",
     "icon": "crimson_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_fence_gate",
     "name": "Crimson Fence Gate",
     "icon": "crimson_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_hanging_sign",
     "name": "Crimson Hanging Sign",
     "icon": "crimson_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_hyphae",
     "name": "Crimson Hyphae",
     "icon": "crimson_hyphae.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_planks",
     "name": "Crimson Planks",
     "icon": "crimson_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_pressure_plate",
     "name": "Crimson Pressure Plate",
     "icon": "crimson_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_shelf",
     "name": "Crimson Shelf",
     "icon": "crimson_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_sign",
     "name": "Crimson Sign",
     "icon": "crimson_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_slab",
     "name": "Crimson Slab",
     "icon": "crimson_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_stairs",
     "name": "Crimson Stairs",
     "icon": "crimson_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_stem",
     "name": "Crimson Stem",
     "icon": "crimson_stem.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crimson_trapdoor",
     "name": "Crimson Trapdoor",
     "icon": "crimson_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crossbow",
     "name": "Crossbow",
     "icon": "crossbow.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:crying_obsidian",
     "name": "Crying Obsidian",
     "icon": "crying_obsidian.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cut_copper",
     "name": "Cut Copper",
     "icon": "cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:cut_copper_slab",
     "name": "Cut Copper Slab",
     "icon": "cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:cut_copper_stairs",
     "name": "Cut Copper Stairs",
     "icon": "cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:cut_red_sandstone",
     "name": "Cut Red Sandstone",
     "icon": "cut_red_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cut_red_sandstone_slab",
     "name": "Cut Red Sandstone Slab",
     "icon": "cut_red_sandstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cut_sandstone",
     "name": "Cut Sandstone",
     "icon": "cut_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cut_sandstone_slab",
     "name": "Cut Sandstone Slab",
     "icon": "cut_sandstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cyan_banner",
     "name": "Cyan Banner",
     "icon": "cyan_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:cyan_bed",
     "name": "Cyan Bed",
     "icon": "cyan_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:cyan_bundle",
@@ -1838,14 +2065,16 @@
     "name": "Cyan Carpet",
     "icon": "cyan_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:cyan_concrete_powder",
     "name": "Cyan Concrete Powder",
     "icon": "cyan_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:cyan_dye",
@@ -1859,371 +2088,424 @@
     "name": "Cyan Harness",
     "icon": "cyan_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:cyan_shulker_box",
     "name": "Cyan Shulker Box",
     "icon": "cyan_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cyan_stained_glass",
     "name": "Cyan Stained Glass",
     "icon": "cyan_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cyan_stained_glass_pane",
     "name": "Cyan Stained Glass Pane",
     "icon": "cyan_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cyan_terracotta",
     "name": "Cyan Terracotta",
     "icon": "cyan_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:cyan_wool",
     "name": "Cyan Wool",
     "icon": "cyan_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:dandelion",
     "name": "Dandelion",
     "icon": "dandelion.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:dark_oak_boat",
     "name": "Dark Oak Boat",
     "icon": "dark_oak_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_button",
     "name": "Dark Oak Button",
     "icon": "dark_oak_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_chest_boat",
     "name": "Dark Oak Chest Boat",
     "icon": "dark_oak_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_door",
     "name": "Dark Oak Door",
     "icon": "dark_oak_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_fence",
     "name": "Dark Oak Fence",
     "icon": "dark_oak_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_fence_gate",
     "name": "Dark Oak Fence Gate",
     "icon": "dark_oak_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_hanging_sign",
     "name": "Dark Oak Hanging Sign",
     "icon": "dark_oak_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_log",
     "name": "Dark Oak Log",
     "icon": "dark_oak_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_planks",
     "name": "Dark Oak Planks",
     "icon": "dark_oak_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_pressure_plate",
     "name": "Dark Oak Pressure Plate",
     "icon": "dark_oak_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_shelf",
     "name": "Dark Oak Shelf",
     "icon": "dark_oak_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_sign",
     "name": "Dark Oak Sign",
     "icon": "dark_oak_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_slab",
     "name": "Dark Oak Slab",
     "icon": "dark_oak_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_stairs",
     "name": "Dark Oak Stairs",
     "icon": "dark_oak_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_trapdoor",
     "name": "Dark Oak Trapdoor",
     "icon": "dark_oak_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_oak_wood",
     "name": "Dark Oak Wood",
     "icon": "dark_oak_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:dark_prismarine",
     "name": "Dark Prismarine",
     "icon": "dark_prismarine.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:dark_prismarine_slab",
     "name": "Dark Prismarine Slab",
     "icon": "dark_prismarine_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:dark_prismarine_stairs",
     "name": "Dark Prismarine Stairs",
     "icon": "dark_prismarine_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:daylight_detector",
     "name": "Daylight Detector",
     "icon": "daylight_detector.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:decorated_pot",
     "name": "Decorated Pot",
     "icon": "decorated_pot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_brick_slab",
     "name": "Deepslate Brick Slab",
     "icon": "deepslate_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_brick_stairs",
     "name": "Deepslate Brick Stairs",
     "icon": "deepslate_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_brick_wall",
     "name": "Deepslate Brick Wall",
     "icon": "deepslate_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_bricks",
     "name": "Deepslate Bricks",
     "icon": "deepslate_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_tile_slab",
     "name": "Deepslate Tile Slab",
     "icon": "deepslate_tile_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_tile_stairs",
     "name": "Deepslate Tile Stairs",
     "icon": "deepslate_tile_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_tile_wall",
     "name": "Deepslate Tile Wall",
     "icon": "deepslate_tile_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:deepslate_tiles",
     "name": "Deepslate Tiles",
     "icon": "deepslate_tiles.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:detector_rail",
     "name": "Detector Rail",
     "icon": "detector_rail.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:diamond",
     "name": "Diamond",
     "icon": "diamond.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_axe",
     "name": "Diamond Axe",
     "icon": "diamond_axe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_block",
     "name": "Diamond Block",
     "icon": "diamond_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_boots",
     "name": "Diamond Boots",
     "icon": "diamond_boots.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_chestplate",
     "name": "Diamond Chestplate",
     "icon": "diamond_chestplate.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_helmet",
     "name": "Diamond Helmet",
     "icon": "diamond_helmet.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_hoe",
     "name": "Diamond Hoe",
     "icon": "diamond_hoe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_leggings",
     "name": "Diamond Leggings",
     "icon": "diamond_leggings.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_pickaxe",
     "name": "Diamond Pickaxe",
     "icon": "diamond_pickaxe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_shovel",
     "name": "Diamond Shovel",
     "icon": "diamond_shovel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diamond_sword",
     "name": "Diamond Sword",
     "icon": "diamond_sword.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:diorite",
     "name": "Diorite",
     "icon": "diorite.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:diorite_slab",
     "name": "Diorite Slab",
     "icon": "diorite_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:diorite_stairs",
     "name": "Diorite Stairs",
     "icon": "diorite_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:diorite_wall",
     "name": "Diorite Wall",
     "icon": "diorite_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:dirt",
     "name": "Dirt",
     "icon": "dirt.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:disc_fragment_5",
@@ -2237,7 +2519,8 @@
     "name": "Dispenser",
     "icon": "dispenser.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:dried_ghast",
@@ -2251,28 +2534,32 @@
     "name": "Dried Kelp",
     "icon": "dried_kelp.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:dried_kelp_block",
     "name": "Dried Kelp Block",
     "icon": "dried_kelp_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:dripstone_block",
     "name": "Dripstone Block",
     "icon": "dripstone_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:dropper",
     "name": "Dropper",
     "icon": "dropper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:dune_armor_trim_smithing_template",
@@ -2286,7 +2573,8 @@
     "name": "Echo Shard",
     "icon": "echo_shard.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:egg",
@@ -2300,84 +2588,96 @@
     "name": "Emerald",
     "icon": "emerald.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:emerald_block",
     "name": "Emerald Block",
     "icon": "emerald_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:enchanted_golden_apple",
     "name": "Enchanted Golden Apple",
     "icon": "enchanted_golden_apple.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:enchanting_table",
     "name": "Enchanting Table",
     "icon": "enchanting_table.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:end_crystal",
     "name": "End Crystal",
     "icon": "end_crystal.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:end_rod",
     "name": "End Rod",
     "icon": "end_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:end_stone",
     "name": "End Stone",
     "icon": "end_stone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:end_stone_brick_slab",
     "name": "End Stone Brick Slab",
     "icon": "end_stone_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:end_stone_brick_stairs",
     "name": "End Stone Brick Stairs",
     "icon": "end_stone_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:end_stone_brick_wall",
     "name": "End Stone Brick Wall",
     "icon": "end_stone_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:end_stone_bricks",
     "name": "End Stone Bricks",
     "icon": "end_stone_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:ender_chest",
     "name": "Ender Chest",
     "icon": "ender_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:ender_eye",
@@ -2398,105 +2698,120 @@
     "name": "Exposed Chiseled Copper",
     "icon": "exposed_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper",
     "name": "Exposed Copper",
     "icon": "exposed_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_bars",
     "name": "Exposed Copper Bars",
     "icon": "exposed_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_bulb",
     "name": "Exposed Copper Bulb",
     "icon": "exposed_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_chain",
     "name": "Exposed Copper Chain",
     "icon": "exposed_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_chest",
     "name": "Exposed Copper Chest",
     "icon": "exposed_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_door",
     "name": "Exposed Copper Door",
     "icon": "exposed_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_golem_statue",
     "name": "Exposed Copper Golem Statue",
     "icon": "exposed_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_grate",
     "name": "Exposed Copper Grate",
     "icon": "exposed_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_lantern",
     "name": "Exposed Copper Lantern",
     "icon": "exposed_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_copper_trapdoor",
     "name": "Exposed Copper Trapdoor",
     "icon": "exposed_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_cut_copper",
     "name": "Exposed Cut Copper",
     "icon": "exposed_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_cut_copper_slab",
     "name": "Exposed Cut Copper Slab",
     "icon": "exposed_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_cut_copper_stairs",
     "name": "Exposed Cut Copper Stairs",
     "icon": "exposed_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:exposed_lightning_rod",
     "name": "Exposed Lightning Rod",
     "icon": "exposed_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:eye_armor_trim_smithing_template",
@@ -2545,28 +2860,32 @@
     "name": "Fishing Rod",
     "icon": "fishing_rod.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:fletching_table",
     "name": "Fletching Table",
     "icon": "fletching_table.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:flint",
     "name": "Flint",
     "icon": "flint.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:flint_and_steel",
     "name": "Flint And Steel",
     "icon": "flint_and_steel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:flow_armor_trim_smithing_template",
@@ -2587,21 +2906,24 @@
     "name": "Flower Pot",
     "icon": "flower_pot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:furnace",
     "name": "Furnace",
     "icon": "furnace.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:furnace_minecart",
     "name": "Furnace Minecart",
     "icon": "furnace_minecart.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:ghast_tear",
@@ -2615,21 +2937,24 @@
     "name": "Glass",
     "icon": "glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:glass_bottle",
     "name": "Glass Bottle",
     "icon": "glass_bottle.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:glass_pane",
     "name": "Glass Pane",
     "icon": "glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:glistering_melon_slice",
@@ -2650,168 +2975,192 @@
     "name": "Glow Item Frame",
     "icon": "glow_item_frame.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:glowstone",
     "name": "Glowstone",
     "icon": "glowstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:glowstone_dust",
     "name": "Glowstone Dust",
     "icon": "glowstone_dust.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gold_block",
     "name": "Gold Block",
     "icon": "gold_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:gold_ingot",
     "name": "Gold Ingot",
     "icon": "gold_ingot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:gold_nugget",
     "name": "Gold Nugget",
     "icon": "gold_nugget.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_apple",
     "name": "Golden Apple",
     "icon": "golden_apple.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_axe",
     "name": "Golden Axe",
     "icon": "golden_axe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_boots",
     "name": "Golden Boots",
     "icon": "golden_boots.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_carrot",
     "name": "Golden Carrot",
     "icon": "golden_carrot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_chestplate",
     "name": "Golden Chestplate",
     "icon": "golden_chestplate.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_helmet",
     "name": "Golden Helmet",
     "icon": "golden_helmet.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_hoe",
     "name": "Golden Hoe",
     "icon": "golden_hoe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_leggings",
     "name": "Golden Leggings",
     "icon": "golden_leggings.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_pickaxe",
     "name": "Golden Pickaxe",
     "icon": "golden_pickaxe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_shovel",
     "name": "Golden Shovel",
     "icon": "golden_shovel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:golden_sword",
     "name": "Golden Sword",
     "icon": "golden_sword.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:granite",
     "name": "Granite",
     "icon": "granite.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:granite_slab",
     "name": "Granite Slab",
     "icon": "granite_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:granite_stairs",
     "name": "Granite Stairs",
     "icon": "granite_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:granite_wall",
     "name": "Granite Wall",
     "icon": "granite_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gravel",
     "name": "Gravel",
     "icon": "gravel.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:gray_banner",
     "name": "Gray Banner",
     "icon": "gray_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:gray_bed",
     "name": "Gray Bed",
     "icon": "gray_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:gray_bundle",
@@ -2832,14 +3181,16 @@
     "name": "Gray Carpet",
     "icon": "gray_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:gray_concrete_powder",
     "name": "Gray Concrete Powder",
     "icon": "gray_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:gray_dye",
@@ -2853,56 +3204,64 @@
     "name": "Gray Harness",
     "icon": "gray_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:gray_shulker_box",
     "name": "Gray Shulker Box",
     "icon": "gray_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gray_stained_glass",
     "name": "Gray Stained Glass",
     "icon": "gray_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gray_stained_glass_pane",
     "name": "Gray Stained Glass Pane",
     "icon": "gray_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gray_terracotta",
     "name": "Gray Terracotta",
     "icon": "gray_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gray_wool",
     "name": "Gray Wool",
     "icon": "gray_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:green_banner",
     "name": "Green Banner",
     "icon": "green_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:green_bed",
     "name": "Green Bed",
     "icon": "green_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:green_bundle",
@@ -2923,14 +3282,16 @@
     "name": "Green Carpet",
     "icon": "green_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:green_concrete_powder",
     "name": "Green Concrete Powder",
     "icon": "green_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:green_dye",
@@ -2944,49 +3305,56 @@
     "name": "Green Harness",
     "icon": "green_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:green_shulker_box",
     "name": "Green Shulker Box",
     "icon": "green_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:green_stained_glass",
     "name": "Green Stained Glass",
     "icon": "green_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:green_stained_glass_pane",
     "name": "Green Stained Glass Pane",
     "icon": "green_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:green_terracotta",
     "name": "Green Terracotta",
     "icon": "green_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:green_wool",
     "name": "Green Wool",
     "icon": "green_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:grindstone",
     "name": "Grindstone",
     "icon": "grindstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:gunpowder",
@@ -3000,28 +3368,32 @@
     "name": "Hay Block",
     "icon": "hay_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:heart_of_the_sea",
     "name": "Heart Of The Sea",
     "icon": "heart_of_the_sea.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:heavy_core",
     "name": "Heavy Core",
     "icon": "heavy_core.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:heavy_weighted_pressure_plate",
     "name": "Heavy Weighted Pressure Plate",
     "icon": "heavy_weighted_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:honey_block",
@@ -3035,35 +3407,40 @@
     "name": "Honey Bottle",
     "icon": "honey_bottle.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:honeycomb",
     "name": "Honeycomb",
     "icon": "honeycomb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:honeycomb_block",
     "name": "Honeycomb Block",
     "icon": "honeycomb_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:hopper",
     "name": "Hopper",
     "icon": "hopper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:hopper_minecart",
     "name": "Hopper Minecart",
     "icon": "hopper_minecart.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:host_armor_trim_smithing_template",
@@ -3077,7 +3454,8 @@
     "name": "Ice",
     "icon": "ice.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:ink_sac",
@@ -3091,273 +3469,312 @@
     "name": "Iron Axe",
     "icon": "iron_axe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_bars",
     "name": "Iron Bars",
     "icon": "iron_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_block",
     "name": "Iron Block",
     "icon": "iron_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_boots",
     "name": "Iron Boots",
     "icon": "iron_boots.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_chain",
     "name": "Iron Chain",
     "icon": "iron_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_chestplate",
     "name": "Iron Chestplate",
     "icon": "iron_chestplate.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_door",
     "name": "Iron Door",
     "icon": "iron_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_helmet",
     "name": "Iron Helmet",
     "icon": "iron_helmet.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_hoe",
     "name": "Iron Hoe",
     "icon": "iron_hoe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_ingot",
     "name": "Iron Ingot",
     "icon": "iron_ingot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_leggings",
     "name": "Iron Leggings",
     "icon": "iron_leggings.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_nugget",
     "name": "Iron Nugget",
     "icon": "iron_nugget.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_pickaxe",
     "name": "Iron Pickaxe",
     "icon": "iron_pickaxe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_shovel",
     "name": "Iron Shovel",
     "icon": "iron_shovel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_sword",
     "name": "Iron Sword",
     "icon": "iron_sword.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:iron_trapdoor",
     "name": "Iron Trapdoor",
     "icon": "iron_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:item_frame",
     "name": "Item Frame",
     "icon": "item_frame.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jack_o_lantern",
     "name": "Jack O Lantern",
     "icon": "jack_o_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jukebox",
     "name": "Jukebox",
     "icon": "jukebox.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_boat",
     "name": "Jungle Boat",
     "icon": "jungle_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_button",
     "name": "Jungle Button",
     "icon": "jungle_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_chest_boat",
     "name": "Jungle Chest Boat",
     "icon": "jungle_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_door",
     "name": "Jungle Door",
     "icon": "jungle_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_fence",
     "name": "Jungle Fence",
     "icon": "jungle_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_fence_gate",
     "name": "Jungle Fence Gate",
     "icon": "jungle_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_hanging_sign",
     "name": "Jungle Hanging Sign",
     "icon": "jungle_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_log",
     "name": "Jungle Log",
     "icon": "jungle_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_planks",
     "name": "Jungle Planks",
     "icon": "jungle_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_pressure_plate",
     "name": "Jungle Pressure Plate",
     "icon": "jungle_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_shelf",
     "name": "Jungle Shelf",
     "icon": "jungle_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_sign",
     "name": "Jungle Sign",
     "icon": "jungle_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_slab",
     "name": "Jungle Slab",
     "icon": "jungle_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_stairs",
     "name": "Jungle Stairs",
     "icon": "jungle_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_trapdoor",
     "name": "Jungle Trapdoor",
     "icon": "jungle_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:jungle_wood",
     "name": "Jungle Wood",
     "icon": "jungle_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:ladder",
     "name": "Ladder",
     "icon": "ladder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:lantern",
     "name": "Lantern",
     "icon": "lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:lapis_block",
     "name": "Lapis Block",
     "icon": "lapis_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:lapis_lazuli",
     "name": "Lapis Lazuli",
     "icon": "lapis_lazuli.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:lead",
@@ -3413,28 +3830,32 @@
     "name": "Lectern",
     "icon": "lectern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:lever",
     "name": "Lever",
     "icon": "lever.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:light_blue_banner",
     "name": "Light Blue Banner",
     "icon": "light_blue_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_blue_bed",
     "name": "Light Blue Bed",
     "icon": "light_blue_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_blue_bundle",
@@ -3455,14 +3876,16 @@
     "name": "Light Blue Carpet",
     "icon": "light_blue_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_blue_concrete_powder",
     "name": "Light Blue Concrete Powder",
     "icon": "light_blue_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:light_blue_dye",
@@ -3476,56 +3899,64 @@
     "name": "Light Blue Harness",
     "icon": "light_blue_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_blue_shulker_box",
     "name": "Light Blue Shulker Box",
     "icon": "light_blue_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_blue_stained_glass",
     "name": "Light Blue Stained Glass",
     "icon": "light_blue_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_blue_stained_glass_pane",
     "name": "Light Blue Stained Glass Pane",
     "icon": "light_blue_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_blue_terracotta",
     "name": "Light Blue Terracotta",
     "icon": "light_blue_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_blue_wool",
     "name": "Light Blue Wool",
     "icon": "light_blue_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_gray_banner",
     "name": "Light Gray Banner",
     "icon": "light_gray_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_gray_bed",
     "name": "Light Gray Bed",
     "icon": "light_gray_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_gray_bundle",
@@ -3546,14 +3977,16 @@
     "name": "Light Gray Carpet",
     "icon": "light_gray_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_gray_concrete_powder",
     "name": "Light Gray Concrete Powder",
     "icon": "light_gray_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:light_gray_dye",
@@ -3567,84 +4000,96 @@
     "name": "Light Gray Harness",
     "icon": "light_gray_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_gray_shulker_box",
     "name": "Light Gray Shulker Box",
     "icon": "light_gray_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_gray_stained_glass",
     "name": "Light Gray Stained Glass",
     "icon": "light_gray_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_gray_stained_glass_pane",
     "name": "Light Gray Stained Glass Pane",
     "icon": "light_gray_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_gray_terracotta",
     "name": "Light Gray Terracotta",
     "icon": "light_gray_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:light_gray_wool",
     "name": "Light Gray Wool",
     "icon": "light_gray_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:light_weighted_pressure_plate",
     "name": "Light Weighted Pressure Plate",
     "icon": "light_weighted_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:lightning_rod",
     "name": "Lightning Rod",
     "icon": "lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:lilac",
     "name": "Lilac",
     "icon": "lilac.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:lily_of_the_valley",
     "name": "Lily Of The Valley",
     "icon": "lily_of_the_valley.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:lime_banner",
     "name": "Lime Banner",
     "icon": "lime_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:lime_bed",
     "name": "Lime Bed",
     "icon": "lime_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:lime_bundle",
@@ -3665,14 +4110,16 @@
     "name": "Lime Carpet",
     "icon": "lime_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:lime_concrete_powder",
     "name": "Lime Concrete Powder",
     "icon": "lime_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:lime_dye",
@@ -3686,77 +4133,88 @@
     "name": "Lime Harness",
     "icon": "lime_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:lime_shulker_box",
     "name": "Lime Shulker Box",
     "icon": "lime_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:lime_stained_glass",
     "name": "Lime Stained Glass",
     "icon": "lime_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:lime_stained_glass_pane",
     "name": "Lime Stained Glass Pane",
     "icon": "lime_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:lime_terracotta",
     "name": "Lime Terracotta",
     "icon": "lime_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:lime_wool",
     "name": "Lime Wool",
     "icon": "lime_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:lodestone",
     "name": "Lodestone",
     "icon": "lodestone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:loom",
     "name": "Loom",
     "icon": "loom.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mace",
     "name": "Mace",
     "icon": "mace.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:magenta_banner",
     "name": "Magenta Banner",
     "icon": "magenta_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:magenta_bed",
     "name": "Magenta Bed",
     "icon": "magenta_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:magenta_bundle",
@@ -3777,14 +4235,16 @@
     "name": "Magenta Carpet",
     "icon": "magenta_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:magenta_concrete_powder",
     "name": "Magenta Concrete Powder",
     "icon": "magenta_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:magenta_dye",
@@ -3798,49 +4258,56 @@
     "name": "Magenta Harness",
     "icon": "magenta_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:magenta_shulker_box",
     "name": "Magenta Shulker Box",
     "icon": "magenta_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:magenta_stained_glass",
     "name": "Magenta Stained Glass",
     "icon": "magenta_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:magenta_stained_glass_pane",
     "name": "Magenta Stained Glass Pane",
     "icon": "magenta_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:magenta_terracotta",
     "name": "Magenta Terracotta",
     "icon": "magenta_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:magenta_wool",
     "name": "Magenta Wool",
     "icon": "magenta_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:magma_block",
     "name": "Magma Block",
     "icon": "magma_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:magma_cream",
@@ -3854,70 +4321,80 @@
     "name": "Mangrove Boat",
     "icon": "mangrove_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_button",
     "name": "Mangrove Button",
     "icon": "mangrove_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_chest_boat",
     "name": "Mangrove Chest Boat",
     "icon": "mangrove_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_door",
     "name": "Mangrove Door",
     "icon": "mangrove_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_fence",
     "name": "Mangrove Fence",
     "icon": "mangrove_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_fence_gate",
     "name": "Mangrove Fence Gate",
     "icon": "mangrove_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_hanging_sign",
     "name": "Mangrove Hanging Sign",
     "icon": "mangrove_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_log",
     "name": "Mangrove Log",
     "icon": "mangrove_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_planks",
     "name": "Mangrove Planks",
     "icon": "mangrove_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_pressure_plate",
     "name": "Mangrove Pressure Plate",
     "icon": "mangrove_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_roots",
@@ -3931,42 +4408,48 @@
     "name": "Mangrove Shelf",
     "icon": "mangrove_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_sign",
     "name": "Mangrove Sign",
     "icon": "mangrove_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_slab",
     "name": "Mangrove Slab",
     "icon": "mangrove_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_stairs",
     "name": "Mangrove Stairs",
     "icon": "mangrove_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_trapdoor",
     "name": "Mangrove Trapdoor",
     "icon": "mangrove_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:mangrove_wood",
     "name": "Mangrove Wood",
     "icon": "mangrove_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:map",
@@ -3980,7 +4463,8 @@
     "name": "Melon",
     "icon": "melon.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:melon_seeds",
@@ -4001,14 +4485,16 @@
     "name": "Milk Bucket",
     "icon": "milk_bucket.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:minecart",
     "name": "Minecart",
     "icon": "minecart.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:mojang_banner_pattern",
@@ -4022,105 +4508,120 @@
     "name": "Moss Block",
     "icon": "moss_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:moss_carpet",
     "name": "Moss Carpet",
     "icon": "moss_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:mossy_cobblestone",
     "name": "Mossy Cobblestone",
     "icon": "mossy_cobblestone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_cobblestone_slab",
     "name": "Mossy Cobblestone Slab",
     "icon": "mossy_cobblestone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_cobblestone_stairs",
     "name": "Mossy Cobblestone Stairs",
     "icon": "mossy_cobblestone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_cobblestone_wall",
     "name": "Mossy Cobblestone Wall",
     "icon": "mossy_cobblestone_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_stone_brick_slab",
     "name": "Mossy Stone Brick Slab",
     "icon": "mossy_stone_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_stone_brick_stairs",
     "name": "Mossy Stone Brick Stairs",
     "icon": "mossy_stone_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_stone_brick_wall",
     "name": "Mossy Stone Brick Wall",
     "icon": "mossy_stone_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mossy_stone_bricks",
     "name": "Mossy Stone Bricks",
     "icon": "mossy_stone_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mud",
     "name": "Mud",
     "icon": "mud.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:mud_brick_slab",
     "name": "Mud Brick Slab",
     "icon": "mud_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mud_brick_stairs",
     "name": "Mud Brick Stairs",
     "icon": "mud_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mud_brick_wall",
     "name": "Mud Brick Wall",
     "icon": "mud_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:mud_bricks",
     "name": "Mud Bricks",
     "icon": "mud_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:muddy_mangrove_roots",
@@ -4134,7 +4635,8 @@
     "name": "Mushroom Stew",
     "icon": "mushroom_stew.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:music_disc_5",
@@ -4148,49 +4650,56 @@
     "name": "Nautilus Shell",
     "icon": "nautilus_shell.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_brick",
     "name": "Nether Brick",
     "icon": "nether_brick.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_brick_fence",
     "name": "Nether Brick Fence",
     "icon": "nether_brick_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_brick_slab",
     "name": "Nether Brick Slab",
     "icon": "nether_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_brick_stairs",
     "name": "Nether Brick Stairs",
     "icon": "nether_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_brick_wall",
     "name": "Nether Brick Wall",
     "icon": "nether_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_bricks",
     "name": "Nether Bricks",
     "icon": "nether_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:nether_star",
@@ -4218,21 +4727,24 @@
     "name": "Netherite Block",
     "icon": "netherite_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:netherite_ingot",
     "name": "Netherite Ingot",
     "icon": "netherite_ingot.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:netherite_scrap",
     "name": "Netherite Scrap",
     "icon": "netherite_scrap.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:netherite_upgrade_smithing_template",
@@ -4246,161 +4758,184 @@
     "name": "Netherrack",
     "icon": "netherrack.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:note_block",
     "name": "Note Block",
     "icon": "note_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_boat",
     "name": "Oak Boat",
     "icon": "oak_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_button",
     "name": "Oak Button",
     "icon": "oak_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_chest_boat",
     "name": "Oak Chest Boat",
     "icon": "oak_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_door",
     "name": "Oak Door",
     "icon": "oak_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_fence",
     "name": "Oak Fence",
     "icon": "oak_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_fence_gate",
     "name": "Oak Fence Gate",
     "icon": "oak_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_hanging_sign",
     "name": "Oak Hanging Sign",
     "icon": "oak_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_log",
     "name": "Oak Log",
     "icon": "oak_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_planks",
     "name": "Oak Planks",
     "icon": "oak_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_pressure_plate",
     "name": "Oak Pressure Plate",
     "icon": "oak_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_shelf",
     "name": "Oak Shelf",
     "icon": "oak_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_sign",
     "name": "Oak Sign",
     "icon": "oak_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_slab",
     "name": "Oak Slab",
     "icon": "oak_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_stairs",
     "name": "Oak Stairs",
     "icon": "oak_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_trapdoor",
     "name": "Oak Trapdoor",
     "icon": "oak_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:oak_wood",
     "name": "Oak Wood",
     "icon": "oak_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:observer",
     "name": "Observer",
     "icon": "observer.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:obsidian",
     "name": "Obsidian",
     "icon": "obsidian.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:open_eyeblossom",
     "name": "Open Eyeblossom",
     "icon": "open_eyeblossom.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:orange_banner",
     "name": "Orange Banner",
     "icon": "orange_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:orange_bed",
     "name": "Orange Bed",
     "icon": "orange_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:orange_bundle",
@@ -4421,14 +4956,16 @@
     "name": "Orange Carpet",
     "icon": "orange_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:orange_concrete_powder",
     "name": "Orange Concrete Powder",
     "icon": "orange_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:orange_dye",
@@ -4442,308 +4979,352 @@
     "name": "Orange Harness",
     "icon": "orange_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:orange_shulker_box",
     "name": "Orange Shulker Box",
     "icon": "orange_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:orange_stained_glass",
     "name": "Orange Stained Glass",
     "icon": "orange_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:orange_stained_glass_pane",
     "name": "Orange Stained Glass Pane",
     "icon": "orange_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:orange_terracotta",
     "name": "Orange Terracotta",
     "icon": "orange_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:orange_tulip",
     "name": "Orange Tulip",
     "icon": "orange_tulip.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:orange_wool",
     "name": "Orange Wool",
     "icon": "orange_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:oxeye_daisy",
     "name": "Oxeye Daisy",
     "icon": "oxeye_daisy.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:oxidized_chiseled_copper",
     "name": "Oxidized Chiseled Copper",
     "icon": "oxidized_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper",
     "name": "Oxidized Copper",
     "icon": "oxidized_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_bars",
     "name": "Oxidized Copper Bars",
     "icon": "oxidized_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_bulb",
     "name": "Oxidized Copper Bulb",
     "icon": "oxidized_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_chain",
     "name": "Oxidized Copper Chain",
     "icon": "oxidized_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_chest",
     "name": "Oxidized Copper Chest",
     "icon": "oxidized_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_door",
     "name": "Oxidized Copper Door",
     "icon": "oxidized_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_golem_statue",
     "name": "Oxidized Copper Golem Statue",
     "icon": "oxidized_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_grate",
     "name": "Oxidized Copper Grate",
     "icon": "oxidized_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_lantern",
     "name": "Oxidized Copper Lantern",
     "icon": "oxidized_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_copper_trapdoor",
     "name": "Oxidized Copper Trapdoor",
     "icon": "oxidized_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_cut_copper",
     "name": "Oxidized Cut Copper",
     "icon": "oxidized_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_cut_copper_slab",
     "name": "Oxidized Cut Copper Slab",
     "icon": "oxidized_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_cut_copper_stairs",
     "name": "Oxidized Cut Copper Stairs",
     "icon": "oxidized_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:oxidized_lightning_rod",
     "name": "Oxidized Lightning Rod",
     "icon": "oxidized_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:packed_ice",
     "name": "Packed Ice",
     "icon": "packed_ice.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:packed_mud",
     "name": "Packed Mud",
     "icon": "packed_mud.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:painting",
     "name": "Painting",
     "icon": "painting.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_moss_block",
     "name": "Pale Moss Block",
     "icon": "pale_moss_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:pale_moss_carpet",
     "name": "Pale Moss Carpet",
     "icon": "pale_moss_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:pale_oak_boat",
     "name": "Pale Oak Boat",
     "icon": "pale_oak_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_button",
     "name": "Pale Oak Button",
     "icon": "pale_oak_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_chest_boat",
     "name": "Pale Oak Chest Boat",
     "icon": "pale_oak_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_door",
     "name": "Pale Oak Door",
     "icon": "pale_oak_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_fence",
     "name": "Pale Oak Fence",
     "icon": "pale_oak_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_fence_gate",
     "name": "Pale Oak Fence Gate",
     "icon": "pale_oak_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_hanging_sign",
     "name": "Pale Oak Hanging Sign",
     "icon": "pale_oak_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_log",
     "name": "Pale Oak Log",
     "icon": "pale_oak_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_planks",
     "name": "Pale Oak Planks",
     "icon": "pale_oak_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_pressure_plate",
     "name": "Pale Oak Pressure Plate",
     "icon": "pale_oak_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_shelf",
     "name": "Pale Oak Shelf",
     "icon": "pale_oak_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_sign",
     "name": "Pale Oak Sign",
     "icon": "pale_oak_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_slab",
     "name": "Pale Oak Slab",
     "icon": "pale_oak_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_stairs",
     "name": "Pale Oak Stairs",
     "icon": "pale_oak_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_trapdoor",
     "name": "Pale Oak Trapdoor",
     "icon": "pale_oak_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pale_oak_wood",
     "name": "Pale Oak Wood",
     "icon": "pale_oak_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:paper",
@@ -4757,21 +5338,24 @@
     "name": "Peony",
     "icon": "peony.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:pink_banner",
     "name": "Pink Banner",
     "icon": "pink_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:pink_bed",
     "name": "Pink Bed",
     "icon": "pink_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:pink_bundle",
@@ -4792,14 +5376,16 @@
     "name": "Pink Carpet",
     "icon": "pink_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:pink_concrete_powder",
     "name": "Pink Concrete Powder",
     "icon": "pink_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:pink_dye",
@@ -4813,273 +5399,312 @@
     "name": "Pink Harness",
     "icon": "pink_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:pink_petals",
     "name": "Pink Petals",
     "icon": "pink_petals.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:pink_shulker_box",
     "name": "Pink Shulker Box",
     "icon": "pink_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:pink_stained_glass",
     "name": "Pink Stained Glass",
     "icon": "pink_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:pink_stained_glass_pane",
     "name": "Pink Stained Glass Pane",
     "icon": "pink_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:pink_terracotta",
     "name": "Pink Terracotta",
     "icon": "pink_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:pink_tulip",
     "name": "Pink Tulip",
     "icon": "pink_tulip.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:pink_wool",
     "name": "Pink Wool",
     "icon": "pink_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:piston",
     "name": "Piston",
     "icon": "piston.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pitcher_plant",
     "name": "Pitcher Plant",
     "icon": "pitcher_plant.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:pointed_dripstone",
     "name": "Pointed Dripstone",
     "icon": "pointed_dripstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_andesite",
     "name": "Polished Andesite",
     "icon": "polished_andesite.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_andesite_slab",
     "name": "Polished Andesite Slab",
     "icon": "polished_andesite_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_andesite_stairs",
     "name": "Polished Andesite Stairs",
     "icon": "polished_andesite_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_basalt",
     "name": "Polished Basalt",
     "icon": "polished_basalt.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone",
     "name": "Polished Blackstone",
     "icon": "polished_blackstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_brick_slab",
     "name": "Polished Blackstone Brick Slab",
     "icon": "polished_blackstone_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_brick_stairs",
     "name": "Polished Blackstone Brick Stairs",
     "icon": "polished_blackstone_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_brick_wall",
     "name": "Polished Blackstone Brick Wall",
     "icon": "polished_blackstone_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_bricks",
     "name": "Polished Blackstone Bricks",
     "icon": "polished_blackstone_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_button",
     "name": "Polished Blackstone Button",
     "icon": "polished_blackstone_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_pressure_plate",
     "name": "Polished Blackstone Pressure Plate",
     "icon": "polished_blackstone_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_slab",
     "name": "Polished Blackstone Slab",
     "icon": "polished_blackstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_stairs",
     "name": "Polished Blackstone Stairs",
     "icon": "polished_blackstone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_blackstone_wall",
     "name": "Polished Blackstone Wall",
     "icon": "polished_blackstone_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_deepslate",
     "name": "Polished Deepslate",
     "icon": "polished_deepslate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_deepslate_slab",
     "name": "Polished Deepslate Slab",
     "icon": "polished_deepslate_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_deepslate_stairs",
     "name": "Polished Deepslate Stairs",
     "icon": "polished_deepslate_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_deepslate_wall",
     "name": "Polished Deepslate Wall",
     "icon": "polished_deepslate_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_diorite",
     "name": "Polished Diorite",
     "icon": "polished_diorite.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_diorite_slab",
     "name": "Polished Diorite Slab",
     "icon": "polished_diorite_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_diorite_stairs",
     "name": "Polished Diorite Stairs",
     "icon": "polished_diorite_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_granite",
     "name": "Polished Granite",
     "icon": "polished_granite.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_granite_slab",
     "name": "Polished Granite Slab",
     "icon": "polished_granite_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_granite_stairs",
     "name": "Polished Granite Stairs",
     "icon": "polished_granite_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_tuff",
     "name": "Polished Tuff",
     "icon": "polished_tuff.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_tuff_slab",
     "name": "Polished Tuff Slab",
     "icon": "polished_tuff_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_tuff_stairs",
     "name": "Polished Tuff Stairs",
     "icon": "polished_tuff_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:polished_tuff_wall",
     "name": "Polished Tuff Wall",
     "icon": "polished_tuff_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:popped_chorus_fruit",
@@ -5093,84 +5718,96 @@
     "name": "Poppy",
     "icon": "poppy.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:powered_rail",
     "name": "Powered Rail",
     "icon": "powered_rail.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:prismarine",
     "name": "Prismarine",
     "icon": "prismarine.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_brick_slab",
     "name": "Prismarine Brick Slab",
     "icon": "prismarine_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_brick_stairs",
     "name": "Prismarine Brick Stairs",
     "icon": "prismarine_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_bricks",
     "name": "Prismarine Bricks",
     "icon": "prismarine_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_crystals",
     "name": "Prismarine Crystals",
     "icon": "prismarine_crystals.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_shard",
     "name": "Prismarine Shard",
     "icon": "prismarine_shard.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_slab",
     "name": "Prismarine Slab",
     "icon": "prismarine_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_stairs",
     "name": "Prismarine Stairs",
     "icon": "prismarine_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:prismarine_wall",
     "name": "Prismarine Wall",
     "icon": "prismarine_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:pumpkin",
     "name": "Pumpkin",
     "icon": "pumpkin.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:pumpkin_pie",
@@ -5191,14 +5828,16 @@
     "name": "Purple Banner",
     "icon": "purple_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:purple_bed",
     "name": "Purple Bed",
     "icon": "purple_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:purple_bundle",
@@ -5219,14 +5858,16 @@
     "name": "Purple Carpet",
     "icon": "purple_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:purple_concrete_powder",
     "name": "Purple Concrete Powder",
     "icon": "purple_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:purple_dye",
@@ -5240,112 +5881,128 @@
     "name": "Purple Harness",
     "icon": "purple_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:purple_shulker_box",
     "name": "Purple Shulker Box",
     "icon": "purple_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purple_stained_glass",
     "name": "Purple Stained Glass",
     "icon": "purple_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purple_stained_glass_pane",
     "name": "Purple Stained Glass Pane",
     "icon": "purple_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purple_terracotta",
     "name": "Purple Terracotta",
     "icon": "purple_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purple_wool",
     "name": "Purple Wool",
     "icon": "purple_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:purpur_block",
     "name": "Purpur Block",
     "icon": "purpur_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purpur_pillar",
     "name": "Purpur Pillar",
     "icon": "purpur_pillar.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purpur_slab",
     "name": "Purpur Slab",
     "icon": "purpur_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:purpur_stairs",
     "name": "Purpur Stairs",
     "icon": "purpur_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:quartz",
     "name": "Quartz",
     "icon": "quartz.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:quartz_block",
     "name": "Quartz Block",
     "icon": "quartz_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:quartz_bricks",
     "name": "Quartz Bricks",
     "icon": "quartz_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:quartz_pillar",
     "name": "Quartz Pillar",
     "icon": "quartz_pillar.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:quartz_slab",
     "name": "Quartz Slab",
     "icon": "quartz_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:quartz_stairs",
     "name": "Quartz Stairs",
     "icon": "quartz_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:rabbit_hide",
@@ -5359,14 +6016,16 @@
     "name": "Rabbit Stew",
     "icon": "rabbit_stew.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:rail",
     "name": "Rail",
     "icon": "rail.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:raiser_armor_trim_smithing_template",
@@ -5380,63 +6039,72 @@
     "name": "Raw Copper",
     "icon": "raw_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:raw_copper_block",
     "name": "Raw Copper Block",
     "icon": "raw_copper_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:raw_gold",
     "name": "Raw Gold",
     "icon": "raw_gold.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:raw_gold_block",
     "name": "Raw Gold Block",
     "icon": "raw_gold_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:raw_iron",
     "name": "Raw Iron",
     "icon": "raw_iron.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:raw_iron_block",
     "name": "Raw Iron Block",
     "icon": "raw_iron_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:recovery_compass",
     "name": "Recovery Compass",
     "icon": "recovery_compass.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:red_banner",
     "name": "Red Banner",
     "icon": "red_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:red_bed",
     "name": "Red Bed",
     "icon": "red_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:red_bundle",
@@ -5457,14 +6125,16 @@
     "name": "Red Carpet",
     "icon": "red_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:red_concrete_powder",
     "name": "Red Concrete Powder",
     "icon": "red_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:red_dye",
@@ -5478,7 +6148,8 @@
     "name": "Red Harness",
     "icon": "red_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:red_mushroom",
@@ -5492,196 +6163,224 @@
     "name": "Red Nether Brick Slab",
     "icon": "red_nether_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_nether_brick_stairs",
     "name": "Red Nether Brick Stairs",
     "icon": "red_nether_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_nether_brick_wall",
     "name": "Red Nether Brick Wall",
     "icon": "red_nether_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_nether_bricks",
     "name": "Red Nether Bricks",
     "icon": "red_nether_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_sand",
     "name": "Red Sand",
     "icon": "red_sand.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:red_sandstone",
     "name": "Red Sandstone",
     "icon": "red_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_sandstone_slab",
     "name": "Red Sandstone Slab",
     "icon": "red_sandstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_sandstone_stairs",
     "name": "Red Sandstone Stairs",
     "icon": "red_sandstone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_sandstone_wall",
     "name": "Red Sandstone Wall",
     "icon": "red_sandstone_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_shulker_box",
     "name": "Red Shulker Box",
     "icon": "red_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_stained_glass",
     "name": "Red Stained Glass",
     "icon": "red_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_stained_glass_pane",
     "name": "Red Stained Glass Pane",
     "icon": "red_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_terracotta",
     "name": "Red Terracotta",
     "icon": "red_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:red_tulip",
     "name": "Red Tulip",
     "icon": "red_tulip.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:red_wool",
     "name": "Red Wool",
     "icon": "red_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:redstone",
     "name": "Redstone",
     "icon": "redstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:redstone_block",
     "name": "Redstone Block",
     "icon": "redstone_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:redstone_lamp",
     "name": "Redstone Lamp",
     "icon": "redstone_lamp.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:redstone_torch",
     "name": "Redstone Torch",
     "icon": "redstone_torch.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:repeater",
     "name": "Repeater",
     "icon": "repeater.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_block",
     "name": "Resin Block",
     "icon": "resin_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_brick",
     "name": "Resin Brick",
     "icon": "resin_brick.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_brick_slab",
     "name": "Resin Brick Slab",
     "icon": "resin_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_brick_stairs",
     "name": "Resin Brick Stairs",
     "icon": "resin_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_brick_wall",
     "name": "Resin Brick Wall",
     "icon": "resin_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_bricks",
     "name": "Resin Bricks",
     "icon": "resin_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:resin_clump",
     "name": "Resin Clump",
     "icon": "resin_clump.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:respawn_anchor",
     "name": "Respawn Anchor",
     "icon": "respawn_anchor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:rib_armor_trim_smithing_template",
@@ -5695,7 +6394,8 @@
     "name": "Rose Bush",
     "icon": "rose_bush.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:saddle",
@@ -5709,56 +6409,64 @@
     "name": "Sand",
     "icon": "sand.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:sandstone",
     "name": "Sandstone",
     "icon": "sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:sandstone_slab",
     "name": "Sandstone Slab",
     "icon": "sandstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:sandstone_stairs",
     "name": "Sandstone Stairs",
     "icon": "sandstone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:sandstone_wall",
     "name": "Sandstone Wall",
     "icon": "sandstone_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:scaffolding",
     "name": "Scaffolding",
     "icon": "scaffolding.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:sculk_sensor",
     "name": "Sculk Sensor",
     "icon": "sculk_sensor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:sea_lantern",
     "name": "Sea Lantern",
     "icon": "sea_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:sentry_armor_trim_smithing_template",
@@ -5779,28 +6487,32 @@
     "name": "Shears",
     "icon": "shears.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:shield",
     "name": "Shield",
     "icon": "shield.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:shulker_box",
     "name": "Shulker Box",
     "icon": "shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:shulker_shell",
     "name": "Shulker Shell",
     "icon": "shulker_shell.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:silence_armor_trim_smithing_template",
@@ -5835,91 +6547,104 @@
     "name": "Smithing Table",
     "icon": "smithing_table.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:smoker",
     "name": "Smoker",
     "icon": "smoker.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_quartz",
     "name": "Smooth Quartz",
     "icon": "smooth_quartz.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_quartz_slab",
     "name": "Smooth Quartz Slab",
     "icon": "smooth_quartz_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_quartz_stairs",
     "name": "Smooth Quartz Stairs",
     "icon": "smooth_quartz_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_red_sandstone",
     "name": "Smooth Red Sandstone",
     "icon": "smooth_red_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_red_sandstone_slab",
     "name": "Smooth Red Sandstone Slab",
     "icon": "smooth_red_sandstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_red_sandstone_stairs",
     "name": "Smooth Red Sandstone Stairs",
     "icon": "smooth_red_sandstone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_sandstone",
     "name": "Smooth Sandstone",
     "icon": "smooth_sandstone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_sandstone_slab",
     "name": "Smooth Sandstone Slab",
     "icon": "smooth_sandstone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_sandstone_stairs",
     "name": "Smooth Sandstone Stairs",
     "icon": "smooth_sandstone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_stone",
     "name": "Smooth Stone",
     "icon": "smooth_stone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:smooth_stone_slab",
     "name": "Smooth Stone Slab",
     "icon": "smooth_stone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:snout_armor_trim_smithing_template",
@@ -5933,63 +6658,72 @@
     "name": "Snow",
     "icon": "snow.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:snow_block",
     "name": "Snow Block",
     "icon": "snow_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:snowball",
     "name": "Snowball",
     "icon": "snowball.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:soul_campfire",
     "name": "Soul Campfire",
     "icon": "soul_campfire.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:soul_lantern",
     "name": "Soul Lantern",
     "icon": "soul_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:soul_sand",
     "name": "Soul Sand",
     "icon": "soul_sand.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:soul_soil",
     "name": "Soul Soil",
     "icon": "soul_soil.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRAVEL"
   },
   {
     "id": "minecraft:soul_torch",
     "name": "Soul Torch",
     "icon": "soul_torch.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spectral_arrow",
     "name": "Spectral Arrow",
     "icon": "spectral_arrow.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spider_eye",
@@ -6010,406 +6744,464 @@
     "name": "Spruce Boat",
     "icon": "spruce_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_button",
     "name": "Spruce Button",
     "icon": "spruce_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_chest_boat",
     "name": "Spruce Chest Boat",
     "icon": "spruce_chest_boat.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_door",
     "name": "Spruce Door",
     "icon": "spruce_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_fence",
     "name": "Spruce Fence",
     "icon": "spruce_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_fence_gate",
     "name": "Spruce Fence Gate",
     "icon": "spruce_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_hanging_sign",
     "name": "Spruce Hanging Sign",
     "icon": "spruce_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_log",
     "name": "Spruce Log",
     "icon": "spruce_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_planks",
     "name": "Spruce Planks",
     "icon": "spruce_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_pressure_plate",
     "name": "Spruce Pressure Plate",
     "icon": "spruce_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_shelf",
     "name": "Spruce Shelf",
     "icon": "spruce_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_sign",
     "name": "Spruce Sign",
     "icon": "spruce_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_slab",
     "name": "Spruce Slab",
     "icon": "spruce_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_stairs",
     "name": "Spruce Stairs",
     "icon": "spruce_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_trapdoor",
     "name": "Spruce Trapdoor",
     "icon": "spruce_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spruce_wood",
     "name": "Spruce Wood",
     "icon": "spruce_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:spyglass",
     "name": "Spyglass",
     "icon": "spyglass.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:stick",
     "name": "Stick",
     "icon": "stick.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:sticky_piston",
     "name": "Sticky Piston",
     "icon": "sticky_piston.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stone",
     "name": "Stone",
     "icon": "stone.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_axe",
     "name": "Stone Axe",
     "icon": "stone_axe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_brick_slab",
     "name": "Stone Brick Slab",
     "icon": "stone_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_brick_stairs",
     "name": "Stone Brick Stairs",
     "icon": "stone_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_brick_wall",
     "name": "Stone Brick Wall",
     "icon": "stone_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_bricks",
     "name": "Stone Bricks",
     "icon": "stone_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_button",
     "name": "Stone Button",
     "icon": "stone_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_hoe",
     "name": "Stone Hoe",
     "icon": "stone_hoe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_pickaxe",
     "name": "Stone Pickaxe",
     "icon": "stone_pickaxe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_pressure_plate",
     "name": "Stone Pressure Plate",
     "icon": "stone_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_shovel",
     "name": "Stone Shovel",
     "icon": "stone_shovel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_slab",
     "name": "Stone Slab",
     "icon": "stone_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_stairs",
     "name": "Stone Stairs",
     "icon": "stone_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stone_sword",
     "name": "Stone Sword",
     "icon": "stone_sword.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:stonecutter",
     "name": "Stonecutter",
     "icon": "stonecutter.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:string",
     "name": "String",
     "icon": "string.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:stripped_acacia_log",
     "name": "Stripped Acacia Log",
     "icon": "stripped_acacia_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_acacia_wood",
     "name": "Stripped Acacia Wood",
     "icon": "stripped_acacia_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_bamboo_block",
     "name": "Stripped Bamboo Block",
     "icon": "stripped_bamboo_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_birch_log",
     "name": "Stripped Birch Log",
     "icon": "stripped_birch_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_birch_wood",
     "name": "Stripped Birch Wood",
     "icon": "stripped_birch_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_cherry_log",
     "name": "Stripped Cherry Log",
     "icon": "stripped_cherry_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_cherry_wood",
     "name": "Stripped Cherry Wood",
     "icon": "stripped_cherry_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_crimson_hyphae",
     "name": "Stripped Crimson Hyphae",
     "icon": "stripped_crimson_hyphae.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_crimson_stem",
     "name": "Stripped Crimson Stem",
     "icon": "stripped_crimson_stem.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_dark_oak_log",
     "name": "Stripped Dark Oak Log",
     "icon": "stripped_dark_oak_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_dark_oak_wood",
     "name": "Stripped Dark Oak Wood",
     "icon": "stripped_dark_oak_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_jungle_log",
     "name": "Stripped Jungle Log",
     "icon": "stripped_jungle_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_jungle_wood",
     "name": "Stripped Jungle Wood",
     "icon": "stripped_jungle_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_mangrove_log",
     "name": "Stripped Mangrove Log",
     "icon": "stripped_mangrove_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_mangrove_wood",
     "name": "Stripped Mangrove Wood",
     "icon": "stripped_mangrove_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_oak_log",
     "name": "Stripped Oak Log",
     "icon": "stripped_oak_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_oak_wood",
     "name": "Stripped Oak Wood",
     "icon": "stripped_oak_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_pale_oak_log",
     "name": "Stripped Pale Oak Log",
     "icon": "stripped_pale_oak_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_pale_oak_wood",
     "name": "Stripped Pale Oak Wood",
     "icon": "stripped_pale_oak_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_spruce_log",
     "name": "Stripped Spruce Log",
     "icon": "stripped_spruce_log.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_spruce_wood",
     "name": "Stripped Spruce Wood",
     "icon": "stripped_spruce_wood.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_warped_hyphae",
     "name": "Stripped Warped Hyphae",
     "icon": "stripped_warped_hyphae.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:stripped_warped_stem",
     "name": "Stripped Warped Stem",
     "icon": "stripped_warped_stem.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:sugar",
@@ -6423,35 +7215,40 @@
     "name": "Sugar Cane",
     "icon": "sugar_cane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:sunflower",
     "name": "Sunflower",
     "icon": "sunflower.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:suspicious_stew",
     "name": "Suspicious Stew",
     "icon": "suspicious_stew.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:target",
     "name": "Target",
     "icon": "target.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:terracotta",
     "name": "Terracotta",
     "icon": "terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tide_armor_trim_smithing_template",
@@ -6465,105 +7262,120 @@
     "name": "Tinted Glass",
     "icon": "tinted_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tnt",
     "name": "Tnt",
     "icon": "tnt.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:tnt_minecart",
     "name": "Tnt Minecart",
     "icon": "tnt_minecart.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:torch",
     "name": "Torch",
     "icon": "torch.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:torchflower",
     "name": "Torchflower",
     "icon": "torchflower.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:trapped_chest",
     "name": "Trapped Chest",
     "icon": "trapped_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:tripwire_hook",
     "name": "Tripwire Hook",
     "icon": "tripwire_hook.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:tuff",
     "name": "Tuff",
     "icon": "tuff.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_brick_slab",
     "name": "Tuff Brick Slab",
     "icon": "tuff_brick_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_brick_stairs",
     "name": "Tuff Brick Stairs",
     "icon": "tuff_brick_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_brick_wall",
     "name": "Tuff Brick Wall",
     "icon": "tuff_brick_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_bricks",
     "name": "Tuff Bricks",
     "icon": "tuff_bricks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_slab",
     "name": "Tuff Slab",
     "icon": "tuff_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_stairs",
     "name": "Tuff Stairs",
     "icon": "tuff_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:tuff_wall",
     "name": "Tuff Wall",
     "icon": "tuff_wall.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:turtle_helmet",
@@ -6591,7 +7403,8 @@
     "name": "Vine",
     "icon": "vine.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:ward_armor_trim_smithing_template",
@@ -6605,644 +7418,736 @@
     "name": "Warped Button",
     "icon": "warped_button.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_door",
     "name": "Warped Door",
     "icon": "warped_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_fence",
     "name": "Warped Fence",
     "icon": "warped_fence.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_fence_gate",
     "name": "Warped Fence Gate",
     "icon": "warped_fence_gate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_fungus",
     "name": "Warped Fungus",
     "icon": "warped_fungus.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:warped_fungus_on_a_stick",
     "name": "Warped Fungus On A Stick",
     "icon": "warped_fungus_on_a_stick.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_hanging_sign",
     "name": "Warped Hanging Sign",
     "icon": "warped_hanging_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_hyphae",
     "name": "Warped Hyphae",
     "icon": "warped_hyphae.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_planks",
     "name": "Warped Planks",
     "icon": "warped_planks.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_pressure_plate",
     "name": "Warped Pressure Plate",
     "icon": "warped_pressure_plate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_shelf",
     "name": "Warped Shelf",
     "icon": "warped_shelf.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_sign",
     "name": "Warped Sign",
     "icon": "warped_sign.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_slab",
     "name": "Warped Slab",
     "icon": "warped_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_stairs",
     "name": "Warped Stairs",
     "icon": "warped_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_stem",
     "name": "Warped Stem",
     "icon": "warped_stem.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:warped_trapdoor",
     "name": "Warped Trapdoor",
     "icon": "warped_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:waxed_chiseled_copper",
     "name": "Waxed Chiseled Copper",
     "icon": "waxed_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_bars",
     "name": "Waxed Copper Bars",
     "icon": "waxed_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_block",
     "name": "Waxed Copper Block",
     "icon": "waxed_copper_block.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_bulb",
     "name": "Waxed Copper Bulb",
     "icon": "waxed_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_chain",
     "name": "Waxed Copper Chain",
     "icon": "waxed_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_chest",
     "name": "Waxed Copper Chest",
     "icon": "waxed_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_door",
     "name": "Waxed Copper Door",
     "icon": "waxed_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_golem_statue",
     "name": "Waxed Copper Golem Statue",
     "icon": "waxed_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_grate",
     "name": "Waxed Copper Grate",
     "icon": "waxed_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_lantern",
     "name": "Waxed Copper Lantern",
     "icon": "waxed_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_copper_trapdoor",
     "name": "Waxed Copper Trapdoor",
     "icon": "waxed_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_cut_copper",
     "name": "Waxed Cut Copper",
     "icon": "waxed_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_cut_copper_slab",
     "name": "Waxed Cut Copper Slab",
     "icon": "waxed_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_cut_copper_stairs",
     "name": "Waxed Cut Copper Stairs",
     "icon": "waxed_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_chiseled_copper",
     "name": "Waxed Exposed Chiseled Copper",
     "icon": "waxed_exposed_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper",
     "name": "Waxed Exposed Copper",
     "icon": "waxed_exposed_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_bars",
     "name": "Waxed Exposed Copper Bars",
     "icon": "waxed_exposed_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_bulb",
     "name": "Waxed Exposed Copper Bulb",
     "icon": "waxed_exposed_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_chain",
     "name": "Waxed Exposed Copper Chain",
     "icon": "waxed_exposed_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_chest",
     "name": "Waxed Exposed Copper Chest",
     "icon": "waxed_exposed_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_door",
     "name": "Waxed Exposed Copper Door",
     "icon": "waxed_exposed_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_golem_statue",
     "name": "Waxed Exposed Copper Golem Statue",
     "icon": "waxed_exposed_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_grate",
     "name": "Waxed Exposed Copper Grate",
     "icon": "waxed_exposed_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_lantern",
     "name": "Waxed Exposed Copper Lantern",
     "icon": "waxed_exposed_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_copper_trapdoor",
     "name": "Waxed Exposed Copper Trapdoor",
     "icon": "waxed_exposed_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_cut_copper",
     "name": "Waxed Exposed Cut Copper",
     "icon": "waxed_exposed_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_cut_copper_slab",
     "name": "Waxed Exposed Cut Copper Slab",
     "icon": "waxed_exposed_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_cut_copper_stairs",
     "name": "Waxed Exposed Cut Copper Stairs",
     "icon": "waxed_exposed_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_exposed_lightning_rod",
     "name": "Waxed Exposed Lightning Rod",
     "icon": "waxed_exposed_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_lightning_rod",
     "name": "Waxed Lightning Rod",
     "icon": "waxed_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_chiseled_copper",
     "name": "Waxed Oxidized Chiseled Copper",
     "icon": "waxed_oxidized_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper",
     "name": "Waxed Oxidized Copper",
     "icon": "waxed_oxidized_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_bars",
     "name": "Waxed Oxidized Copper Bars",
     "icon": "waxed_oxidized_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_bulb",
     "name": "Waxed Oxidized Copper Bulb",
     "icon": "waxed_oxidized_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_chain",
     "name": "Waxed Oxidized Copper Chain",
     "icon": "waxed_oxidized_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_chest",
     "name": "Waxed Oxidized Copper Chest",
     "icon": "waxed_oxidized_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_door",
     "name": "Waxed Oxidized Copper Door",
     "icon": "waxed_oxidized_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_golem_statue",
     "name": "Waxed Oxidized Copper Golem Statue",
     "icon": "waxed_oxidized_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_grate",
     "name": "Waxed Oxidized Copper Grate",
     "icon": "waxed_oxidized_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_lantern",
     "name": "Waxed Oxidized Copper Lantern",
     "icon": "waxed_oxidized_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_copper_trapdoor",
     "name": "Waxed Oxidized Copper Trapdoor",
     "icon": "waxed_oxidized_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_cut_copper",
     "name": "Waxed Oxidized Cut Copper",
     "icon": "waxed_oxidized_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_cut_copper_slab",
     "name": "Waxed Oxidized Cut Copper Slab",
     "icon": "waxed_oxidized_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_cut_copper_stairs",
     "name": "Waxed Oxidized Cut Copper Stairs",
     "icon": "waxed_oxidized_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_oxidized_lightning_rod",
     "name": "Waxed Oxidized Lightning Rod",
     "icon": "waxed_oxidized_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_chiseled_copper",
     "name": "Waxed Weathered Chiseled Copper",
     "icon": "waxed_weathered_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper",
     "name": "Waxed Weathered Copper",
     "icon": "waxed_weathered_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_bars",
     "name": "Waxed Weathered Copper Bars",
     "icon": "waxed_weathered_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_bulb",
     "name": "Waxed Weathered Copper Bulb",
     "icon": "waxed_weathered_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_chain",
     "name": "Waxed Weathered Copper Chain",
     "icon": "waxed_weathered_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_chest",
     "name": "Waxed Weathered Copper Chest",
     "icon": "waxed_weathered_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_door",
     "name": "Waxed Weathered Copper Door",
     "icon": "waxed_weathered_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_golem_statue",
     "name": "Waxed Weathered Copper Golem Statue",
     "icon": "waxed_weathered_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_grate",
     "name": "Waxed Weathered Copper Grate",
     "icon": "waxed_weathered_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_lantern",
     "name": "Waxed Weathered Copper Lantern",
     "icon": "waxed_weathered_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_copper_trapdoor",
     "name": "Waxed Weathered Copper Trapdoor",
     "icon": "waxed_weathered_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_cut_copper",
     "name": "Waxed Weathered Cut Copper",
     "icon": "waxed_weathered_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_cut_copper_slab",
     "name": "Waxed Weathered Cut Copper Slab",
     "icon": "waxed_weathered_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_cut_copper_stairs",
     "name": "Waxed Weathered Cut Copper Stairs",
     "icon": "waxed_weathered_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:waxed_weathered_lightning_rod",
     "name": "Waxed Weathered Lightning Rod",
     "icon": "waxed_weathered_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:wayfinder_armor_trim_smithing_template",
     "name": "Wayfinder Armor Trim Smithing Template",
     "icon": "wayfinder_armor_trim_smithing_template.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_chiseled_copper",
     "name": "Weathered Chiseled Copper",
     "icon": "weathered_chiseled_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper",
     "name": "Weathered Copper",
     "icon": "weathered_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_bars",
     "name": "Weathered Copper Bars",
     "icon": "weathered_copper_bars.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_bulb",
     "name": "Weathered Copper Bulb",
     "icon": "weathered_copper_bulb.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_chain",
     "name": "Weathered Copper Chain",
     "icon": "weathered_copper_chain.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_chest",
     "name": "Weathered Copper Chest",
     "icon": "weathered_copper_chest.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_door",
     "name": "Weathered Copper Door",
     "icon": "weathered_copper_door.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_golem_statue",
     "name": "Weathered Copper Golem Statue",
     "icon": "weathered_copper_golem_statue.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_grate",
     "name": "Weathered Copper Grate",
     "icon": "weathered_copper_grate.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_lantern",
     "name": "Weathered Copper Lantern",
     "icon": "weathered_copper_lantern.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_copper_trapdoor",
     "name": "Weathered Copper Trapdoor",
     "icon": "weathered_copper_trapdoor.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_cut_copper",
     "name": "Weathered Cut Copper",
     "icon": "weathered_cut_copper.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_cut_copper_slab",
     "name": "Weathered Cut Copper Slab",
     "icon": "weathered_cut_copper_slab.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_cut_copper_stairs",
     "name": "Weathered Cut Copper Stairs",
     "icon": "weathered_cut_copper_stairs.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:weathered_lightning_rod",
     "name": "Weathered Lightning Rod",
     "icon": "weathered_lightning_rod.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "METAL"
   },
   {
     "id": "minecraft:wheat",
@@ -7256,14 +8161,16 @@
     "name": "White Banner",
     "icon": "white_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:white_bed",
     "name": "White Bed",
     "icon": "white_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:white_bundle",
@@ -7284,14 +8191,16 @@
     "name": "White Carpet",
     "icon": "white_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:white_concrete_powder",
     "name": "White Concrete Powder",
     "icon": "white_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:white_dye",
@@ -7305,49 +8214,56 @@
     "name": "White Harness",
     "icon": "white_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:white_shulker_box",
     "name": "White Shulker Box",
     "icon": "white_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:white_stained_glass",
     "name": "White Stained Glass",
     "icon": "white_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:white_stained_glass_pane",
     "name": "White Stained Glass Pane",
     "icon": "white_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:white_terracotta",
     "name": "White Terracotta",
     "icon": "white_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:white_tulip",
     "name": "White Tulip",
     "icon": "white_tulip.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:white_wool",
     "name": "White Wool",
     "icon": "white_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:wild_armor_trim_smithing_template",
@@ -7361,7 +8277,8 @@
     "name": "Wildflowers",
     "icon": "wildflowers.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:wind_charge",
@@ -7375,7 +8292,8 @@
     "name": "Wither Rose",
     "icon": "wither_rose.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "GRASS"
   },
   {
     "id": "minecraft:wither_skeleton_skull",
@@ -7396,35 +8314,40 @@
     "name": "Wooden Axe",
     "icon": "wooden_axe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:wooden_hoe",
     "name": "Wooden Hoe",
     "icon": "wooden_hoe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:wooden_pickaxe",
     "name": "Wooden Pickaxe",
     "icon": "wooden_pickaxe.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:wooden_shovel",
     "name": "Wooden Shovel",
     "icon": "wooden_shovel.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:wooden_sword",
     "name": "Wooden Sword",
     "icon": "wooden_sword.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOD"
   },
   {
     "id": "minecraft:writable_book",
@@ -7438,14 +8361,16 @@
     "name": "Yellow Banner",
     "icon": "yellow_banner.png",
     "count": 0,
-    "stack_size": 16
+    "stack_size": 16,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:yellow_bed",
     "name": "Yellow Bed",
     "icon": "yellow_bed.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:yellow_bundle",
@@ -7466,14 +8391,16 @@
     "name": "Yellow Carpet",
     "icon": "yellow_carpet.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:yellow_concrete_powder",
     "name": "Yellow Concrete Powder",
     "icon": "yellow_concrete_powder.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "SAND"
   },
   {
     "id": "minecraft:yellow_dye",
@@ -7487,41 +8414,47 @@
     "name": "Yellow Harness",
     "icon": "yellow_harness.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "WOOL"
   },
   {
     "id": "minecraft:yellow_shulker_box",
     "name": "Yellow Shulker Box",
     "icon": "yellow_shulker_box.png",
     "count": 0,
-    "stack_size": 1
+    "stack_size": 1,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:yellow_stained_glass",
     "name": "Yellow Stained Glass",
     "icon": "yellow_stained_glass.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:yellow_stained_glass_pane",
     "name": "Yellow Stained Glass Pane",
     "icon": "yellow_stained_glass_pane.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:yellow_terracotta",
     "name": "Yellow Terracotta",
     "icon": "yellow_terracotta.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "STONE"
   },
   {
     "id": "minecraft:yellow_wool",
     "name": "Yellow Wool",
     "icon": "yellow_wool.png",
     "count": 0,
-    "stack_size": 64
+    "stack_size": 64,
+    "sound": "WOOL"
   }
 ]

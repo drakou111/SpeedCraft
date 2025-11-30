@@ -21,6 +21,7 @@ type RawItem = {
     icon?: string;
     count?: number;
     stack_size?: number;
+    sound?: string;
 };
 
 const _raw: RawItem[] = (rawItems as any) || [];
@@ -33,6 +34,7 @@ const items: Item[] = _raw.map((r) => {
         icon: "./items/" + (r.icon ?? `${id.split(":")[1]}.png`),
         count: r.count ?? 0,
         stack_size: r.stack_size ?? 64,
+        sound: r.sound ?? "DEFAULT"
     } as Item;
 });
 const itemsById = new Map<string, Item>();

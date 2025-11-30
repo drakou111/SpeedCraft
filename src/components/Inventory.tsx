@@ -68,15 +68,15 @@ export default function Inventory({
 
             if (!clickedInside && e.button === 0) {
                 if (state.heldItem != null && !state.firstLeft) {
+                    playPutDownSound(state.heldItem.sound);
                     handlers.setHeld(null);
-                    playPutDownSound();
                 }
             }
             if (!clickedInside && e.button === 2) {
                 if (state.heldItem != null && !state.firstRight) {
                     const held = state.heldItem;
+                    playPutDownSound(held.sound);
                     handlers.setHeld(held.count > 1 ? {...held, count: held.count - 1} : null);
-                    playPutDownSound();
                 }
             }
             handlers.setFirstRight(false);

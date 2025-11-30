@@ -40,23 +40,23 @@ export default function ItemSource({
       if (!heldItem) {
         setHeld({ ...proto, count: proto.stack_size });
         setFirstLeft(true);
-        playPickupSound();
+        playPickupSound(proto.sound);
       } else {
+        playPutDownSound(heldItem.sound);
         setHeld(null);
-        playPutDownSound();
       }
     } else if (e.button === 2) {
       if (!heldItem) {
         setHeld({ ...proto, count: 1 });
         setFirstRight(true);
-        playPickupSound();
+        playPickupSound(proto.sound);
       } else {
         if (heldItem.count > 1) {
           setHeld({ ...heldItem, count: heldItem.count - 1 });
-          playPutDownSound();
+          playPutDownSound(heldItem.sound);
         } else {
+          playPutDownSound(heldItem.sound);
           setHeld(null);
-          playPutDownSound();
         }
       }
     }

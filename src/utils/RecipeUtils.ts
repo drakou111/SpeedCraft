@@ -107,7 +107,7 @@ export function allPossibleItemsFromInput(items: Item[]) {
   }
 
   let changed = true;
-
+  let depth = 0;
   while (changed) {
     changed = false;
 
@@ -120,6 +120,8 @@ export function allPossibleItemsFromInput(items: Item[]) {
       if (recipeSatisfied(recipe, currentItems)) {
         have[outId] = { ...recipe.output };
         changed = true;
+        depth++;
+        console.log("Depth " + depth + ": " + recipe.output.name)
       }
     }
   }

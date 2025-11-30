@@ -424,17 +424,17 @@ export function useInventoryInput(options: {
       if (slot.type == SlotType.OUTPUT) {
         if (e.ctrlKey) {
           handleShiftClickOutput(idx, true);
-          playPutDownSound();
+          playPutDownSound(item.sound);
           return;
         }
         else {
           handleOutputClick(idx, true);
-          playPutDownSound();
+          playPutDownSound(item.sound);
           return;
         }
       } else {
         next[idx] = {...slot,item: e.ctrlKey? null: item.count === 1? null: { ...item, count: item.count - 1 }};
-        playPutDownSound();
+        playPutDownSound(item.sound);
       }
     }
 
@@ -618,7 +618,7 @@ export function useInventoryInput(options: {
           if (s?.item) {
             setFirstLeft(true);
             setHeldItem(s.item);
-            playPickupSound();
+            playPickupSound(s.item.sound);
             setSlots((prev) => {
               const next = prev.slice();
               next[idx] = { ...next[idx], item: null };
@@ -648,7 +648,7 @@ export function useInventoryInput(options: {
             const remain = s.item.count - take;
             setFirstRight(true);
             setHeldItem({ ...s.item, count: take });
-            playPickupSound();
+            playPickupSound(s.item.sound);
             setSlots((prev) => {
               const next = prev.slice();
               next[idx] =
@@ -717,11 +717,11 @@ export function useInventoryInput(options: {
           return next;
         });
         if (slotItem) {
-          setHeldItem({ ...slotItem });
           playSwapSound();
+          setHeldItem({ ...slotItem });
         } else {
+          playPutDownSound(heldItem.sound);
           setHeldItem(null);
-          playPutDownSound();
         }
         setDragLeft(false);
         setDragRight(false);
@@ -739,7 +739,7 @@ export function useInventoryInput(options: {
       });
 
       if (valid.length > 0) {
-        playPutDownSound();
+        playPutDownSound(heldItem.sound);
         const perSlot = Math.floor(heldItem.count / valid.length);
 
         if (perSlot > 0) {
@@ -782,7 +782,7 @@ export function useInventoryInput(options: {
       });
 
       if (valid.length > 0 && heldItem.count > 0) {
-        playPutDownSound();
+        playPutDownSound(heldItem.sound);
         let remaining = heldItem.count;
         setSlots((prev) => {
           const next = prev.slice();
@@ -828,7 +828,7 @@ export function useInventoryInput(options: {
 
         // Make sure we still have items to place
         if (used < heldItem.count) {
-          playDragSound();
+          playDragSound(heldItem.sound);
           hoveredSlotsRef.current.add(idx);
           setSelectedSlots([...hoveredSlotsRef.current]);
         }
