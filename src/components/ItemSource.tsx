@@ -7,12 +7,16 @@ export type ItemSourceProps = {
   itemId: string;
   heldItem: Item | null;
   setHeld: (it: Item | null) => void;
+  setFirstLeft: (v: boolean) => void;
+  setFirstRight: (v: boolean) => void;
 };
 
 export default function ItemSource({
   itemId,
   heldItem,
-  setHeld
+  setHeld,
+  setFirstLeft,
+  setFirstRight
 }: ItemSourceProps) {
   const proto = getItemById(itemId);
 
@@ -35,6 +39,7 @@ export default function ItemSource({
     if (e.button === 0) {
       if (!heldItem) {
         setHeld({ ...proto, count: proto.stack_size });
+        setFirstLeft(true);
         playPickupSound();
       } else {
         setHeld(null);
@@ -43,6 +48,7 @@ export default function ItemSource({
     } else if (e.button === 2) {
       if (!heldItem) {
         setHeld({ ...proto, count: 1 });
+        setFirstRight(true);
         playPickupSound();
       } else {
         if (heldItem.count > 1) {
@@ -56,16 +62,11 @@ export default function ItemSource({
     }
   }
 
-  function handleContextMenu(e: React.MouseEvent) {
-    e.preventDefault();
-  }
-
  return (
   <div
     role="button"
     tabIndex={0}
     onMouseDown={handleMouseDown}
-    onContextMenu={handleContextMenu}
     style={{
       userSelect: "none",
       cursor: "pointer",

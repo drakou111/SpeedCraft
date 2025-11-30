@@ -23,6 +23,8 @@ export type InventoryInputState = {
   heldItem: Item | null;
   draggingLeft: boolean;
   draggingRight: boolean;
+  firstLeft: boolean;
+  firstRight: boolean;
   dragStartIndex: number | null;
   hoverIndex: number | null;
   selectedSlots: number[];
@@ -37,6 +39,7 @@ export function useInventoryInput(options: {
   inventorySlots: number;
   hotbarSlots: number;
   craftingSlots: number;
+  onCraft?: (crafted: Item) => void;
 }) {
   const {
     preventContextMenu = true,
@@ -45,6 +48,7 @@ export function useInventoryInput(options: {
     inventorySlots,
     hotbarSlots,
     craftingSlots,
+    onCraft
   } = options;
 
   const cloneSlot = (s: Slot): Slot => ({
@@ -55,6 +59,9 @@ export function useInventoryInput(options: {
   const [leftDown, setLeftDown] = useState(false);
   const [rightDown, setRightDown] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  
+  const [firstLeft, setFirstLeft] = useState(false);
+  const [firstRight, setFirstRight] = useState(false);
 
   const [heldItem, setHeldItem] = useState<Item | null>(null);
 
@@ -220,7 +227,7 @@ export function useInventoryInput(options: {
     }
   }
 
-  function handleOutputClick(outputIdx: number) {
+  function handleOutputClick(outputIdx: number, deleteResult: boolean = false) {
     const outputSlot = slots[outputIdx];
     if (!outputSlot?.item) return;
 
@@ -229,15 +236,19 @@ export function useInventoryInput(options: {
     const { output, secondary } = result;
     if (!output) return;
 
-    if (!heldItem) {
-      setHeldItem({ ...output });
-    } else if (heldItem.id !== output.id || heldItem.count + output.count > heldItem.stack_size) {
-      return;
-    } else {
-      setHeldItem({ ...heldItem, count: heldItem.count + output.count });
+    if (!deleteResult) {
+      if (!heldItem) {
+        setHeldItem({ ...output });
+      } else if (heldItem.id !== output.id || heldItem.count + output.count > heldItem.stack_size) {
+        return;
+      } else {
+        setHeldItem({ ...heldItem, count: heldItem.count + output.count });
+      }
     }
 
     playSwapSound();
+    if (onCraft)
+      onCraft(output);
 
     const next = slots.slice();
 
@@ -271,7 +282,6 @@ export function useInventoryInput(options: {
 
     const newResult = getCraftingResult(next.slice(inputStart, inputEnd));
     const newOutput = newResult.output ?? null;
-
     next[outputIdx] = { ...next[outputIdx], item: newOutput };
 
     setSlots(next);
@@ -282,10 +292,9 @@ export function useInventoryInput(options: {
     if (!outputSlot?.item) return;
 
     let didMove = false;
-    let next = slots.slice();
+    let next = slots.map(cloneSlot)
 
     while (true) {
-      console.log("A")
       const curOutput = next[outputIdx];
       if (!curOutput?.item) break;
       const item = curOutput.item;
@@ -297,9 +306,11 @@ export function useInventoryInput(options: {
 
         if (!success) break;
         if (placed > 0) didMove = true;
-        next = after.map((s) => ({ ...s, item: s.item ? { ...s.item } : null }));
+        next = after.map(cloneSlot);
       }
 
+      if (onCraft)
+        onCraft(item);
       const curRecipeResult = getCraftingResult(next.slice(inputStart, inputEnd));
       const secondary = curRecipeResult?.secondary;
 
@@ -338,7 +349,9 @@ export function useInventoryInput(options: {
       if (!newOutput || newOutput.id !== item.id) break;
     }
 
-    if (didMove) playSwapSound();
+    if (didMove) {
+      playSwapSound();
+    }
     setSlots(next);
   }
 
@@ -407,10 +420,16 @@ export function useInventoryInput(options: {
     const item = slot.item;
 
     if (item) {
-      console.log("yup")
       if (slot.type == SlotType.OUTPUT) {
         if (e.ctrlKey) {
           handleShiftClickOutput(idx, true);
+          playPutDownSound();
+          return;
+        }
+        else {
+          handleOutputClick(idx, true);
+          playPutDownSound();
+          return;
         }
       } else {
         next[idx] = {...slot,item: e.ctrlKey? null: item.count === 1? null: { ...item, count: item.count - 1 }};
@@ -443,6 +462,9 @@ export function useInventoryInput(options: {
           next[sel] = { ...next[sel], item: null };
           return next;
         });
+
+        if (onCraft)
+          onCraft(sSel.item);
 
         const curRecipeResult = getCraftingResult(slots.slice(inputStart, inputEnd));
         const secondary = curRecipeResult?.secondary;
@@ -530,6 +552,8 @@ export function useInventoryInput(options: {
 
   function onMouseDown(e: React.MouseEvent) {
     const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
+    setFirstLeft(false);
+    setFirstRight(false);
 
     if (idx !== null && slots[idx]?.type == SlotType.OFFHAND) return;
 
@@ -579,7 +603,6 @@ export function useInventoryInput(options: {
     if (e.shiftKey)
       return;
 
-
     if (e.button === 0 && !dragRight) {
       setLeftDown(true);
       if (heldItem) {
@@ -592,6 +615,7 @@ export function useInventoryInput(options: {
         if (idx !== null) {
           const s = slots[idx];
           if (s?.item) {
+            setFirstLeft(true);
             setHeldItem(s.item);
             playPickupSound();
             setSlots((prev) => {
@@ -621,6 +645,7 @@ export function useInventoryInput(options: {
           if (s?.item) {
             const take = Math.ceil(s.item.count / 2);
             const remain = s.item.count - take;
+            setFirstRight(true);
             setHeldItem({ ...s.item, count: take });
             playPickupSound();
             setSlots((prev) => {
@@ -643,11 +668,6 @@ export function useInventoryInput(options: {
       setDragStartIndex(idx);
     }
   }
-
-  // TODO: drop item when click outside area (clicking in-between slots doesnt drop)
-  // TODO: handle drop of output
-  // TODO: fix display issue when edit mode
-  // TODO: when drag over slot should not work
 
   function onMouseUp(e: React.MouseEvent) {
     if (e.button === 0) setLeftDown(false);
@@ -785,7 +805,7 @@ export function useInventoryInput(options: {
     setMousePos({ x: e.clientX, y: e.clientY });
     const idx = getSlotIndex(slotRefs.current, e.clientX, e.clientY);
     if (idx === null) return;
-    if (slots[idx]?.type === SlotType.OFFHAND) return;
+    if (slots[idx]?.type === SlotType.OFFHAND || slots[idx]?.type === SlotType.OUTPUT) return;
 
     setHoverIndex(idx);
 
@@ -833,6 +853,8 @@ export function useInventoryInput(options: {
     heldItem,
     draggingLeft: dragLeft,
     draggingRight: dragRight,
+    firstLeft: firstLeft,
+    firstRight: firstRight,
     dragStartIndex,
     hoverIndex,
     selectedSlots,
@@ -849,6 +871,8 @@ export function useInventoryInput(options: {
     onContextMenu,
     onMouseLeave: () => setHoverIndex(null),
     setHeld,
+    setFirstLeft,
+    setFirstRight,
     resetDrag,
   };
 

@@ -88,6 +88,7 @@ export default function GamePage() {
   const [slots, _setSlots] = useState<Slot[]>(initialSlots);
   const infiniteItems = (game.infiniteSupply ?? []).map(id => getItemById(id)).filter(Boolean) as Item[];
 
+  // goalProgress now accumulates crafted increments directly
   const [goalProgress, setGoalProgress] = useState<number[]>(game.goals.map(() => 0));
   const [completed, setCompleted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -97,16 +98,36 @@ export default function GamePage() {
   const startTimeRef = useRef<number | null>(null);
   const [timerStarted, setTimerStarted] = useState(false);
 
+  // ---------- Craft handler (no separate craftedCounts) ----------
+  // When Inventory performs a craft, call this with the crafted item (and count).
+  function handleCrafted(crafted: Item) {
+    // Only count crafted items if we're NOT in checkAtEndOnly mode
+    if (!game) return;
+    if (game.checkAtEndOnly) return;
+
+    setGoalProgress(prev => {
+      // increment progress for any goal that includes this crafted item
+      return prev.map((val, i) => {
+        const goal = game.goals[i];
+        if (!goal.items.includes(crafted.id)) return val;
+        // increment by the crafted count
+        return val + crafted.count;
+      });
+    });
+  }
+  // ----------------------------------------------------------------
+
   const handleSlotsChange: React.Dispatch<React.SetStateAction<Slot[]>> = (value) => {
-    const newSlots = typeof value === "function" ? (value as (prev: Slot[]) => Slot[])(_setSlots instanceof Function ?
-      slots : slots) : value;
+    _setSlots(prev => {
+      const newSlots = typeof value === "function" ? value(prev) : value;
 
-    if (!timerStarted && !completed && !areSlotsEqual(slots, newSlots)) {
-      startTimeRef.current = Date.now();
-      setTimerStarted(true);
-    }
+      if (!timerStarted && !completed && !areSlotsEqual(prev, newSlots)) {
+        startTimeRef.current = Date.now();
+        setTimerStarted(true);
+      }
 
-    _setSlots(newSlots);
+      return newSlots;
+    });
   };
 
   useEffect(() => {
@@ -117,8 +138,13 @@ export default function GamePage() {
         let current = 0;
         for (const item of allItems) if (goal.items.includes(item.id)) current += item.count;
 
+        // If not checkAtEndOnly, we keep the best seen value:
+        // * prev already contains crafted increments (because handleCrafted added them)
+        // * compare with current inventory count and keep the max
         if (!game!.checkAtEndOnly) return Math.max(prev[i], current);
-        else return goal.max !== undefined && goal.max !== -1 ? Math.min(current, goal.max) : current;
+
+        // If checkAtEndOnly is true, progress is purely derived from inventory at the moment (or clamped to max)
+        return goal.max !== undefined && goal.max !== -1 ? Math.min(current, goal.max) : current;
       });
 
       const changed = newProgress.some((v, i) => v !== prev[i]);
@@ -176,6 +202,7 @@ export default function GamePage() {
         inventorySlots={inventorySlots}
         hotbarSlots={hotbarSlots}
         craftingSlots={craftingSlots}
+        onCraft={handleCrafted}
       />
 
       <div style={{

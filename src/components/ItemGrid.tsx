@@ -7,6 +7,8 @@ export type ItemGridProps = {
   itemIds?: string[];
   heldItem: Item | null;
   setHeld: (it: Item | null) => void;
+  setFirstLeft: (v: boolean) => void;
+  setFirstRight: (v: boolean) => void;
   columns?: number;
 };
 
@@ -14,6 +16,8 @@ export default function ItemGrid({
   itemIds,
   heldItem,
   setHeld,
+  setFirstLeft,
+  setFirstRight,
   columns = 10,
 }: ItemGridProps) {
   const allIds = itemIds ?? getAllItems().map((it) => it.id);
@@ -75,6 +79,8 @@ export default function ItemGrid({
               itemId={id}
               heldItem={heldItem}
               setHeld={setHeld}
+              setFirstLeft={setFirstLeft}
+              setFirstRight={setFirstRight}
             />
           ))}
         </div>

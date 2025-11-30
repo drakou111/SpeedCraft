@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useInventoryInput } from "../hooks/UseInventoryInputs";
 import type { Item } from "../types/Item";
 import { SlotType, type Slot } from "../types/Slot";
@@ -9,6 +9,7 @@ import {
 } from "../utils/InventoryUtils";
 import { slotPositions } from "../data/SlotPositions";
 import ItemGrid from "./ItemGrid";
+import { playPutDownSound } from "../utils/SoundUtils";
 
 export default function Inventory({
     slots,
@@ -17,6 +18,7 @@ export default function Inventory({
     inventorySlots,
     hotbarSlots,
     craftingSlots,
+    onCraft,
 }: {
     slots: Array<Slot>;
     setSlots: React.Dispatch<React.SetStateAction<Array<Slot>>>;
@@ -24,6 +26,7 @@ export default function Inventory({
     inventorySlots: number;
     hotbarSlots: number;
     craftingSlots: number;
+    onCraft?: (crafted: Item) => void;
 }) {
     const { state, handlers } = useInventoryInput({
         slots,
@@ -31,15 +34,16 @@ export default function Inventory({
         inventorySlots,
         hotbarSlots,
         craftingSlots,
+        onCraft
     });
     const { slotRefs, onMouseDown, onMouseMove, onMouseUp, onContextMenu } = handlers;
 
     const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: -9999, y: -9999 });
     const [mouseInInventory, setMouseInInventory] = useState(false);
 
-    useEffect(() => {
-        if (!state.heldItem) return;
+    const inventoryRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
         function handleGlobalMouseMove(e: MouseEvent) {
             setMousePos({ x: e.clientX, y: e.clientY });
         }
@@ -50,6 +54,47 @@ export default function Inventory({
             window.removeEventListener("mousemove", handleGlobalMouseMove);
         };
     }, [state.heldItem]);
+
+    useEffect(() => {
+        function handleGlobalMouseUp(e: MouseEvent) {
+            if (!state.heldItem) return;
+
+            const root = inventoryRef.current;
+            if (!root) return;
+
+            e.preventDefault();
+
+            const clickedInside = root.contains(e.target as Node);
+
+            if (!clickedInside && e.button === 0) {
+                if (state.heldItem != null && !state.firstLeft) {
+                    handlers.setHeld(null);
+                    playPutDownSound();
+                }
+            }
+            if (!clickedInside && e.button === 2) {
+                if (state.heldItem != null && !state.firstRight) {
+                    const held = state.heldItem;
+                    handlers.setHeld(held.count > 1 ? {...held, count: held.count - 1} : null);
+                    playPutDownSound();
+                }
+            }
+            handlers.setFirstRight(false);
+            handlers.setFirstLeft(false);
+        }
+
+        window.addEventListener("mouseup", handleGlobalMouseUp);
+        return () => window.removeEventListener("mouseup", handleGlobalMouseUp);
+    }, [state]);
+
+    useEffect(() => {
+        const handleContextMenu = (e: MouseEvent) => {
+            e.preventDefault();
+        };
+
+    window.addEventListener("contextmenu", handleContextMenu);
+    return () => window.removeEventListener("contextmenu", handleContextMenu);
+    }, [state]);
 
 
     function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
@@ -193,6 +238,7 @@ export default function Inventory({
         <>
             <div className="inventory-wrapper">
                 <div
+                    ref={inventoryRef}
                     className="inventory-root"
                     onMouseDown={(e) => handleMouseDown(e)}
                     onMouseMove={(e) => handleMouseMove(e)}
@@ -224,20 +270,25 @@ export default function Inventory({
                         );
                     })}
 
-                    {state.heldItem && (
-                        <div
-                            className="held-item"
-                            style={{
-                                left: mousePos.x,
-                                top: mousePos.y,
-                                transform: "translate(-50%, -50%)",
-                            }}
-                        >
-                            {renderItem(
-                                { ...state.heldItem, count: previewActive ? previewHeldCount : state.heldItem.count }
-                            )}
-                        </div>
-                    )}
+
+                </div>
+
+                <div
+                    className="held-item"
+                    style={{
+                        left: mousePos.x,
+                        top: mousePos.y,
+                        transform: "translate(-50%, -50%)",
+                    }}
+                >
+                    {state.heldItem &&
+                        renderItem({
+                            ...state.heldItem,
+                            count: previewActive
+                                ? previewHeldCount
+                                : state.heldItem.count,
+                        })
+                    }
                 </div>
             </div>
 
@@ -249,6 +300,8 @@ export default function Inventory({
                         itemIds={infiniteItems.map(a => a.id)}
                         heldItem={state.heldItem}
                         setHeld={handlers.setHeld}
+                        setFirstLeft={handlers.setFirstLeft}
+                        setFirstRight={handlers.setFirstRight}
                     />
                 </div>
             }
