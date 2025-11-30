@@ -8,7 +8,7 @@ import type { Game } from "../types/Game";
 import { getAllItemsAsArray } from "../utils/InventoryUtils";
 import type { Item } from "../types/Item";
 import Confetti from "react-confetti";
-import { Repeat, House, Pencil, CircleX, ExternalLink } from "lucide-react";
+import { Repeat, House, Pencil, ExternalLink } from "lucide-react";
 
 function Timer({ startTimeRef, completed, finishedMs }: {
   startTimeRef: React.MutableRefObject<number | null>;
@@ -112,7 +112,7 @@ export default function GamePage() {
     });
   }
 
-  function formatGoalProgress(current: number, min?: number, max?: number, checkAtEndOnly?: boolean) {
+  function formatGoalProgress(current: number, min?: number, max?: number) {
     const m = min ?? -1;
     const M = max ?? -1;
 
@@ -148,7 +148,7 @@ export default function GamePage() {
     const allItems = getAllItemsAsArray(slots);
 
     setGoalProgress(prev => {
-      const newProgress = game!.goals.map((goal, i) => {
+      const newProgress = game!.goals.map((goal) => {
         let current = 0;
         for (const item of allItems) 
           if (goal.items.includes(item.id)) current += item.count;
@@ -254,7 +254,7 @@ export default function GamePage() {
               const minCheck = min === -1 ? true : current >= min;
               const maxCheck = max === -1 ? true : current <= max;
               const fulfilled = minCheck && maxCheck;
-              const progressText = formatGoalProgress(current, min, max, game.checkAtEndOnly);
+              const progressText = formatGoalProgress(current, min, max);
 
               return (
                 <div key={i} style={{
