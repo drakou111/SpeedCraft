@@ -89,8 +89,8 @@ export default function GamePage() {
   const [slots, _setSlots] = useState<Slot[]>(initialSlots);
   const infiniteItems = (game.infiniteSupply ?? []).map(id => getItemById(id)).filter(Boolean) as Item[];
 
-  // goalProgress now accumulates crafted increments directly
   const [goalProgress, setGoalProgress] = useState<number[]>(game.goals.map(() => 0));
+  const [goalPassed, setGoalPassed] = useState<boolean[]>(game.goals.map(() => false));
   const [completed, setCompleted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [confettiActive, setConfettiActive] = useState(false);
@@ -150,7 +150,7 @@ export default function GamePage() {
     setGoalProgress(prev => {
       const newProgress = game!.goals.map((goal) => {
         let current = 0;
-        for (const item of allItems) 
+        for (const item of allItems)
           if (goal.items.includes(item.id)) current += item.count;
         return current;
       });
@@ -161,17 +161,46 @@ export default function GamePage() {
   }, [slots, game]);
 
   useEffect(() => {
-    if (completed) return;
+     if (completed) return;
 
+  const updated = [...goalPassed];
+  let changed = false;
+
+  for (let i = 0; i < game.goals.length; i++) {
+    if (updated[i]) continue; // already passed, keep it
+
+    const goal = game.goals[i];
+    const current = goalProgress[i];
+
+    const min = goal.min ?? -1;
+    const max = goal.max ?? -1;
+
+    const minCheck = min === -1 ? true : current >= min;
+    const maxCheck = max === -1 ? true : current <= max;
+
+    if (minCheck && maxCheck) {
+      updated[i] = true;
+      changed = true;
+    }
+  }
+
+  if (changed) {
+    setGoalPassed(updated); // <-- only updates when truly needed
+  }
     const allDone = goalProgress.every((v, i) => {
       const goal = game!.goals[i];
+
+      if (!game.checkAtEndOnly && goalPassed[i]) return true;
+
       const min = goal.min ?? -1;
       const max = goal.max ?? -1;
+
       const minCheck = min === -1 ? true : v >= min;
       const maxCheck = max === -1 ? true : v <= max;
 
       return minCheck && maxCheck;
     });
+
     if (allDone) {
       setCompleted(true);
       setModalOpen(true);
@@ -253,7 +282,7 @@ export default function GamePage() {
               const max = goal.max ?? -1;
               const minCheck = min === -1 ? true : current >= min;
               const maxCheck = max === -1 ? true : current <= max;
-              const fulfilled = minCheck && maxCheck;
+              const fulfilled = (!game.checkAtEndOnly && goalPassed[i]) || (minCheck && maxCheck);
               const progressText = formatGoalProgress(current, min, max);
 
               return (
