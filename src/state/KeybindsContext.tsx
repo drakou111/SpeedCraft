@@ -5,17 +5,17 @@ import { createContext, useContext, useState, useMemo, useCallback } from "react
 export type Keybinds = Record<string, string>;
 
 export const defaultKeybinds: Keybinds = {
-  hotbar1: "1",
-  hotbar2: "2",
-  hotbar3: "3",
-  hotbar4: "4",
-  hotbar5: "5",
-  hotbar6: "6",
-  hotbar7: "7",
-  hotbar8: "8",
-  hotbar9: "9",
-  offhand: "f",
-  drop: "q",
+  hotbar1: "digit1",
+  hotbar2: "digit2",
+  hotbar3: "digit3",
+  hotbar4: "digit4",
+  hotbar5: "digit5",
+  hotbar6: "digit6",
+  hotbar7: "digit7",
+  hotbar8: "digit8",
+  hotbar9: "digit9",
+  offhand: "keyf",
+  drop: "keyq",
 };
 
 interface KeybindContextType {

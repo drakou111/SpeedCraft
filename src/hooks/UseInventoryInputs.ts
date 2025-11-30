@@ -149,7 +149,7 @@ export function useInventoryInput(options: {
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      const key = e.key.toLowerCase();
+      const key = e.code.toLowerCase();
 
       const hotbarIdx = hotkeyBindings[key];
       if (hotbarIdx != null) {
@@ -454,7 +454,6 @@ export function useInventoryInput(options: {
     if (sSel.type == SlotType.OFFHAND)
       return;
 
-    // special output handling
     if (sSel.type == SlotType.OUTPUT) {
       if (sSel.item && !sHot.item) {
         setSlots((prev) => {
