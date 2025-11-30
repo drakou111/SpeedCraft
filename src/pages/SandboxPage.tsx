@@ -3,6 +3,7 @@ import { SlotType, type Slot } from "../types/Slot";
 import { useState } from "react";
 import { getAllItems } from "../utils/ItemUtils";
 import { useNavigate } from "react-router-dom";
+import { Eraser, House } from "lucide-react";
 
 export default function SandboxPage() {
   const columns = 9;
@@ -50,15 +51,19 @@ export default function SandboxPage() {
           fontWeight: 600,
           cursor: "pointer",
           fontSize: 32
-        }}>Clear</button>
+        }}>Clear
+          <Eraser size={32} style={{ transform: "translateX(4px) translateY(4px)" }} /></button>
         <button onClick={() => navigate("/")} style={{
           padding: "12px 24px",
           fontWeight: 600,
           cursor: "pointer",
           fontSize: 32
-        }}>Go Home</button>
+        }}>Go Home
+
+          <House size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+        </button>
       </div>
     </div>
-    
+
   );
 }

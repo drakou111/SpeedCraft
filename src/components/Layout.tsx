@@ -67,6 +67,7 @@ export function Footer() {
             <p> 
                 <a href="https://github.com/drakou111" target="_blank" >GitHub</a>
                 <a href="https://www.youtube.com/@drakou111" target="_blank" >  Youtube</a>
+                <a href="https://ko-fi.com/drakou111" target="_blank" >  Ko-fi</a>
             </p>
                     
         </footer>
