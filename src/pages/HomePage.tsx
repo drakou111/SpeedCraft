@@ -13,7 +13,7 @@ export default function HomePage() {
             gap: "40px",
             margin: 24,
         }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", imageRendering:"pixelated" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", imageRendering: "pixelated" }}>
                 <img
                     src="./logo.png"
                     alt="SpeedCraft Logo"
@@ -32,14 +32,14 @@ export default function HomePage() {
                     style={buttonStyle}
                 >
                     Create
-                    <Brush size={32} style={{ transform: "translateX(4px) translateY(4px)"}}/>
+                    <Brush size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
                 </button>
                 <button
                     onClick={() => navigate("/sandbox")}
                     style={buttonStyle}
                 >
                     Sandbox
-                    <Package size={32} style={{ transform: "translateX(4px) translateY(4px)"}}/>
+                    <Package size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
                 </button>
             </div>
 
@@ -55,13 +55,29 @@ export default function HomePage() {
                                 borderRadius: 12,
                                 boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
                                 cursor: "pointer",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                transition: "transform 0.2s",
                             }}
                             onClick={() => navigate(`/game?data=${encodeURIComponent(game.data)}`)}
                             onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.03)")}
                             onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
                         >
-                            <h3 style={{ margin: "0 0 8px 0" }}>{game.title}</h3>
-                            <p style={{ margin: 0, fontSize: "14px", color: "#ccc" }}>{game.description}</p>
+                            {/* Left side: title + description */}
+                            <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                                <h3 style={{ margin: 0 }}>{game.title}</h3>
+                                <p style={{ margin: 0, fontSize: "14px", color: "#ccc" }}>{game.description}</p>
+                            </div>
+
+                            {/* Right side: icon */}
+                            {game.icon && (
+                                <img
+                                    src={`./items/${game.icon}`}
+                                    alt={game.title}
+                                    style={{ width: 64, height: 64, objectFit: "contain", imageRendering: "pixelated" }}
+                                />
+                            )}
                         </div>
                     ))}
                 </div>
