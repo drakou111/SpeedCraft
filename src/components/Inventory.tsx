@@ -19,6 +19,7 @@ export default function Inventory({
     hotbarSlots,
     craftingSlots,
     onCraft,
+    resetSignal,
 }: {
     slots: Array<Slot>;
     setSlots: React.Dispatch<React.SetStateAction<Array<Slot>>>;
@@ -27,6 +28,7 @@ export default function Inventory({
     hotbarSlots: number;
     craftingSlots: number;
     onCraft?: (crafted: Item) => void;
+    resetSignal: number;
 }) {
     const { state, handlers } = useInventoryInput({
         slots,
@@ -54,6 +56,12 @@ export default function Inventory({
             window.removeEventListener("mousemove", handleGlobalMouseMove);
         };
     }, [state.heldItem]);
+
+    useEffect(() => {
+        handlers.setHeld(null);
+        handlers.setFirstLeft(false);
+        handlers.setFirstRight(false);
+    }, [resetSignal]);
 
     useEffect(() => {
         function handleGlobalMouseUp(e: MouseEvent) {

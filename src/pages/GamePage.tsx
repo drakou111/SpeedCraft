@@ -9,6 +9,8 @@ import { getAllItemsAsArray } from "../utils/InventoryUtils";
 import type { Item } from "../types/Item";
 import Confetti from "react-confetti";
 import { Repeat, House, Pencil, ExternalLink } from "lucide-react";
+import { useKeybinds } from "../state/KeybindsContext";
+import { playClickSound } from "../utils/SoundUtils";
 
 function Timer({ startTimeRef, completed, finishedMs }: {
   startTimeRef: React.MutableRefObject<number | null>;
@@ -56,8 +58,34 @@ function areSlotsEqual(a: Slot[], b: Slot[]) {
   return true;
 }
 
+const buildInitialSlots = (game: Game) => {
+  const columns = 9;
+  const rows = 3;
+  const inventorySlots = rows * columns;
+  const hotbarSlots = columns;
+  const craftingSlots = 9;
+
+  const slots: Slot[] = [
+    ...Array.from({ length: inventorySlots }, () => ({ item: null, type: SlotType.INVENTORY })),
+    ...Array.from({ length: hotbarSlots }, () => ({ item: null, type: SlotType.HOTBAR })),
+    { item: null, type: SlotType.OFFHAND },
+    ...Array.from({ length: craftingSlots }, () => ({ item: null, type: SlotType.INPUT })),
+    { item: null, type: SlotType.OUTPUT },
+  ];
+
+  for (let i = 0; i < game.startLayout.length; i++) {
+    const info = game.startLayout[i];
+    if (!info) continue;
+    const item = getItemById(info.id);
+    if (item) slots[i].item = { ...item, count: info.count };
+  }
+
+  return slots;
+};
+
 export default function GamePage() {
   const navigate = useNavigate();
+  const { keybinds } = useKeybinds();
 
   const columns = 9;
   const rows = 3;
@@ -85,8 +113,8 @@ export default function GamePage() {
       if (item) initialSlots[idx].item = { ...item, count: itemInfo.count };
     }
   }
-
-  const [slots, _setSlots] = useState<Slot[]>(initialSlots);
+  const [slots, setSlots] = useState<Slot[]>(() => buildInitialSlots(game));
+  const [restartTick, setRestartTick] = useState(0);
   const infiniteItems = (game.infiniteSupply ?? []).map(id => getItemById(id)).filter(Boolean) as Item[];
 
   const [goalProgress, setGoalProgress] = useState<number[]>(game.goals.map(() => 0));
@@ -132,7 +160,7 @@ export default function GamePage() {
   }
 
   const handleSlotsChange: React.Dispatch<React.SetStateAction<Slot[]>> = (value) => {
-    _setSlots(prev => {
+    setSlots(prev => {
       const newSlots = typeof value === "function" ? value(prev) : value;
 
       if (!timerStarted && !completed && !areSlotsEqual(prev, newSlots)) {
@@ -211,6 +239,7 @@ export default function GamePage() {
     }
   }, [goalProgress, completed, game]);
 
+
   const formatTime = (ms: number) => {
     const mins = Math.floor(ms / 60000);
     const secs = Math.floor((ms % 60000) / 1000);
@@ -218,14 +247,48 @@ export default function GamePage() {
     return `${mins}:${secs.toString().padStart(2, "0")}.${millis.toString().padStart(3, "0")}`;
   };
 
-  const handleShare = () => {
+  const handleShareComplete = () => {
     const elapsed = finishedMs ?? (startTimeRef.current ? Date.now() - startTimeRef.current : 0);
-    const text = `I just completed "${game!.title ?? "Untitled"}" by ${game!.author ?? "Unknown"} in ${formatTime(elapsed)}, check it out [here](${window.location.href}).`;
+    const text = `I just completed "${game!.title ?? "[Untitled]"}" by ${game!.author ?? "[Unknown]"} in ${formatTime(elapsed)}, check it out [here](${window.location.href}).`;
     navigator.clipboard.writeText(text);
     alert("Copied to clipboard!");
   };
 
-  const handleRestart = () => window.location.reload();
+  const handleShare = () => {
+    const text = window.location.href;
+    navigator.clipboard.writeText(text);
+    alert("Copied to clipboard!");
+  };
+
+  const handleRestart = () => {
+    setSlots(buildInitialSlots(game));
+    setGoalProgress(game.goals.map(() => 0));
+    setGoalPassed(game.goals.map(() => false));
+    setCompleted(false);
+    setModalOpen(false);
+    setConfettiActive(false);
+    setFinishedMs(null);
+
+    startTimeRef.current = null;
+    setTimerStarted(false);
+    setRestartTick(t => t + 1);
+  };
+  
+  useEffect(() => {
+  const onKeyDown = (e: KeyboardEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") return;
+
+    if (e.code.toLowerCase() === keybinds.reset) {
+      e.preventDefault();
+      playClickSound();
+      handleRestart();
+    }
+  };
+
+  window.addEventListener("keydown", onKeyDown);
+  return () => window.removeEventListener("keydown", onKeyDown);
+}, [keybinds.reset, handleRestart]);
 
   return (
     <div className="app" style={{ display: "flex", gap: 0, margin: 24 }}>
@@ -248,6 +311,7 @@ export default function GamePage() {
         hotbarSlots={hotbarSlots}
         craftingSlots={craftingSlots}
         onCraft={handleCrafted}
+        resetSignal={restartTick}
       />
 
       <div style={{
@@ -351,7 +415,7 @@ export default function GamePage() {
                 </p>
 
                 <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12 }}>
-                  <button onClick={handleShare} style={{ padding: "8px 16px" }}>
+                  <button onClick={handleShareComplete} style={{ padding: "8px 16px" }}>
                     Share
                     <ExternalLink size={16} style={{ transform: "translateX(4px) translateY(4px)" }} />
                   </button>
@@ -404,6 +468,10 @@ export default function GamePage() {
           Edit
 
           <Pencil size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
+        </button>
+        <button onClick={handleShare} style={{ padding: "8px 16px" }}>
+          Share
+          <ExternalLink size={32} style={{ transform: "translateX(4px) translateY(4px)" }} />
         </button>
       </div>
     </div>

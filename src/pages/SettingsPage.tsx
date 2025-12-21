@@ -14,6 +14,7 @@ const defaultKeybinds = {
     hotbar9: "digit9",
     offhand: "keyf",
     drop: "keyq",
+    reset: "keyr"
 };
 
 let lastSoundTime = 0;
@@ -167,7 +168,7 @@ function KeybindRow({
             if (duplicate) {
                 setError(`"${key.toUpperCase()}" is already bound to ${duplicate[0]}`);
                 if (timeoutRef.current) clearTimeout(timeoutRef.current);
-                timeoutRef.current = window.setTimeout(() => setError(null), 1000);
+                timeoutRef.current = window.setTimeout(() => setError(null), 2000);
             } else {
                 onChange(action, key);
                 playPreviewSound();

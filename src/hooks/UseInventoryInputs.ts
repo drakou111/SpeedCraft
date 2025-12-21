@@ -399,7 +399,7 @@ export function useInventoryInput(options: {
     next[idx] = { ...slot, item: null };
 
     const order = getShiftClickOrder(next, idx, false, overrideType);
-    const { after, remaining } = tryPlaceAllTwoPass(next, order, order, true, item, totalToDistribute);
+    const { after, remaining } = tryPlaceAllTwoPass(next, order, order, false, item, totalToDistribute);
 
     if (remaining > 0) {
       after[idx] = { ...slot, item: { ...(slot.item as Item), count: remaining } };
@@ -591,7 +591,7 @@ export function useInventoryInput(options: {
       }
     }
 
-    if (idx && slots[idx].item && e.shiftKey) {
+    if (idx != null && slots[idx].item && e.shiftKey) {
       const after = shiftClickSlot(slots, idx);
       if (after) {
         playSwapSound();
