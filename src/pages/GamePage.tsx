@@ -330,7 +330,10 @@ export default function GamePage() {
         </div>
 
         <div style={{ fontSize: 20, fontWeight: 500, marginBottom: 16 }}>
-          {goalProgress.filter((v, i) => v >= (game!.goals[i].min ?? 1)).length} / {game.goals.length} goals done
+          {game.checkAtEndOnly
+            ? goalProgress.filter((v, i) => v >= (game!.goals[i].min ?? 1)).length
+            : goalPassed.filter(passed => passed).length
+          } / {game.goals.length} goals done
         </div>
 
         {game.showOnUI && (
