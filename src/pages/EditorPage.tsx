@@ -82,7 +82,7 @@ export default function EditorPage() {
                 inventorySlots={inventorySlots}
                 hotbarSlots={hotbarSlots}
                 craftingSlots={0}
-
+                resetSignal={0}
             />
 
             <div style={{

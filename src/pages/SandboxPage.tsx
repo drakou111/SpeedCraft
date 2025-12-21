@@ -36,6 +36,7 @@ export default function SandboxPage() {
         inventorySlots={inventorySlots}
         hotbarSlots={hotbarSlots}
         craftingSlots={craftingSlots}
+        resetSignal={0}
       />
       <div style={{
         marginTop: 24,
