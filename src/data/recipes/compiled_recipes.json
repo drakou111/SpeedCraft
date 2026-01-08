@@ -4263,6 +4263,33 @@
     "type": "SHAPED",
     "input": [
       [
+        null,
+        null,
+        [
+          "minecraft:copper_ingot"
+        ]
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ],
+      [
+        "minecraft:stick",
+        null,
+        null
+      ]
+    ],
+    "output": {
+      "id": "minecraft:copper_spear",
+      "count": 1
+    },
+    "sourceFile": "shaped/copper_spear.json"
+  },
+  {
+    "type": "SHAPED",
+    "input": [
+      [
         [
           "minecraft:copper_ingot"
         ]
@@ -5842,6 +5869,33 @@
     "type": "SHAPED",
     "input": [
       [
+        null,
+        null,
+        [
+          "minecraft:diamond"
+        ]
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ],
+      [
+        "minecraft:stick",
+        null,
+        null
+      ]
+    ],
+    "output": {
+      "id": "minecraft:diamond_spear",
+      "count": 1
+    },
+    "sourceFile": "shaped/diamond_spear.json"
+  },
+  {
+    "type": "SHAPED",
+    "input": [
+      [
         [
           "minecraft:diamond"
         ]
@@ -7009,6 +7063,33 @@
     "type": "SHAPED",
     "input": [
       [
+        null,
+        null,
+        [
+          "minecraft:gold_ingot"
+        ]
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ],
+      [
+        "minecraft:stick",
+        null,
+        null
+      ]
+    ],
+    "output": {
+      "id": "minecraft:golden_spear",
+      "count": 1
+    },
+    "sourceFile": "shaped/golden_spear.json"
+  },
+  {
+    "type": "SHAPED",
+    "input": [
+      [
         [
           "minecraft:gold_ingot"
         ]
@@ -7976,6 +8057,33 @@
       "count": 1
     },
     "sourceFile": "shaped/iron_shovel.json"
+  },
+  {
+    "type": "SHAPED",
+    "input": [
+      [
+        null,
+        null,
+        [
+          "minecraft:iron_ingot"
+        ]
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ],
+      [
+        "minecraft:stick",
+        null,
+        null
+      ]
+    ],
+    "output": {
+      "id": "minecraft:iron_spear",
+      "count": 1
+    },
+    "sourceFile": "shaped/iron_spear.json"
   },
   {
     "type": "SHAPED",
@@ -15364,6 +15472,35 @@
     "type": "SHAPED",
     "input": [
       [
+        null,
+        null,
+        [
+          "minecraft:blackstone",
+          "minecraft:cobbled_deepslate",
+          "minecraft:cobblestone"
+        ]
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ],
+      [
+        "minecraft:stick",
+        null,
+        null
+      ]
+    ],
+    "output": {
+      "id": "minecraft:stone_spear",
+      "count": 1
+    },
+    "sourceFile": "shaped/stone_spear.json"
+  },
+  {
+    "type": "SHAPED",
+    "input": [
+      [
         "minecraft:stone",
         "minecraft:stone",
         "minecraft:stone"
@@ -17393,6 +17530,44 @@
       "count": 1
     },
     "sourceFile": "shaped/wooden_shovel.json"
+  },
+  {
+    "type": "SHAPED",
+    "input": [
+      [ 
+        null,
+        null,
+        [
+          "minecraft:acacia_planks",
+          "minecraft:bamboo_planks",
+          "minecraft:birch_planks",
+          "minecraft:cherry_planks",
+          "minecraft:crimson_planks",
+          "minecraft:dark_oak_planks",
+          "minecraft:jungle_planks",
+          "minecraft:mangrove_planks",
+          "minecraft:oak_planks",
+          "minecraft:pale_oak_planks",
+          "minecraft:spruce_planks",
+          "minecraft:warped_planks"
+        ]
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ],
+      [
+        "minecraft:stick",
+        null,
+        null
+      ]
+    ],
+    "output": {
+      "id": "minecraft:wooden_spear",
+      "count": 1
+    },
+    "sourceFile": "shaped/wooden_spear.json"
   },
   {
     "type": "SHAPED",
