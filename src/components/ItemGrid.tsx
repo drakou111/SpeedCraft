@@ -25,9 +25,9 @@ export default function ItemGrid({
   const [search, setSearch] = useState("");
 
   const filteredIds = useMemo(() => {
-    const q = search.trim().toLowerCase();
+    const q = search.trim().toLowerCase().replaceAll(/[^a-z]/gi, "");
     if (!q) return allIds;
-    return allIds.filter((id) => id.toLowerCase().includes(q));
+    return allIds.filter((id) => id.toLowerCase().replaceAll(/[^a-z]/gi, "").includes(q));
   }, [search, allIds]);
 
   return (
