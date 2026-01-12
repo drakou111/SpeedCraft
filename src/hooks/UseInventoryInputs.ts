@@ -114,7 +114,7 @@ export function useInventoryInput(options: {
     let needed = maxStack - heldItem.count;
     const slotIndex = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
     if (needed <= 0) return;
-    if (!slotIndex) return;
+    if (slotIndex == null) return;
     
     const order = getShiftClickOrder(slots, slotIndex, false, null, true);
 
@@ -154,7 +154,7 @@ export function useInventoryInput(options: {
       const hotbarIdx = hotkeyBindings[key];
       if (hotbarIdx != null) {
         const idx = getSlotIndex(slotRefs.current, mousePos.x, mousePos.y);
-        if (idx) e.preventDefault();
+        if (idx != null) e.preventDefault();
         runHotkey(hotbarIdx, idx);
         return;
       }
@@ -569,7 +569,7 @@ export function useInventoryInput(options: {
     let isDoubleClicking = false;
     const now = performance.now();
 
-    if (lastLeftDownRef.current && now - lastLeftDownRef.current <= DOUBLE_CLICK_MS)
+    if (lastLeftDownRef.current != null && now - lastLeftDownRef.current <= DOUBLE_CLICK_MS)
       isDoubleClicking = true;
 
     setDoubleClick(false);
@@ -686,7 +686,7 @@ export function useInventoryInput(options: {
       return;
     }
 
-    if (doubleClick && idx) {
+    if (doubleClick && idx !== null) {
       if (e.shiftKey && heldItem) {
         const after = shiftClickSlots(idx, doubleClickItem)
         if (after)
